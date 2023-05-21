@@ -2,7 +2,7 @@ package view.enums;
 
 public enum LoginMenuMessages {
     INCORRECT_USERNAME("Incorrect Username!"
-            + "\n" + "Username doesn't contain spaces."),
+            + "\n" + "Username only contains letters and numbers."),
     INCORRECT_PASSWORD("Incorrect Password!"
             + "\n" + "Password doesn't contain spaces."),
     WEAK_PASSWORD("Weak Password!"
@@ -14,6 +14,9 @@ public enum LoginMenuMessages {
             + "\n" + "There is no user account with this username."),
     INVALID_PASSWORD("Invalid Password"
             + "\n" + "Passwords doesn't match."),
+    ADMIN_EXISTS("Admin with this username already exists."),
+    USER_EXISTS("User with this username already exists."),
+
     ADMIN_ACCOUNT_CREATED("Admin account created successfully."),
     USER_ACCOUNT_CREATED("User account created successfully."),
     ADMIN_LOGIN_SUCCESSFUL("Admin account logged in successfully."),

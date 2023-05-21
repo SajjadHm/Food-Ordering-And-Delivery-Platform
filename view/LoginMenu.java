@@ -1,5 +1,6 @@
 package view;
 
+import controllers.LoginMenuController;
 import view.enums.LoginMenuCommands;
 import view.enums.LoginMenuMessages;
 import view.enums.LoginMenuResults;
@@ -44,23 +45,27 @@ public class LoginMenu {
     }
 
     public static LoginMenuMessages checkAddAdmin() {
-
-        return LoginMenuMessages.ADMIN_ACCOUNT_CREATED;
+        String userName = matcher.group("userName");
+        String passWord = matcher.group("passWord");
+        return LoginMenuController.checkAddAdmin(userName, passWord);
     }
 
     public static LoginMenuMessages checkAddUser() {
-
-        return LoginMenuMessages.USER_ACCOUNT_CREATED;
+        String userName = matcher.group("userName");
+        String passWord = matcher.group("passWord");
+        return LoginMenuController.checkAddUser(userName, passWord);
     }
 
     public static LoginMenuMessages checkLoginAdmin() {
-
-        return LoginMenuMessages.ADMIN_LOGIN_SUCCESSFUL;
+        String userName = matcher.group("userName");
+        String passWord = matcher.group("passWord");
+        return LoginMenuController.checkLoginAdmin(userName, passWord);
     }
 
     public static LoginMenuMessages checkLoginUser() {
-
-        return LoginMenuMessages.USER_LOGIN_SUCCESSFUL;
+        String userName = matcher.group("userName");
+        String passWord = matcher.group("passWord");
+        return LoginMenuController.checkLoginUser(userName, passWord);
     }
 
 }
