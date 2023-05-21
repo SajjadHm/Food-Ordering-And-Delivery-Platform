@@ -1,4 +1,4 @@
-package controllers.model.accounts;
+package model.accounts;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
