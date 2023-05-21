@@ -62,4 +62,5 @@ public class LoginMenu {
 
         return LoginMenuMessages.USER_LOGIN_SUCCESSFUL;
     }
+
 }
