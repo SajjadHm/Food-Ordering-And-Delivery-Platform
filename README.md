@@ -21,6 +21,7 @@ Coming soon...
 - [Sajjad Hashembeiki](https://github.com/SajjadHm)
 - [Amir Hossein Saririan](https://github.com/AmirSarir)
 - [Nadia Bakhsheshi](https://github.com/Nadiabakhsheshi)
+- [Parsa Sadeghi](https://github.com/parsad7)
 
 
 Spring 2023 
