@@ -44,7 +44,7 @@ public class LoginMenuController {
     public static LoginMenuMessages checkLoginAdmin(String userName, String passWord) {
         Admin admin = Memory.getAdmin(userName);
         if (admin == null) return LoginMenuMessages.INVALID_ADMIN_USERNAME;
-        if (!admin.checkPassword(passWord)) return LoginMenuMessages.INCORRECT_PASSWORD;
+        if (!admin.checkPassword(passWord)) return LoginMenuMessages.INVALID_PASSWORD;
         Memory.setCurrentAccount(admin);
         return LoginMenuMessages.ADMIN_LOGIN_SUCCESSFUL;
     }
@@ -52,7 +52,7 @@ public class LoginMenuController {
     public static LoginMenuMessages checkLoginUser(String userName, String passWord) {
         User user = Memory.getUser(userName);
         if (user == null) return LoginMenuMessages.INVALID_USER_USERNAME;
-        if (!user.checkPassword(passWord)) return LoginMenuMessages.INCORRECT_PASSWORD;
+        if (!user.checkPassword(passWord)) return LoginMenuMessages.INVALID_PASSWORD;
         Memory.setCurrentAccount(user);
         return LoginMenuMessages.USER_LOGIN_SUCCESSFUL;
     }

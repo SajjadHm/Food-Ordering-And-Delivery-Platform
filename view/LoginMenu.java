@@ -4,6 +4,7 @@ import controllers.LoginMenuController;
 import view.enums.LoginMenuCommands;
 import view.enums.LoginMenuMessages;
 import view.enums.LoginMenuResults;
+import view.others.Colors;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -13,7 +14,7 @@ public class LoginMenu {
     private static Matcher matcher;
 
     public static void printer(LoginMenuMessages message) {
-        if (message != null) System.out.println(message.getMessage());
+        if (message != null) System.out.println(message.getMessage() + Colors.RESET);
     }
 
     public static LoginMenuResults run(Scanner scanner) {
