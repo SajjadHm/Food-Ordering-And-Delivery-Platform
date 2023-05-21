@@ -31,15 +31,17 @@ public class LoginMenu {
                 messages = checkAddAdmin();
             else if ((matcher = LoginMenuCommands.getMatcher(input, LoginMenuCommands.ADD_USER)) != null)
                 messages = checkAddUser();
-            else if ((matcher = LoginMenuCommands.getMatcher(input, LoginMenuCommands.LOGIN_ADMIN)) != null) {
-                printer(checkLoginAdmin());
-                return LoginMenuResults.ADMIN_LOGIN;
-            }
-            else if ((matcher = LoginMenuCommands.getMatcher(input, LoginMenuCommands.LOGIN_USER)) != null) {
-                printer(checkLoginUser());
-                return LoginMenuResults.USER_LOGIN;
-            }
+            else if ((matcher = LoginMenuCommands.getMatcher(input, LoginMenuCommands.LOGIN_ADMIN)) != null)
+                messages = checkLoginAdmin();
+            else if ((matcher = LoginMenuCommands.getMatcher(input, LoginMenuCommands.LOGIN_USER)) != null)
+                messages = checkLoginUser();
+
             printer(messages);
+
+            if (messages == LoginMenuMessages.ADMIN_LOGIN_SUCCESSFUL)
+                return LoginMenuResults.ADMIN_LOGIN;
+            else if (messages == LoginMenuMessages.USER_LOGIN_SUCCESSFUL)
+                return LoginMenuResults.USER_LOGIN;
         }
         return null;
     }

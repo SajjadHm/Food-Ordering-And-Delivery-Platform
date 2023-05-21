@@ -23,7 +23,7 @@ public class LoginMenuController {
         if (checkUsernamePassword(userName, passWord) != null) return checkUsernamePassword(userName, passWord);
         Admin admin = Memory.getAdmin(userName);
         if (admin != null) return LoginMenuMessages.ADMIN_EXISTS;
-        Matcher matcher = Pattern.compile("(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}").matcher(passWord);
+        Matcher matcher = Pattern.compile("(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}").matcher(passWord);
         if (!matcher.matches()) return LoginMenuMessages.WEAK_PASSWORD;
         admin = new Admin(userName, passWord);
         Memory.getAdmins().add(admin);
@@ -34,7 +34,7 @@ public class LoginMenuController {
         if (checkUsernamePassword(userName, passWord) != null) return checkUsernamePassword(userName, passWord);
         User user = Memory.getUser(userName);
         if (user != null) return LoginMenuMessages.USER_EXISTS;
-        Matcher matcher = Pattern.compile("(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}").matcher(passWord);
+        Matcher matcher = Pattern.compile("(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}").matcher(passWord);
         if (!matcher.matches()) return LoginMenuMessages.WEAK_PASSWORD;
         user = new User(userName, passWord);
         Memory.getUsers().add(user);
