@@ -5,6 +5,7 @@ import model.enums.ResturantFoodType;
 public class Resturant {
     private String name;
     private ResturantFoodType foodType;
+
     private final int id;
     private static int idCount;
 
