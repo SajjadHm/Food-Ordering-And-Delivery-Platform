@@ -20,7 +20,6 @@ Coming soon...
 ## Team
 - [Sajjad Hashembeiki](https://github.com/SajjadHm)
 - [Amir Hossein Saririan](https://github.com/AmirSarir)
-- [Nadia Bakhsheshi](https://github.com/Nadiabakhsheshi)
 - [Parsa Sadeghi](https://github.com/parsad7)
 
 
