@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #019 - Comment&#10;&#10;&#10;- Comment class added in model.social.">
-      <change afterPath="$PROJECT_DIR$/model/social/Rating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/resturant/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/resturant/Food.java" afterDir="false" />
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #021 - Food&#10;&#10;&#10;- Food class edited.">
+      <change afterPath="$PROJECT_DIR$/model/resturant/FoodList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +73,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684828405141</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit #020 - Rating&#10;&#10;&#10;- Rating class added in model.social.">
+      <created>1684828732747</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684828732747</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Commit #021 - Food&#10;&#10;&#10;- Food class edited.">
+      <created>1684828996746</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684828996746</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +120,8 @@
     <MESSAGE value="Commit #017 - Merging?" />
     <MESSAGE value="Commit #018 - Food&#10;&#10;&#10;- Food class added in model.resturant.&#10;- other classes edited." />
     <MESSAGE value="Commit #019 - Comment&#10;&#10;&#10;- Comment class added in model.social." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #019 - Comment&#10;&#10;&#10;- Comment class added in model.social." />
+    <MESSAGE value="Commit #020 - Rating&#10;&#10;&#10;- Rating class added in model.social." />
+    <MESSAGE value="Commit #021 - Food&#10;&#10;&#10;- Food class edited." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #021 - Food&#10;&#10;&#10;- Food class edited." />
   </component>
 </project>
