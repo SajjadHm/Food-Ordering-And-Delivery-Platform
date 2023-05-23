@@ -1,4 +1,4 @@
-package view.enums;
+package view.enums.loginmenu;
 
 public enum LoginMenuMessages {
     INCORRECT_USERNAME("Incorrect Username!"

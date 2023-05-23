@@ -5,7 +5,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class Account {
-    String userName, hashedPassWord;
+    String userName, hashedPassWord, firstName, lastName;
 
     private String encrypted(String input) {
         MessageDigest md = null;
@@ -23,17 +23,15 @@ public class Account {
         }
     }
 
-    Account(String userName, String passWord) {
+    Account(String userName, String passWord, String firstName, String lastName) {
         this.userName = userName;
         this.hashedPassWord = encrypted(passWord);
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public boolean checkPassword(String checkingPassWord) {
         return encrypted(checkingPassWord).equals(hashedPassWord);
-    }
-
-    public void setHashedPassWord(String hashedPassWord) {
-        this.hashedPassWord = encrypted(hashedPassWord);
     }
 
     public String getUserName() {
@@ -42,5 +40,29 @@ public class Account {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getHashedPassWord() {
+        return hashedPassWord;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setHashedPassWord(String hashedPassWord) {
+        this.hashedPassWord = hashedPassWord;
     }
 }

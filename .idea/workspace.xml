@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="" />
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu.">
+      <change afterPath="$PROJECT_DIR$/controllers/ManagerMenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/UserMenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/ManagerMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/UserMenu.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="parsa" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -18,15 +36,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Uni-01-02(2)/OOP/project/Phase1/ProjectPhase1&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Uni-01-02(2)/OOP/project/Phase1/ProjectPhase1",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="view.enums" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -37,6 +61,84 @@
       <updated>1684828309295</updated>
       <workItem from="1684828311195" duration="102000" />
     </task>
+    <task id="LOCAL-00001" summary="Commit #017 - Merging?">
+      <created>1684826613596</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684826613596</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Commit #018 - Food&#10;&#10;&#10;- Food class added in model.resturant.&#10;- other classes edited.">
+      <created>1684828121262</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684828121262</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Commit #019 - Comment&#10;&#10;&#10;- Comment class added in model.social.">
+      <created>1684828405141</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684828405141</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Commit #020 - Rating&#10;&#10;&#10;- Rating class added in model.social.">
+      <created>1684828732747</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684828732747</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Commit #021 - Food&#10;&#10;&#10;- Food class edited.">
+      <created>1684828996746</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684828996746</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Commit #022 - FoodList&#10;&#10;&#10;- FoodList class added in model.resturant.">
+      <created>1684829328375</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684829328375</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Commit #023 - FoodMenu&#10;&#10;&#10;- FoodMenu class added in model.resturant.">
+      <created>1684829458365</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684829458365</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Commit #024 - Order and DeliveryStatus&#10;&#10;&#10;- Order class added in model.resturant.&#10;- DeliveryStatus enum in model.resturant.">
+      <created>1684830019010</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684830019010</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Commit #025 - User&#10;&#10;&#10;- fixing User constructor.">
+      <created>1684830120020</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1684830120020</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Commit #026 - UserMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.usermenu.&#10;- enums package structure edited.">
+      <created>1684830748974</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684830748974</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu.">
+      <created>1684830857908</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1684830857908</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -53,7 +155,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Sajjad" />
+                        <option value="HEAD" />
                       </list>
                     </value>
                   </entry>
@@ -64,5 +166,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit #017 - Merging?" />
+    <MESSAGE value="Commit #018 - Food&#10;&#10;&#10;- Food class added in model.resturant.&#10;- other classes edited." />
+    <MESSAGE value="Commit #019 - Comment&#10;&#10;&#10;- Comment class added in model.social." />
+    <MESSAGE value="Commit #020 - Rating&#10;&#10;&#10;- Rating class added in model.social." />
+    <MESSAGE value="Commit #021 - Food&#10;&#10;&#10;- Food class edited." />
+    <MESSAGE value="Commit #022 - FoodList&#10;&#10;&#10;- FoodList class added in model.resturant." />
+    <MESSAGE value="Commit #023 - FoodMenu&#10;&#10;&#10;- FoodMenu class added in model.resturant." />
+    <MESSAGE value="Commit #023 - Order and DeliveryStatus&#10;&#10;&#10;- Order class added in model.resturant.&#10;- DeliveryStatus enum in model.resturant." />
+    <MESSAGE value="Commit #024 - Order and DeliveryStatus&#10;&#10;&#10;- Order class added in model.resturant.&#10;- DeliveryStatus enum in model.resturant." />
+    <MESSAGE value="Commit #025 - User&#10;&#10;&#10;- fixing User constructor." />
+    <MESSAGE value="Commit #025 - UserMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.usermenu.&#10;- enums package structure edited." />
+    <MESSAGE value="Commit #026 - UserMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.usermenu.&#10;- enums package structure edited." />
+    <MESSAGE value="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu." />
   </component>
 </project>
