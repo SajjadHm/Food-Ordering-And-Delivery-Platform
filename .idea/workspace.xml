@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #021 - Food&#10;&#10;&#10;- Food class edited.">
-      <change afterPath="$PROJECT_DIR$/model/resturant/FoodList.java" afterDir="false" />
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #022 - FoodList&#10;&#10;&#10;- FoodList class added in model.resturant.">
+      <change afterPath="$PROJECT_DIR$/model/resturant/FoodMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684828996746</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Commit #022 - FoodList&#10;&#10;&#10;- FoodList class added in model.resturant.">
+      <created>1684829328375</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684829328375</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +129,7 @@
     <MESSAGE value="Commit #019 - Comment&#10;&#10;&#10;- Comment class added in model.social." />
     <MESSAGE value="Commit #020 - Rating&#10;&#10;&#10;- Rating class added in model.social." />
     <MESSAGE value="Commit #021 - Food&#10;&#10;&#10;- Food class edited." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #021 - Food&#10;&#10;&#10;- Food class edited." />
+    <MESSAGE value="Commit #022 - FoodList&#10;&#10;&#10;- FoodList class added in model.resturant." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #022 - FoodList&#10;&#10;&#10;- FoodList class added in model.resturant." />
   </component>
 </project>
