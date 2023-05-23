@@ -1,4 +1,4 @@
-package view.enums;
+package view.enums.loginmenu;
 
 import java.util.regex.Matcher;
 

@@ -1,9 +1,9 @@
 package view;
 
 import controllers.LoginMenuController;
-import view.enums.LoginMenuCommands;
-import view.enums.LoginMenuMessages;
-import view.enums.LoginMenuResults;
+import view.enums.loginmenu.LoginMenuCommands;
+import view.enums.loginmenu.LoginMenuMessages;
+import view.enums.loginmenu.LoginMenuResults;
 import view.others.Colors;
 
 import java.util.Scanner;

@@ -3,7 +3,7 @@ package controllers;
 import model.Memory;
 import model.accounts.Manager;
 import model.accounts.User;
-import view.enums.LoginMenuMessages;
+import view.enums.loginmenu.LoginMenuMessages;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
