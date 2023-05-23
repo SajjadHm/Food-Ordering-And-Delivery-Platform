@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #025 - User&#10;&#10;&#10;- fixing User constructor.">
-      <change afterPath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/enums/usermenu/UsenMenuCommands.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuResults.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/LoginMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/LoginMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/LoginMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/enums/LoginMenuCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/loginmenu/LoginMenuCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/enums/LoginMenuMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/loginmenu/LoginMenuMessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/enums/LoginMenuResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/loginmenu/LoginMenuResults.java" afterDir="false" />
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu.">
+      <change afterPath="$PROJECT_DIR$/controllers/ManagerMenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/UserMenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/ManagerMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/UserMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +124,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684830120020</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Commit #026 - UserMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.usermenu.&#10;- enums package structure edited.">
+      <created>1684830748974</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684830748974</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu.">
+      <created>1684830857908</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1684830857908</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +178,9 @@
     <MESSAGE value="Commit #023 - Order and DeliveryStatus&#10;&#10;&#10;- Order class added in model.resturant.&#10;- DeliveryStatus enum in model.resturant." />
     <MESSAGE value="Commit #024 - Order and DeliveryStatus&#10;&#10;&#10;- Order class added in model.resturant.&#10;- DeliveryStatus enum in model.resturant." />
     <MESSAGE value="Commit #025 - User&#10;&#10;&#10;- fixing User constructor." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #025 - User&#10;&#10;&#10;- fixing User constructor." />
+    <MESSAGE value="Commit #025 - UserMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.usermenu.&#10;- enums package structure edited." />
+    <MESSAGE value="Commit #026 - UserMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.usermenu.&#10;- enums package structure edited." />
+    <MESSAGE value="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu." />
   </component>
 </project>
