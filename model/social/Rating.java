@@ -4,9 +4,9 @@ public class Rating {
     private double rating;
     private int count;
 
-    public Rating(double rating) {
-        this.count = 1;
-        this.rating = rating;
+    public Rating() {
+        this.count = 0;
+        this.rating = 0;
     }
 
     public void addRating(int rate) {
@@ -15,8 +15,9 @@ public class Rating {
     }
 
     public void removeRating(int rate) {
-        if (count == 1) {
+        if (count <= 1) {
             rating = 0;
+            count = 0;
             return;
         }
         rating = ((rating * count) - rate) / (count - 1);
