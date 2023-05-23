@@ -15,6 +15,5 @@ public class Food {
         isUnlisted = false;
     }
 
-    public Food() {
-    }
+
 }

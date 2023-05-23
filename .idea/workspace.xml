@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #017 - Merging?">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/resturant/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/LoginMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/LoginMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/Memory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/accounts/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/accounts/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/accounts/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/accounts/Manager.java" afterDir="false" />
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #019 - Comment&#10;&#10;&#10;- Comment class added in model.social.">
+      <change afterPath="$PROJECT_DIR$/model/social/Rating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/resturant/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/resturant/Food.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +60,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684826613596</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit #018 - Food&#10;&#10;&#10;- Food class added in model.resturant.&#10;- other classes edited.">
+      <created>1684828121262</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684828121262</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Commit #019 - Comment&#10;&#10;&#10;- Comment class added in model.social.">
+      <created>1684828405141</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684828405141</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +105,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit #017 - Merging?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #017 - Merging?" />
+    <MESSAGE value="Commit #018 - Food&#10;&#10;&#10;- Food class added in model.resturant.&#10;- other classes edited." />
+    <MESSAGE value="Commit #019 - Comment&#10;&#10;&#10;- Comment class added in model.social." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #019 - Comment&#10;&#10;&#10;- Comment class added in model.social." />
   </component>
 </project>
