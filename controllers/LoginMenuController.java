@@ -1,9 +1,8 @@
 package controllers;
 
 import model.Memory;
-import model.accounts.Admin;
+import model.accounts.Manager;
 import model.accounts.User;
-import view.MainMenu;
 import view.enums.LoginMenuMessages;
 
 import java.util.regex.Matcher;
@@ -21,12 +20,12 @@ public class LoginMenuController {
 
     public static LoginMenuMessages checkAddAdmin(String userName, String passWord) {
         if (checkUsernamePassword(userName, passWord) != null) return checkUsernamePassword(userName, passWord);
-        Admin admin = Memory.getAdmin(userName);
-        if (admin != null) return LoginMenuMessages.ADMIN_EXISTS;
+        Manager manager = Memory.getAdmin(userName);
+        if (manager != null) return LoginMenuMessages.ADMIN_EXISTS;
         Matcher matcher = Pattern.compile("(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}").matcher(passWord);
         if (!matcher.matches()) return LoginMenuMessages.WEAK_PASSWORD;
-        admin = new Admin(userName, passWord);
-        Memory.getAdmins().add(admin);
+        manager = new Manager(userName, passWord, "", ""); // TODO: fix it!
+        Memory.getAdmins().add(manager);
         return LoginMenuMessages.ADMIN_ACCOUNT_CREATED;
     }
 
@@ -42,10 +41,10 @@ public class LoginMenuController {
     }
 
     public static LoginMenuMessages checkLoginAdmin(String userName, String passWord) {
-        Admin admin = Memory.getAdmin(userName);
-        if (admin == null) return LoginMenuMessages.INVALID_ADMIN_USERNAME;
-        if (!admin.checkPassword(passWord)) return LoginMenuMessages.INVALID_PASSWORD;
-        Memory.setCurrentAccount(admin);
+        Manager manager = Memory.getAdmin(userName);
+        if (manager == null) return LoginMenuMessages.INVALID_ADMIN_USERNAME;
+        if (!manager.checkPassword(passWord)) return LoginMenuMessages.INVALID_PASSWORD;
+        Memory.setCurrentAccount(manager);
         return LoginMenuMessages.ADMIN_LOGIN_SUCCESSFUL;
     }
 

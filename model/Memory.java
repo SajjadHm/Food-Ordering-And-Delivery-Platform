@@ -1,26 +1,28 @@
 package model;
 
 import model.accounts.Account;
-import model.accounts.Admin;
+import model.accounts.Manager;
 import model.accounts.User;
+import model.resturant.Resturant;
 
 import java.util.ArrayList;
 
 public class Memory {
-    private final static ArrayList<Admin> admins;
+    private final static ArrayList<Manager> MANAGERS;
     private final static ArrayList<User> users;
     private static Account currentAccount;
+    private static Resturant currentResturant;
 
     static {
-        admins = new ArrayList<>();
+        MANAGERS = new ArrayList<>();
         users = new ArrayList<>();
         currentAccount = null;
     }
 
-    public static Admin getAdmin(String userName) {
-        if (admins.size() == 0) return null;
-        for (Admin admin : admins) {
-            if (userName.equals(admin.getUserName())) return admin;
+    public static Manager getAdmin(String userName) {
+        if (MANAGERS.size() == 0) return null;
+        for (Manager manager : MANAGERS) {
+            if (userName.equals(manager.getUserName())) return manager;
         }
         return null;
     }
@@ -33,8 +35,8 @@ public class Memory {
         return null;
     }
 
-    public static ArrayList<Admin> getAdmins() {
-        return admins;
+    public static ArrayList<Manager> getAdmins() {
+        return MANAGERS;
     }
 
     public static ArrayList<User> getUsers() {
@@ -47,5 +49,13 @@ public class Memory {
 
     public static void setCurrentAccount(Account currentAccount) {
         Memory.currentAccount = currentAccount;
+    }
+
+    public static Resturant getCurrentResturant() {
+        return currentResturant;
+    }
+
+    public static void setCurrentResturant(Resturant currentResturant) {
+        Memory.currentResturant = currentResturant;
     }
 }
