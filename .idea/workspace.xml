@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu.">
-      <change afterPath="$PROJECT_DIR$/controllers/ManagerMenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/UserMenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/ManagerMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/UserMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/loginmenu/LoginMenuMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/loginmenu/LoginMenuMessages.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +40,10 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/Uni-01-02(2)/OOP/project/Phase1/ProjectPhase1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -54,12 +55,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b75a9c95-8e39-4c3c-b415-e2b0510b6c74" name="Changes" comment="" />
+      <changelist id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu." />
       <created>1684828309295</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684828309295</updated>
       <workItem from="1684828311195" duration="102000" />
+      <workItem from="1684946906465" duration="527000" />
     </task>
     <task id="LOCAL-00001" summary="Commit #017 - Merging?">
       <created>1684826613596</created>
@@ -155,13 +157,28 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="origin/Sajjad" />
                       </list>
                     </value>
                   </entry>
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
