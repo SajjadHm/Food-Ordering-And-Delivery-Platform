@@ -5,6 +5,7 @@ import model.enums.ResturantFoodType;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.UUID;
 
 public class Resturant {
     private String name, location;
@@ -14,30 +15,31 @@ public class Resturant {
     private static int idCount;
 
     static {
-        idCount = 1;
+        idCount = 0;
     }
 
-    private String encrypted(String input) {
+    private String getID(String seed) {
         MessageDigest md = null;
         try {
-            md = MessageDigest.getInstance("SHA-128");
-            byte[] messageDigest = md.digest(input.getBytes());
+            md = MessageDigest.getInstance("SHA-1");
+            byte[] messageDigest = md.digest(seed.getBytes());
             BigInteger no = new BigInteger(1, messageDigest);
             String hashText = no.toString(16);
             while (hashText.length() < 8) {
                 hashText = "0" + hashText;
             }
-            return hashText;
+            return hashText.substring(0, 8);
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         }
+
     }
 
 
     public Resturant(String name, ResturantFoodType[] foodTypes, String location) {
         this.name = name;
         this.foodTypes = foodTypes.clone();
-        this.id = encrypted(String.valueOf(idCount));
+        this.id = getID(String.valueOf(idCount));
         this.location = location;
         idCount++;
     }
