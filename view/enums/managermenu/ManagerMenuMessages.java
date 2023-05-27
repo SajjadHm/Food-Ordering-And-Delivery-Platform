@@ -1,12 +1,13 @@
 package view.enums.managermenu;
 
 public enum ManagerMenuMessages {
-    RESTAURANT_ADDED(""),
-    RESTAURANT_EXISTS(""),
-    RESTAURANT_NOT_FOUND(""),
-    RESTAURANT_REMOVED(""),
-    RESTAURANT_OPENED(""),
-    NO_RESTAURANTS(""),
+    RESTAURANT_ADDED("Restaurant added successfully."),
+    RESTAURANT_EXISTS("Restaurant already exists with this name."),
+    RESTAURANT_NOT_FOUND("There's no restaurant with this name."),
+    RESTAURANT_REMOVED("Restaurant removed successfully."),
+    RESTAURANT_OPENED("Entering restaurant:"),
+    NO_RESTAURANTS("There are no restaurants."),
+    INVALID_COMMAND("Invalid command!"),
     ;
 
     private String message;
