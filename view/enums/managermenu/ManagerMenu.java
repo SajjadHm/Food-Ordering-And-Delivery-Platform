@@ -40,6 +40,8 @@ public class ManagerMenu {
                 message = checkRemoveRestaurant();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.SHOW)) != null)
                 message = checkShow();
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.SELECT_RESTAURANT)) != null)
+                message = checkSelect();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.LOGOUT)) != null) {
                 message = checkLogOut();
                 isRunning = false;
@@ -69,6 +71,8 @@ public class ManagerMenu {
     public static ManagerMenuMessages checkShow() {
         Manager manager = (Manager) Memory.getCurrentAccount();
         if (manager.getResturants().size() == 0) return ManagerMenuMessages.NO_RESTAURANTS;
+        System.out.println("Number of restaurants: " + manager.getResturants().size());
+        if (Memory.getCurrentResturant() != null) System.out.println("Current Restaurant == " + Memory.getCurrentResturant().getId());
         HashMap<String, Resturant> resturants = manager.getResturants();
         String[] keys = resturants.keySet().toArray(new String[0]);
         Arrays.sort(keys);
@@ -77,4 +81,18 @@ public class ManagerMenu {
         }
         return null;
     }
+
+    public static ManagerMenuMessages checkSelect() {
+        String id = matcher.group("id");
+        return ManagerMenuController.checkSelect(id);
+    }
 }
+/*
+add admin parsa Pass1234!
+login admin parsa Pass1234!
+add restaurant oop sut Italian
+add restaurant lph usa Fried
+add restaurant sagPaz inja Persian
+show
+
+ */
