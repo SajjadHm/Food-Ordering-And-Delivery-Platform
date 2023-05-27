@@ -7,6 +7,9 @@ import model.enums.ResturantFoodType;
 import model.resturant.Resturant;
 import view.others.Colors;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 
@@ -66,8 +69,11 @@ public class ManagerMenu {
     public static ManagerMenuMessages checkShow() {
         Manager manager = (Manager) Memory.getCurrentAccount();
         if (manager.getResturants().size() == 0) return ManagerMenuMessages.NO_RESTAURANTS;
-        for (Resturant resturant : manager.getResturants()) {
-            System.out.printf("id: %s    name: %s\n", resturant.getId(), resturant.getName());
+        HashMap<String, Resturant> resturants = manager.getResturants();
+        String[] keys = resturants.keySet().toArray(new String[0]);
+        Arrays.sort(keys);
+        for (String key : keys) {
+            System.out.printf("id: %s    name: %s\n", resturants.get(key).getId(), resturants.get(key).getName());
         }
         return null;
     }
