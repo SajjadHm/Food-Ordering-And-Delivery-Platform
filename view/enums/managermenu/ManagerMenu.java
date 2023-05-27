@@ -1,7 +1,10 @@
 package view.enums.managermenu;
 
 import controllers.ManagerMenuController;
+import model.Memory;
+import model.accounts.Manager;
 import model.enums.ResturantFoodType;
+import model.resturant.Resturant;
 import view.others.Colors;
 
 import java.util.Scanner;
@@ -32,6 +35,8 @@ public class ManagerMenu {
                 message = checkAddRestaurant();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.REMOVE_RESTAURANT)) != null)
                 message = checkRemoveRestaurant();
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.SHOW)) != null)
+                message = checkShow();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.LOGOUT)) != null) {
                 message = checkLogOut();
                 isRunning = false;
@@ -56,5 +61,14 @@ public class ManagerMenu {
     public static ManagerMenuMessages checkRemoveRestaurant() {
         String id = matcher.group("id");
         return ManagerMenuController.checkRemoveRestaurant(id);
+    }
+
+    public static ManagerMenuMessages checkShow() {
+        Manager manager = (Manager) Memory.getCurrentAccount();
+        if (manager.getResturants().size() == 0) return ManagerMenuMessages.NO_RESTAURANTS;
+        for (Resturant resturant : manager.getResturants()) {
+            System.out.printf("id: %s    name: %s\n", resturant.getId(), resturant.getName());
+        }
+        return null;
     }
 }
