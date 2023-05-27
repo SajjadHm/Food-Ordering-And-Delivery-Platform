@@ -12,6 +12,14 @@ public class Manager extends Account {
         resturants = new ArrayList<>();
     }
 
+    public Resturant getRestaurant(String name) {
+        if (resturants.size() == 0) return null;
+        for (Resturant resturant : resturants) {
+            if (name.equals(resturant.getName())) return resturant;
+        }
+        return null;
+    }
+
     public ArrayList<Resturant> getResturants() {
         return resturants;
     }

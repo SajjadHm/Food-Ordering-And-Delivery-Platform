@@ -4,8 +4,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public enum ManagerMenuCommands {
-    ADD_RESTAURANT("add\\s+(?<name>\\w+)\\s+(?<foodType>\\w+)\\s+(?<location>\\w+)"),
-    REMOVE_RESTAURANT("remove\\s+(?<id>\\w+)"),
+    ADD_RESTAURANT("add\\s+restaurant\\s+(?<name>\\w+)\\s+(?<location>\\w+)\\s+(?<foodType>[\\w\\s]+)"),
+    REMOVE_RESTAURANT("remove\\s+restaurant\\s+(?<id>\\w+)"),
     SELECT_RESTAURANT("select\\s+(?<id>\\w+)"),
     SHOW("show"),
     END("end"),

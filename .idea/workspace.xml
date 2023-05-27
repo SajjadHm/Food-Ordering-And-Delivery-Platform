@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #031 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum added in view.enums.managermenu.">
-      <change beforePath="$PROJECT_DIR$/view/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenu.java" afterDir="false" />
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #032 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum edited.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ManagerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ManagerMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/accounts/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/accounts/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/enums/ResturantFoodType.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/enums/ResturantFoodType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/resturant/Resturant.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/resturant/Resturant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuResults.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685169632862</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Commit #032 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum edited.">
+      <created>1685169996995</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1685169996995</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +225,7 @@
     <MESSAGE value="Commit #029 - Clearing Files&#10;&#10;&#10;- making ready for merge." />
     <MESSAGE value="Commit #030 - ManagerMenuCommands&#10;&#10;&#10;- ManagerMenuCommands enum added in view.enums.managermenu." />
     <MESSAGE value="Commit #031 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum added in view.enums.managermenu." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #031 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum added in view.enums.managermenu." />
+    <MESSAGE value="Commit #032 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum edited." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #032 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum edited." />
   </component>
 </project>

@@ -7,6 +7,7 @@ public enum ManagerMenuMessages {
     RESTAURANT_REMOVED("Restaurant removed successfully."),
     RESTAURANT_OPENED("Entering restaurant:"),
     NO_RESTAURANTS("There are no restaurants."),
+    INVALID_FOOD_TYPE("Invalid food type(s)."),
     INVALID_COMMAND("Invalid command!"),
     ;
 

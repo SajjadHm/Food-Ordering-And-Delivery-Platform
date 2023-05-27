@@ -3,8 +3,8 @@ package model.resturant;
 import model.enums.ResturantFoodType;
 
 public class Resturant {
-    private String name;
-    private ResturantFoodType foodType;
+    private String name, location;
+    private ResturantFoodType[] foodTypes;
 
     private final int id;
     private static int idCount;
@@ -13,10 +13,11 @@ public class Resturant {
         idCount = 1;
     }
 
-    Resturant(String name, ResturantFoodType foodType) {
+    public Resturant(String name, ResturantFoodType[] foodTypes, String location) {
         this.name = name;
-        this.foodType = foodType;
+        this.foodTypes = foodTypes.clone();
         this.id = idCount;
+        this.location = location;
         idCount++;
     }
 
@@ -28,13 +29,13 @@ public class Resturant {
         this.name = name;
     }
 
-    public ResturantFoodType getFoodType() {
-        return foodType;
+    public ResturantFoodType[] getFoodTypes() {
+        return foodTypes;
     }
 
-    public void setFoodType(ResturantFoodType foodType) {
+    public void setFoodTypes(ResturantFoodType[] foodTypes) {
         // TODO: empty foods menu
-        this.foodType = foodType;
+        this.foodTypes = foodTypes.clone();
     }
 
     public int getId() {
