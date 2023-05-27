@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #038 - show (debugged)&#10;&#10;&#10;- show command debugged. (id assignment to restaurants)">
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #039 - show (debugged)&#10;&#10;&#10;- show command debugged. (restaurants id assignment).">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/ManagerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ManagerMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/accounts/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/accounts/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/resturant/Resturant.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/resturant/Resturant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -225,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685179591479</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Commit #039 - show (debugged)&#10;&#10;&#10;- show command debugged. (restaurants id assignment).">
+      <created>1685184028978</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1685184028978</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +260,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commit #018 - Food&#10;&#10;&#10;- Food class added in model.resturant.&#10;- other classes edited." />
     <MESSAGE value="Commit #019 - Comment&#10;&#10;&#10;- Comment class added in model.social." />
     <MESSAGE value="Commit #020 - Rating&#10;&#10;&#10;- Rating class added in model.social." />
     <MESSAGE value="Commit #021 - Food&#10;&#10;&#10;- Food class edited." />
@@ -280,6 +284,7 @@
     <MESSAGE value="Commit #036 - show&#10;&#10;&#10;- show command implied." />
     <MESSAGE value="Commit #037 - show&#10;&#10;&#10;- show command implied." />
     <MESSAGE value="Commit #038 - show (debugged)&#10;&#10;&#10;- show command debugged. (id assignment to restaurants)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #038 - show (debugged)&#10;&#10;&#10;- show command debugged. (id assignment to restaurants)" />
+    <MESSAGE value="Commit #039 - show (debugged)&#10;&#10;&#10;- show command debugged. (restaurants id assignment)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #039 - show (debugged)&#10;&#10;&#10;- show command debugged. (restaurants id assignment)." />
   </component>
 </project>

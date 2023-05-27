@@ -52,6 +52,7 @@ public class ManagerMenuController {
 
     public static ManagerMenuMessages checkLogout() {
         Memory.setCurrentAccount(null);
+        Memory.setCurrentResturant(null);
         return ManagerMenuMessages.LOGGED_OUT;
     }
 
@@ -61,5 +62,17 @@ public class ManagerMenuController {
         if (resturant == null) return ManagerMenuMessages.RESTAURANT_NOT_FOUND;
         manager.getResturants().remove(resturant);
         return ManagerMenuMessages.RESTAURANT_REMOVED;
+    }
+
+    public static ManagerMenuMessages checkSelect(String id) {
+        Manager manager = (Manager) Memory.getCurrentAccount();
+        Resturant resturant = manager.getRestaurantById(id);
+        if (resturant == null) return ManagerMenuMessages.RESTAURANT_NOT_FOUND;
+        Memory.setCurrentResturant(resturant);
+        return ManagerMenuMessages.RESTAURANT_OPENED;
+    }
+
+    public static int getIdCount() {
+        return idCount;
     }
 }
