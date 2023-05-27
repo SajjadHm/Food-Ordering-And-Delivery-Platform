@@ -25,4 +25,12 @@ public class ManagerMenuController {
         Memory.setCurrentAccount(null);
         return ManagerMenuMessages.LOGGED_OUT;
     }
+
+    public static ManagerMenuMessages checkRemoveRestaurant(String id) {
+        Manager manager = (Manager) Memory.getCurrentAccount();
+        Resturant resturant = manager.getRestaurantById(id);
+        if (resturant == null) return ManagerMenuMessages.RESTAURANT_NOT_FOUND;
+        manager.getResturants().remove(resturant);
+        return ManagerMenuMessages.RESTAURANT_REMOVED;
+    }
 }

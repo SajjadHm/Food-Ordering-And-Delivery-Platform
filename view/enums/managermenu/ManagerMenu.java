@@ -30,6 +30,8 @@ public class ManagerMenu {
                 return ManagerMenuResults.END;
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.ADD_RESTAURANT)) != null)
                 message = checkAddRestaurant();
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.REMOVE_RESTAURANT)) != null)
+                message = checkRemoveRestaurant();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.LOGOUT)) != null) {
                 message = checkLogOut();
                 isRunning = false;
@@ -49,5 +51,10 @@ public class ManagerMenu {
 
     public static ManagerMenuMessages checkLogOut() {
         return ManagerMenuController.checkLogout();
+    }
+
+    public static ManagerMenuMessages checkRemoveRestaurant() {
+        String id = matcher.group("id");
+        return ManagerMenuController.checkRemoveRestaurant(id);
     }
 }

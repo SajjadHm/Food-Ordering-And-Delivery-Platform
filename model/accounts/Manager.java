@@ -20,6 +20,14 @@ public class Manager extends Account {
         return null;
     }
 
+    public Resturant getRestaurantById(String id) {
+        if (resturants.size() == 0) return null;
+        for (Resturant resturant : resturants) {
+            if (id.equals(resturant.getId())) return resturant;
+        }
+        return null;
+    }
+
     public ArrayList<Resturant> getResturants() {
         return resturants;
     }
