@@ -87,12 +87,3 @@ public class ManagerMenu {
         return ManagerMenuController.checkSelect(id);
     }
 }
-/*
-add admin parsa Pass1234!
-login admin parsa Pass1234!
-add restaurant oop sut Italian
-add restaurant lph usa Fried
-add restaurant sagPaz inja Persian
-show
-
- */
