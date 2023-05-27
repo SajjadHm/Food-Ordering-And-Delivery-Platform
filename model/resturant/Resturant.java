@@ -6,7 +6,7 @@ public class Resturant {
     private String name, location;
     private ResturantFoodType[] foodTypes;
 
-    private final int id;
+    private final String id;
     private static int idCount;
 
     static {
@@ -16,7 +16,7 @@ public class Resturant {
     public Resturant(String name, ResturantFoodType[] foodTypes, String location) {
         this.name = name;
         this.foodTypes = foodTypes.clone();
-        this.id = idCount;
+        this.id = String.valueOf(idCount);
         this.location = location;
         idCount++;
     }
@@ -38,7 +38,7 @@ public class Resturant {
         this.foodTypes = foodTypes.clone();
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
