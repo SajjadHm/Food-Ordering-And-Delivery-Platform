@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu.">
-      <change afterPath="$PROJECT_DIR$/controllers/ManagerMenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/UserMenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/ManagerMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/UserMenu.java" afterDir="false" />
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #029 - Clearing Files&#10;&#10;&#10;- making ready for merge.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuCommands.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +136,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684830857908</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Commit #028 - Menus&#10;&#10;&#10;- Menus added in packages.">
+      <created>1684831033450</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1684831033450</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Commit #029 - Clearing Files&#10;&#10;&#10;- making ready for merge.">
+      <created>1684831091337</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684831091337</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +193,8 @@
     <MESSAGE value="Commit #025 - UserMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.usermenu.&#10;- enums package structure edited." />
     <MESSAGE value="Commit #026 - UserMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.usermenu.&#10;- enums package structure edited." />
     <MESSAGE value="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu." />
+    <MESSAGE value="Commit #028 - Menus&#10;&#10;&#10;- Menus added in packages." />
+    <MESSAGE value="Commit #029 - Clearing Files&#10;&#10;&#10;- making ready for merge." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #029 - Clearing Files&#10;&#10;&#10;- making ready for merge." />
   </component>
 </project>
