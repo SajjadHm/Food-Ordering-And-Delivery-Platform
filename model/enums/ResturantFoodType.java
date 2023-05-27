@@ -1,10 +1,10 @@
 package model.enums;
 
 public enum ResturantFoodType {
-    PERSIAN("Persian Food"),
-    ITALIAN("Italian Food"),
-    FASTFOOD("Fast Food"),
-    FRIED("Fried Food"),
+    PERSIAN("Persian"),
+    ITALIAN("Italian"),
+    FASTFOOD("Fast"),
+    FRIED("Fried"),
     ;
 
     private String name;

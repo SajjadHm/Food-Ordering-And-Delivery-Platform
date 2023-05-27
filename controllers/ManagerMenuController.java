@@ -7,6 +7,7 @@ import model.enums.ResturantFoodType;
 import model.resturant.Resturant;
 import view.enums.managermenu.ManagerMenuCommands;
 import view.enums.managermenu.ManagerMenuMessages;
+import view.enums.managermenu.ManagerMenuResults;
 
 public class ManagerMenuController {
 
@@ -18,5 +19,10 @@ public class ManagerMenuController {
         resturant = new Resturant(name, foodTypes, location);
         manager.getResturants().add(resturant);
         return ManagerMenuMessages.RESTAURANT_ADDED;
+    }
+
+    public static ManagerMenuMessages checkLogout() {
+        Memory.setCurrentAccount(null);
+        return ManagerMenuMessages.LOGGED_OUT;
     }
 }

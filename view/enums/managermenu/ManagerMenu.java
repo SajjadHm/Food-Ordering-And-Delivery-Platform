@@ -2,6 +2,7 @@ package view.enums.managermenu;
 
 import controllers.ManagerMenuController;
 import model.enums.ResturantFoodType;
+import view.others.Colors;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -16,6 +17,10 @@ public class ManagerMenu {
         isRunning = false;
     }
 
+    public static void printer(ManagerMenuMessages message) {
+        if (message != null) System.out.println(message.getMessage() + Colors.RESET);
+    }
+
     public static ManagerMenuResults run(Scanner scanner) {
         isRunning = true;
         while (isRunning) {
@@ -23,8 +28,14 @@ public class ManagerMenu {
             input = scanner.nextLine().trim();
             if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.END)) != null)
                 return ManagerMenuResults.END;
-            if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.ADD_RESTAURANT)) != null)
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.ADD_RESTAURANT)) != null)
                 message = checkAddRestaurant();
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.LOGOUT)) != null) {
+                message = checkLogOut();
+                isRunning = false;
+            }
+
+            printer(message);
         }
         return null;
     }
@@ -34,5 +45,9 @@ public class ManagerMenu {
         ResturantFoodType[] foodType = ResturantFoodType.getType(matcher.group("foodType").split("\\s+"));
         String location = matcher.group("location");
         return ManagerMenuController.checkAddRestaurant(name, location, foodType);
+    }
+
+    public static ManagerMenuMessages checkLogOut() {
+        return ManagerMenuController.checkLogout();
     }
 }

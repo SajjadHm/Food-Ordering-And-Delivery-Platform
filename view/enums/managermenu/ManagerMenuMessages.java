@@ -9,6 +9,7 @@ public enum ManagerMenuMessages {
     NO_RESTAURANTS("There are no restaurants."),
     INVALID_FOOD_TYPE("Invalid food type(s)."),
     INVALID_COMMAND("Invalid command!"),
+    LOGGED_OUT("Manager logged out successfully.")
     ;
 
     private String message;
