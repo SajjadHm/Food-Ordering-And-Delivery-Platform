@@ -95,7 +95,7 @@ public class ManagerMenu {
 
     public static ManagerMenuMessages checkEditFoodType(Scanner scanner) {
         ResturantFoodType[] foodType = ResturantFoodType.getType(matcher.group("foodType").split("\\s+"));
-        ManagerMenuMessages message = ManagerMenuController.editFoodType(foodType);
+        ManagerMenuMessages message = ManagerMenuController.checkEditFoodType(foodType);
         printer(message);
         if (message != ManagerMenuMessages.OK) return null;
         String input;
