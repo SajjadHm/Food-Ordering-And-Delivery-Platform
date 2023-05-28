@@ -42,6 +42,8 @@ public class ManagerMenu {
                 message = checkShow();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.SELECT_RESTAURANT)) != null)
                 message = checkSelect();
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.EDIT_FOODTYPES)) != null)
+                message = checkEditFoodType(scanner);
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.LOGOUT)) != null) {
                 message = checkLogOut();
                 isRunning = false;
@@ -78,6 +80,10 @@ public class ManagerMenu {
         Arrays.sort(keys);
         for (String key : keys) {
             System.out.printf("id: %s    name: %s\n", resturants.get(key).getId(), resturants.get(key).getName());
+            System.out.println("foodtype(s):");
+            for (ResturantFoodType resturantFoodType : resturants.get(key).getFoodTypes()) {
+                System.out.println(resturantFoodType.getName());
+            }
         }
         return null;
     }
@@ -85,5 +91,22 @@ public class ManagerMenu {
     public static ManagerMenuMessages checkSelect() {
         String id = matcher.group("id");
         return ManagerMenuController.checkSelect(id);
+    }
+
+    public static ManagerMenuMessages checkEditFoodType(Scanner scanner) {
+        ResturantFoodType[] foodType = ResturantFoodType.getType(matcher.group("foodType").split("\\s+"));
+        ManagerMenuMessages message = ManagerMenuController.editFoodType(foodType);
+        printer(message);
+        if (message != ManagerMenuMessages.OK) return null;
+        String input;
+        while (true) {
+            input = scanner.nextLine().trim();
+            if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.JA)) != null)
+                return ManagerMenuController.editFoodType(foodType);
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.NEIN)) != null)
+                return ManagerMenuMessages.CANCELLED;
+            else
+                printer(ManagerMenuMessages.INVALID_COMMAND);
+        }
     }
 }
