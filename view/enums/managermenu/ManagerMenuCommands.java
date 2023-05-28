@@ -8,6 +8,9 @@ public enum ManagerMenuCommands {
     REMOVE_RESTAURANT("remove\\s+restaurant\\s+(?<id>\\w+)"),
     SELECT_RESTAURANT("select\\s+(?<id>\\w+)"),
     SHOW("show"),
+    EDIT_FOODTYPES("edit\\s+foodtype\\s+(?<foodType>[\\w\\s]+)"),
+    JA("(Y)|(y)|(Yes)"),
+    NEIN("(N)|(n)|(No)"),
     LOGOUT("logout"),
     END("end"),
     ;

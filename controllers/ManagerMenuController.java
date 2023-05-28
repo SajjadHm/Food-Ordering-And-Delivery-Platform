@@ -72,6 +72,20 @@ public class ManagerMenuController {
         return ManagerMenuMessages.RESTAURANT_OPENED;
     }
 
+    public static ManagerMenuMessages checkEditFoodType(ResturantFoodType[] resturantFoodTypes) {
+        Manager manager = (Manager) Memory.getCurrentAccount();
+        Resturant resturant = Memory.getCurrentResturant();
+        if (resturant == null) return ManagerMenuMessages.NO_RESTAURANTS;
+        if (resturantFoodTypes == null) return ManagerMenuMessages.INVALID_FOOD_TYPE;
+        return ManagerMenuMessages.OK;
+    }
+
+    public static ManagerMenuMessages editFoodType(ResturantFoodType[] resturantFoodTypes) {
+        Resturant resturant = Memory.getCurrentResturant();
+        resturant.setFoodTypes(resturantFoodTypes);
+        return ManagerMenuMessages.RESTAURANT_FOOD_TYPE_CHANGED;
+    }
+
     public static int getIdCount() {
         return idCount;
     }

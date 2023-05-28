@@ -9,7 +9,13 @@ public enum ManagerMenuMessages {
     NO_RESTAURANTS("There are no restaurants."),
     INVALID_FOOD_TYPE("Invalid food type(s)."),
     INVALID_COMMAND("Invalid command!"),
-    LOGGED_OUT("Manager logged out successfully.")
+    LOGGED_OUT("Manager logged out successfully."),
+    CANCELLED("Cancelled."),
+    NO_RESTAURANT_SELECTED("No restaurants are selected."),
+    FOOD_TYPE_EDITED("ّFood Type edited successfully."),
+    ARE_YOU_SURE("Are you sure you want to change your restaurant type? [Y:Yes / N:No]"),
+    OK(""),
+    RESTAURANT_FOOD_TYPE_CHANGED("Restaurant food type changed successfully."),
     ;
 
     private String message;
