@@ -12,9 +12,10 @@ public enum ManagerMenuMessages {
     LOGGED_OUT("Manager logged out successfully."),
     CANCELLED("Cancelled."),
     NO_RESTAURANT_SELECTED("No restaurants are selected."),
-    ARE_YOU_SURE("Are you sure you want to change your restaurant type? [Y:Yes / N:No]"),
+    ARE_YOU_SURE_FOODTYPE("Are you sure you want to change your restaurant type? [Y:Yes / N:No]"),
     OK(""),
     RESTAURANT_FOOD_TYPE_CHANGED("Restaurant food type changed successfully."),
+
     ;
 
     private String message;

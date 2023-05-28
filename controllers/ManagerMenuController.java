@@ -1,13 +1,10 @@
 package controllers;
 
 import model.Memory;
-import model.accounts.Account;
 import model.accounts.Manager;
 import model.enums.ResturantFoodType;
 import model.resturant.Resturant;
-import view.enums.managermenu.ManagerMenuCommands;
 import view.enums.managermenu.ManagerMenuMessages;
-import view.enums.managermenu.ManagerMenuResults;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
@@ -77,12 +74,13 @@ public class ManagerMenuController {
         Resturant resturant = Memory.getCurrentResturant();
         if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
         if (resturantFoodTypes == null) return ManagerMenuMessages.INVALID_FOOD_TYPE;
-        return ManagerMenuMessages.ARE_YOU_SURE;
+        return ManagerMenuMessages.ARE_YOU_SURE_FOODTYPE;
     }
 
     public static ManagerMenuMessages editFoodType(ResturantFoodType[] resturantFoodTypes) {
         Resturant resturant = Memory.getCurrentResturant();
         resturant.setFoodTypes(resturantFoodTypes);
+        // TODO: remove all menus.
         return ManagerMenuMessages.RESTAURANT_FOOD_TYPE_CHANGED;
     }
 
