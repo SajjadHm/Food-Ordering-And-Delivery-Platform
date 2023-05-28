@@ -7,7 +7,6 @@ import model.enums.ResturantFoodType;
 import model.resturant.Resturant;
 import view.others.Colors;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -38,7 +37,7 @@ public class ManagerMenu {
                 message = checkAddRestaurant();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.REMOVE_RESTAURANT)) != null)
                 message = checkRemoveRestaurant();
-            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.SHOW)) != null)
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.SHOW_RESTAURANTS)) != null)
                 message = checkShow();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.SELECT_RESTAURANT)) != null)
                 message = checkSelect();
