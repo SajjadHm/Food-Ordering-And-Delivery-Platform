@@ -12,7 +12,6 @@ public enum ManagerMenuMessages {
     LOGGED_OUT("Manager logged out successfully."),
     CANCELLED("Cancelled."),
     NO_RESTAURANT_SELECTED("No restaurants are selected."),
-    FOOD_TYPE_EDITED("ّFood Type edited successfully."),
     ARE_YOU_SURE("Are you sure you want to change your restaurant type? [Y:Yes / N:No]"),
     OK(""),
     RESTAURANT_FOOD_TYPE_CHANGED("Restaurant food type changed successfully."),

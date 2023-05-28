@@ -75,9 +75,9 @@ public class ManagerMenuController {
     public static ManagerMenuMessages checkEditFoodType(ResturantFoodType[] resturantFoodTypes) {
         Manager manager = (Manager) Memory.getCurrentAccount();
         Resturant resturant = Memory.getCurrentResturant();
-        if (resturant == null) return ManagerMenuMessages.NO_RESTAURANTS;
+        if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
         if (resturantFoodTypes == null) return ManagerMenuMessages.INVALID_FOOD_TYPE;
-        return ManagerMenuMessages.OK;
+        return ManagerMenuMessages.ARE_YOU_SURE;
     }
 
     public static ManagerMenuMessages editFoodType(ResturantFoodType[] resturantFoodTypes) {
