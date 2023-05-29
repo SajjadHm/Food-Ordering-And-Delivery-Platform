@@ -80,7 +80,7 @@ public class ManagerMenuController {
     public static ManagerMenuMessages editFoodType(ResturantFoodType[] resturantFoodTypes) {
         Resturant resturant = Memory.getCurrentResturant();
         resturant.setFoodTypes(resturantFoodTypes);
-        // TODO: remove all menus.
+        resturant.getMenu().removeAll(resturant.getMenu());
         return ManagerMenuMessages.RESTAURANT_FOOD_TYPE_CHANGED;
     }
 

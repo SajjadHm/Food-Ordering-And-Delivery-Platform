@@ -15,6 +15,7 @@ public enum ManagerMenuMessages {
     ARE_YOU_SURE_FOODTYPE("Are you sure you want to change your restaurant type? [Y:Yes / N:No]"),
     OK(""),
     RESTAURANT_FOOD_TYPE_CHANGED("Restaurant food type changed successfully."),
+    EMPTY_MENU("Menu is empty!"),
 
     ;
 

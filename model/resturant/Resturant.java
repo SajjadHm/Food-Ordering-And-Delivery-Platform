@@ -7,7 +7,7 @@ import model.enums.ResturantFoodType;
 public class Resturant {
     private String name, location;
     private ResturantFoodType[] foodTypes;
-
+    private final FoodMenu menu;
     private final String id;
 
     public Resturant(String name, ResturantFoodType[] foodTypes, String location, String id) {
@@ -15,6 +15,7 @@ public class Resturant {
         this.foodTypes = foodTypes.clone();
         this.id = id;
         this.location = location;
+        this.menu = new FoodMenu(name, id);
     }
 
     public String getName() {
@@ -38,4 +39,15 @@ public class Resturant {
         return id;
     }
 
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public FoodMenu getMenu() {
+        return menu;
+    }
 }

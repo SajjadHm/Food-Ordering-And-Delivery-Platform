@@ -1,7 +1,6 @@
 package view;
 
 import view.enums.loginmenu.LoginMenuResults;
-import view.enums.managermenu.ManagerMenu;
 import view.enums.managermenu.ManagerMenuResults;
 
 import java.util.Scanner;

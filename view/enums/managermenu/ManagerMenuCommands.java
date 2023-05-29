@@ -12,7 +12,6 @@ public enum ManagerMenuCommands {
     JA("(Y)|(y)|(Yes)"),
     NEIN("(N)|(n)|(No)"),
     LOGOUT("logout"),
-    SHOW_MENU("show\\s+menu"),
     CLEAR_MENU("clear\\s+menu"),
     SELECT_MENU("select\\s+menu"),
     END("end"),

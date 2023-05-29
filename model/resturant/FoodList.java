@@ -2,23 +2,14 @@ package model.resturant;
 
 import java.util.ArrayList;
 
-public class FoodList {
-    private final ArrayList<Food> foods;
+public class FoodList extends ArrayList<Food> {
     private String name;
     private final String id;
 
 
-    {
-        foods = new ArrayList<>();
-    }
-
     FoodList(String name, String id) {
         this.name = name;
         this.id = id;
-    }
-
-    public ArrayList<Food> getFoods() {
-        return foods;
     }
 
     public String getName() {

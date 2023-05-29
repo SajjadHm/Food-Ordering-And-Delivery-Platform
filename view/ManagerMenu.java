@@ -1,10 +1,15 @@
-package view.enums.managermenu;
+package view;
 
 import controllers.ManagerMenuController;
 import model.Memory;
 import model.accounts.Manager;
 import model.enums.ResturantFoodType;
+import model.resturant.Food;
+import model.resturant.FoodMenu;
 import model.resturant.Resturant;
+import view.enums.managermenu.ManagerMenuCommands;
+import view.enums.managermenu.ManagerMenuMessages;
+import view.enums.managermenu.ManagerMenuResults;
 import view.others.Colors;
 
 import java.util.Arrays;
@@ -43,6 +48,8 @@ public class ManagerMenu {
                 message = checkSelect();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.EDIT_FOODTYPES)) != null)
                 message = checkEditFoodType(scanner);
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.SELECT_MENU)) != null)
+                message = checkSelectMenu();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.LOGOUT)) != null) {
                 message = checkLogOut();
                 isRunning = false;
@@ -107,5 +114,16 @@ public class ManagerMenu {
             else
                 printer(ManagerMenuMessages.INVALID_COMMAND);
         }
+    }
+
+    public static ManagerMenuMessages checkSelectMenu() {
+        Resturant resturant = Memory.getCurrentResturant();
+        if (resturant == null) return ManagerMenuMessages.INVALID_COMMAND;
+        FoodMenu menu = resturant.getMenu();
+        if (menu.size() == 0) return ManagerMenuMessages.EMPTY_MENU;
+        for (Food food : menu) {
+            System.out.printf("%s. %s  %d$", food.getId(), food.getName(), food.getPrice());
+        }
+        return null;
     }
 }
