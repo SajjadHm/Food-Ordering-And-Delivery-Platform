@@ -11,6 +11,7 @@ import view.enums.managermenu.ManagerMenuMessages;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.PublicKey;
 
 public class ManagerMenuController {
     private static int idCount;
@@ -89,9 +90,21 @@ public class ManagerMenuController {
         Resturant resturant = Memory.getCurrentResturant();
         if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
         FoodMenu menu = resturant.getMenu();
+        Food food = menu.getByName(name);
+        if (food != null) return ManagerMenuMessages.FOOD_EXISTS;
         menu.addFood(name, price);
         return ManagerMenuMessages.FOOD_ADDED;
 
+    }
+
+    public static ManagerMenuMessages checkRemoveFood(String id) {
+        Resturant resturant = Memory.getCurrentResturant();
+        if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
+        FoodMenu menu = resturant.getMenu();
+        Food food = menu.get(id);
+        if (food == null) return ManagerMenuMessages.FOOD_NOT_FOUND;
+        menu.remove(food);
+        return ManagerMenuMessages.FOOD_REMOVED;
     }
 
     public static int getIdCount() {

@@ -52,6 +52,9 @@ public class ManagerMenu {
                 message = checkEditFoodType(scanner);
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.ADD_FOOD)) != null)
                 message = checkAddFood();
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.DELETE_FOOD)) != null) {
+                message = checkRemoveFood();
+            }
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.LOGOUT)) != null) {
                 message = checkLogOut();
                 isRunning = false;
@@ -132,5 +135,10 @@ public class ManagerMenu {
         String name = matcher.group("foodName");
         int price = Integer.parseInt(matcher.group("price"));
         return ManagerMenuController.checkAddFood(name, price);
+    }
+
+    public static ManagerMenuMessages checkRemoveFood() {
+        String id = matcher.group("foodID");
+        return ManagerMenuController.checkRemoveFood(id);
     }
 }

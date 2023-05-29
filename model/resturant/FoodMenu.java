@@ -14,6 +14,14 @@ public class FoodMenu extends FoodList {
         return null;
     }
 
+    public Food getByName(String name) {
+        if (size() == 0) return null;
+        for (Food food : this) {
+            if (food.getName().equals(name)) return food;
+        }
+        return null;
+    }
+
     public void addFood(String name, int price) {
         addFood(name, price, 0);
     }
