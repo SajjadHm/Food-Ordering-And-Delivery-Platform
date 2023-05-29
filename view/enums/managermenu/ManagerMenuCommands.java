@@ -14,6 +14,14 @@ public enum ManagerMenuCommands {
     LOGOUT("logout"),
     CLEAR_MENU("clear\\s+menu"),
     SELECT_MENU("select\\s+menu"),
+    ADD_FOOD("add\\s+food\\s+(?<foodName>[\\w\\s]+)\\s+(?<price>\\d+)"),
+    EDIT_FOOD("edit\\s+food\\s+(?<foodID>\\w+)\\s+(?<field>\\w+)\\s+(?<newFieldValue>\\w+)"),
+    DELETE_FOOD("delete\\s+food\\s+(?<foodID>\\w+)"),
+    DEACTIVE_FOOD("deactive\\s+food\\s+(?<foodID>\\w+)"),
+    ACTIVE_FOOD("active\\s+food\\s+(?<foodID>\\w+)"),
+    DISCOUNT_FOOD("discount\\s+food\\s+(?<foodID>\\w+)\\s+(?<percent>\\w+)\\s+(?<timestamp>\\w+)"),
+    SELECT_FOOD("select\\s+food\\s+(?<foodID>\\w+)"),
+    DISPLAY_RATINGS("display\\s+ratings"),
     END("end"),
     ;
 

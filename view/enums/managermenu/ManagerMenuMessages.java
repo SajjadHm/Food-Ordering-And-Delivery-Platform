@@ -16,6 +16,7 @@ public enum ManagerMenuMessages {
     OK(""),
     RESTAURANT_FOOD_TYPE_CHANGED("Restaurant food type changed successfully."),
     EMPTY_MENU("Menu is empty!"),
+    FOOD_ADDED("Food added to menu successfully.")
 
     ;
 

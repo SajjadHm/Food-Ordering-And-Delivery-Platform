@@ -44,17 +44,18 @@ public class ManagerMenu {
                 message = checkRemoveRestaurant();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.SHOW_RESTAURANTS)) != null)
                 message = checkShow();
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.SELECT_MENU)) != null)
+                message = checkSelectMenu();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.SELECT_RESTAURANT)) != null)
                 message = checkSelect();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.EDIT_FOODTYPES)) != null)
                 message = checkEditFoodType(scanner);
-            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.SELECT_MENU)) != null)
-                message = checkSelectMenu();
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.ADD_FOOD)) != null)
+                message = checkAddFood();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.LOGOUT)) != null) {
                 message = checkLogOut();
                 isRunning = false;
             }
-
             printer(message);
         }
         return null;
@@ -122,8 +123,14 @@ public class ManagerMenu {
         FoodMenu menu = resturant.getMenu();
         if (menu.size() == 0) return ManagerMenuMessages.EMPTY_MENU;
         for (Food food : menu) {
-            System.out.printf("%s. %s  %d$", food.getId(), food.getName(), food.getPrice());
+            System.out.printf("%s. %s  %d$\n", food.getId(), food.getName(), food.getPrice());
         }
         return null;
+    }
+
+    public static ManagerMenuMessages checkAddFood() {
+        String name = matcher.group("foodName");
+        int price = Integer.parseInt(matcher.group("price"));
+        return ManagerMenuController.checkAddFood(name, price);
     }
 }

@@ -3,6 +3,8 @@ package controllers;
 import model.Memory;
 import model.accounts.Manager;
 import model.enums.ResturantFoodType;
+import model.resturant.Food;
+import model.resturant.FoodMenu;
 import model.resturant.Resturant;
 import view.enums.managermenu.ManagerMenuMessages;
 
@@ -17,7 +19,7 @@ public class ManagerMenuController {
         idCount = 0;
     }
 
-    private static String getID(String seed) {
+    private static String getID(String seed, int start, int end) {
         MessageDigest md = null;
         try {
             md = MessageDigest.getInstance("SHA-1");
@@ -27,11 +29,10 @@ public class ManagerMenuController {
             while (hashText.length() < 8) {
                 hashText = "0" + hashText;
             }
-            return hashText.substring(0, 8);
+            return hashText.substring(start, end);
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         }
-
     }
 
 
@@ -40,8 +41,8 @@ public class ManagerMenuController {
         Resturant resturant = manager.getRestaurant(name);
         if (resturant != null) return ManagerMenuMessages.RESTAURANT_EXISTS;
         if (foodTypes == null) return ManagerMenuMessages.INVALID_FOOD_TYPE;
-        while (manager.getRestaurantById(getID(String.valueOf(idCount))) != null) idCount++;
-        resturant = new Resturant(name, foodTypes, location, getID(String.valueOf(idCount)));
+        while (manager.getRestaurantById(getID(String.valueOf(idCount), 0, 8)) != null) idCount++;
+        resturant = new Resturant(name, foodTypes, location, getID(String.valueOf(idCount), 0, 8));
         manager.getResturants().put(resturant.getId(), resturant);
         idCount++;
         return ManagerMenuMessages.RESTAURANT_ADDED;
@@ -82,6 +83,15 @@ public class ManagerMenuController {
         resturant.setFoodTypes(resturantFoodTypes);
         resturant.getMenu().removeAll(resturant.getMenu());
         return ManagerMenuMessages.RESTAURANT_FOOD_TYPE_CHANGED;
+    }
+
+    public static ManagerMenuMessages checkAddFood(String name, int price) {
+        Resturant resturant = Memory.getCurrentResturant();
+        if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
+        FoodMenu menu = resturant.getMenu();
+        menu.addFood(name, price);
+        return ManagerMenuMessages.FOOD_ADDED;
+
     }
 
     public static int getIdCount() {

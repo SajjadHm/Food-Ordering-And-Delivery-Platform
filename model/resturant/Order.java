@@ -12,10 +12,10 @@ public class Order extends FoodList {
     }
 
     public int getTotalPrice() {
-        if (this.getFoods().size() == 0) return 0;
+        if (size() == 0) return 0;
 
         int totalPrice = 0;
-        for (Food food : this.getFoods()) {
+        for (Food food : this) {
             totalPrice += food.getPrice();
         }
         return totalPrice;
