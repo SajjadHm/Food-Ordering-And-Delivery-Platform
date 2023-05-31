@@ -6,6 +6,10 @@ public class FoodMenu extends FoodList {
         super(name, id);
     }
 
+    public FoodMenu() {
+        this("", "");
+    }
+
     public Food get(String foodID) {
         if (size() == 0) return null;
         for (Food food : this) {

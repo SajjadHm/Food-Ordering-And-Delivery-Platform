@@ -50,4 +50,12 @@ public class Resturant {
     public FoodMenu getMenu() {
         return menu;
     }
+
+    public FoodMenu getListedMenu() {
+        FoodMenu listedMenu = new FoodMenu();
+        for (Food food : menu) {
+            if (!food.isUnlisted()) listedMenu.add(food);
+        }
+        return listedMenu;
+    }
 }

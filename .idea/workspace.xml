@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #045 - add food&#10;&#10;&#10;- add food command implied.">
-      <change beforePath="$PROJECT_DIR$/controllers/ManagerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ManagerMenuController.java" afterDir="false" />
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #046 - remove food&#10;&#10;&#10;- remove food command implied.">
       <change beforePath="$PROJECT_DIR$/model/resturant/FoodMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/resturant/FoodMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/ManagerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/resturant/Resturant.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/resturant/Resturant.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +50,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Food-Ordering-And-Delivery-Platform" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -280,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685362438107</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Commit #046 - remove food&#10;&#10;&#10;- remove food command implied.">
+      <created>1685367222408</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1685367222408</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +314,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commit #025 - User&#10;&#10;&#10;- fixing User constructor." />
     <MESSAGE value="Commit #025 - UserMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.usermenu.&#10;- enums package structure edited." />
     <MESSAGE value="Commit #026 - UserMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.usermenu.&#10;- enums package structure edited." />
     <MESSAGE value="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu." />
@@ -335,6 +338,7 @@
     <MESSAGE value="Commit #043 - menu commands&#10;&#10;&#10;- menu commands added in enums.loginmenu.ManagerMenuCommands." />
     <MESSAGE value="Commit #044 - select menu&#10;&#10;&#10;- select menu command implied." />
     <MESSAGE value="Commit #045 - add food&#10;&#10;&#10;- add food command implied." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #045 - add food&#10;&#10;&#10;- add food command implied." />
+    <MESSAGE value="Commit #046 - remove food&#10;&#10;&#10;- remove food command implied." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #046 - remove food&#10;&#10;&#10;- remove food command implied." />
   </component>
 </project>
