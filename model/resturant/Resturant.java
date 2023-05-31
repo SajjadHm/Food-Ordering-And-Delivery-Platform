@@ -52,6 +52,7 @@ public class Resturant {
     }
 
     public FoodMenu getListedMenu() {
+        if (menu.size() == 0) return null;
         FoodMenu listedMenu = new FoodMenu();
         for (Food food : menu) {
             if (!food.isUnlisted()) listedMenu.add(food);
