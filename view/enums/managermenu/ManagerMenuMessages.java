@@ -18,9 +18,11 @@ public enum ManagerMenuMessages {
     EMPTY_MENU("Menu is empty!"),
     FOOD_ADDED("Food added to menu successfully."),
     FOOD_EXISTS("Food with this name already exists."),
-    FOOD_NOT_FOUND("Food with this name doesn't exist."),
+    FOOD_NOT_FOUND("Food with this name/id doesn't exist."),
     FOOD_REMOVED("Food removed from menu successfully."),
-
+    ACTIVE_ORDER("You can't deactivate this food. There's an order ongoing."),
+    FOOD_DEACTIVATED("Food deactivated."),
+    FOOD_ACTIVATED("Food activated."),
     ;
 
     private String message;

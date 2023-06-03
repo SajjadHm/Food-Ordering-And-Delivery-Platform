@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #046 - remove food&#10;&#10;&#10;- remove food command implied.">
-      <change beforePath="$PROJECT_DIR$/model/resturant/FoodMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/resturant/FoodMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/resturant/Resturant.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/resturant/Resturant.java" afterDir="false" />
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #047 - listed menu&#10;&#10;&#10;- getListedMenu method implied for user use.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ManagerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ManagerMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/ManagerMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuMessages.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +28,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../Program Files/Java/lib/src.zip!/java.base/java/util/ArrayList.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -40,7 +45,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Uni-01-02(2)/OOP/project/Phase1/ProjectPhase1",
+    "extract.method.default.visibility": "private",
+    "last_opened_file_path": "D:/OOP/Food-Ordering-And-Delivery-Platform",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -52,6 +59,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Food-Ordering-And-Delivery-Platform" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -60,12 +68,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b75a9c95-8e39-4c3c-b415-e2b0510b6c74" name="Changes" comment="" />
+      <changelist id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #047 - listed menu&#10;&#10;&#10;- getListedMenu method implied for user use." />
       <created>1684828309295</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684828309295</updated>
       <workItem from="1684828311195" duration="102000" />
+      <workItem from="1685804288125" duration="1669000" />
     </task>
     <task id="LOCAL-00001" summary="Commit #017 - Merging?">
       <created>1684826613596</created>
@@ -284,7 +293,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685367222408</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Commit #047 - listed menu&#10;&#10;&#10;- getListedMenu method implied for user use.">
+      <created>1685530493114</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1685530493114</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Commit #047 - listed menu&#10;&#10;&#10;- getListedMenu method implied for user use.">
+      <created>1685530670855</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1685530670855</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +337,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commit #025 - UserMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.usermenu.&#10;- enums package structure edited." />
     <MESSAGE value="Commit #026 - UserMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.usermenu.&#10;- enums package structure edited." />
     <MESSAGE value="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu." />
     <MESSAGE value="Commit #028 - Menus&#10;&#10;&#10;- Menus added in packages." />
@@ -339,6 +361,11 @@
     <MESSAGE value="Commit #044 - select menu&#10;&#10;&#10;- select menu command implied." />
     <MESSAGE value="Commit #045 - add food&#10;&#10;&#10;- add food command implied." />
     <MESSAGE value="Commit #046 - remove food&#10;&#10;&#10;- remove food command implied." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #046 - remove food&#10;&#10;&#10;- remove food command implied." />
+    <MESSAGE value="Commit #047 - listed menu&#10;&#10;&#10;- getListedMenu method implied for user use." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #047 - listed menu&#10;&#10;&#10;- getListedMenu method implied for user use." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -52,9 +52,12 @@ public class ManagerMenu {
                 message = checkEditFoodType(scanner);
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.ADD_FOOD)) != null)
                 message = checkAddFood();
-            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.DELETE_FOOD)) != null) {
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.DELETE_FOOD)) != null)
                 message = checkRemoveFood();
-            }
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.DEACTIVE_FOOD)) != null)
+                message = checkDeactiveFood();
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.ACTIVE_FOOD)) != null)
+                message = checkActiveFood();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.LOGOUT)) != null) {
                 message = checkLogOut();
                 isRunning = false;
@@ -126,7 +129,7 @@ public class ManagerMenu {
         FoodMenu menu = resturant.getMenu();
         if (menu.size() == 0) return ManagerMenuMessages.EMPTY_MENU;
         for (Food food : menu) {
-            System.out.printf("%s. %s  %d$\n", food.getId(), food.getName(), food.getPrice());
+            System.out.printf("%s. %s  %d$    isUnlisted: %b\n", food.getId(), food.getName(), food.getPrice(), food.isUnlisted());
         }
         return null;
     }
@@ -140,5 +143,15 @@ public class ManagerMenu {
     public static ManagerMenuMessages checkRemoveFood() {
         String id = matcher.group("foodID");
         return ManagerMenuController.checkRemoveFood(id);
+    }
+
+    public static ManagerMenuMessages checkDeactiveFood() {
+        String foodID = matcher.group("foodID");
+        return ManagerMenuController.checkDeactiveFood(foodID);
+    }
+
+    public static ManagerMenuMessages checkActiveFood() {
+        String foodID = matcher.group("foodID");
+        return ManagerMenuController.checkActiveFood(foodID);
     }
 }

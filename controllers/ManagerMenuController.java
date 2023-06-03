@@ -101,6 +101,7 @@ public class ManagerMenuController {
         Resturant resturant = Memory.getCurrentResturant();
         if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
         FoodMenu menu = resturant.getMenu();
+        if (menu.size() == 0) return ManagerMenuMessages.EMPTY_MENU;
         Food food = menu.get(id);
         if (food == null) return ManagerMenuMessages.FOOD_NOT_FOUND;
         menu.remove(food);
@@ -109,5 +110,26 @@ public class ManagerMenuController {
 
     public static int getIdCount() {
         return idCount;
+    }
+
+    public static ManagerMenuMessages checkDeactiveFood(String foodID) {
+        // TODO: handle orders
+        Resturant resturant = Memory.getCurrentResturant();
+        if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
+        if (resturant.getMenu().size() == 0) return ManagerMenuMessages.EMPTY_MENU;
+        Food food = resturant.getMenu().get(foodID);
+        if (food == null) return ManagerMenuMessages.FOOD_NOT_FOUND;
+        food.setUnlisted(true);
+        return ManagerMenuMessages.FOOD_DEACTIVATED;
+    }
+
+    public static ManagerMenuMessages checkActiveFood(String foodID) {
+        Resturant resturant = Memory.getCurrentResturant();
+        if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
+        if (resturant.getMenu().size() == 0) return ManagerMenuMessages.EMPTY_MENU;
+        Food food = resturant.getMenu().get(foodID);
+        if (food == null) return ManagerMenuMessages.FOOD_NOT_FOUND;
+        food.setUnlisted(false);
+        return ManagerMenuMessages.FOOD_DEACTIVATED;
     }
 }
