@@ -3,16 +3,18 @@ package model.resturant;
 import model.Memory;
 import model.enums.ResturantFoodType;
 
+import java.util.ArrayList;
+
 
 public class Resturant {
     private String name, location;
-    private ResturantFoodType[] foodTypes;
+    private ArrayList<ResturantFoodType> foodTypes;
     private final FoodMenu menu;
     private final String id;
 
-    public Resturant(String name, ResturantFoodType[] foodTypes, String location, String id) {
+    public Resturant(String name, ArrayList<ResturantFoodType> foodTypes, String location, String id) {
         this.name = name;
-        this.foodTypes = foodTypes.clone();
+        this.foodTypes = (ArrayList<ResturantFoodType>) foodTypes.clone();
         this.id = id;
         this.location = location;
         this.menu = new FoodMenu(name, id);
@@ -26,13 +28,13 @@ public class Resturant {
         this.name = name;
     }
 
-    public ResturantFoodType[] getFoodTypes() {
+    public ArrayList<ResturantFoodType> getFoodTypes() {
         return foodTypes;
     }
 
-    public void setFoodTypes(ResturantFoodType[] foodTypes) {
+    public void setFoodTypes(ArrayList<ResturantFoodType> foodTypes) {
         // TODO: empty foods menu
-        this.foodTypes = foodTypes.clone();
+        this.foodTypes = (ArrayList<ResturantFoodType>) foodTypes.clone();
     }
 
     public String getId() {

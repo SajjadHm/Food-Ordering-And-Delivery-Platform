@@ -87,7 +87,7 @@ public class ManagerMenu {
         Manager manager = (Manager) Memory.getCurrentAccount();
         if (manager.getResturants().size() == 0) return ManagerMenuMessages.NO_RESTAURANTS;
         System.out.println("Number of restaurants: " + manager.getResturants().size());
-        if (Memory.getCurrentResturant() != null) System.out.println("Current Restaurant == " + Memory.getCurrentResturant().getId());
+        if (manager.getCurrentRestaurant() != null) System.out.println("Current Restaurant == " + manager.getCurrentRestaurant().getId());
         HashMap<String, Resturant> resturants = manager.getResturants();
         String[] keys = resturants.keySet().toArray(new String[0]);
         Arrays.sort(keys);
@@ -124,7 +124,7 @@ public class ManagerMenu {
     }
 
     public static ManagerMenuMessages checkSelectMenu() {
-        Resturant resturant = Memory.getCurrentResturant();
+        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
         if (resturant == null) return ManagerMenuMessages.INVALID_COMMAND;
         FoodMenu menu = resturant.getMenu();
         if (menu.size() == 0) return ManagerMenuMessages.EMPTY_MENU;

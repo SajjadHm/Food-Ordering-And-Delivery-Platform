@@ -12,6 +12,8 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.PublicKey;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ManagerMenuController {
     private static int idCount;
@@ -37,7 +39,8 @@ public class ManagerMenuController {
     }
 
 
-    public static ManagerMenuMessages checkAddRestaurant(String name, String location, ResturantFoodType[] foodTypes) {
+    public static ManagerMenuMessages checkAddRestaurant(String name, String location, ResturantFoodType[] foodTypesArr) {
+        ArrayList<ResturantFoodType> foodTypes = new ArrayList<>(List.of(foodTypesArr));
         Manager manager = (Manager) Memory.getCurrentAccount();
         Resturant resturant = manager.getRestaurant(name);
         if (resturant != null) return ManagerMenuMessages.RESTAURANT_EXISTS;
@@ -51,7 +54,6 @@ public class ManagerMenuController {
 
     public static ManagerMenuMessages checkLogout() {
         Memory.setCurrentAccount(null);
-        Memory.setCurrentResturant(null);
         return ManagerMenuMessages.LOGGED_OUT;
     }
 
@@ -67,27 +69,29 @@ public class ManagerMenuController {
         Manager manager = (Manager) Memory.getCurrentAccount();
         Resturant resturant = manager.getRestaurantById(id);
         if (resturant == null) return ManagerMenuMessages.RESTAURANT_NOT_FOUND;
-        Memory.setCurrentResturant(resturant);
+        manager.setCurrentRestaurant(resturant);
         return ManagerMenuMessages.RESTAURANT_OPENED;
     }
 
     public static ManagerMenuMessages checkEditFoodType(ResturantFoodType[] resturantFoodTypes) {
         Manager manager = (Manager) Memory.getCurrentAccount();
-        Resturant resturant = Memory.getCurrentResturant();
+        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
         if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
         if (resturantFoodTypes == null) return ManagerMenuMessages.INVALID_FOOD_TYPE;
         return ManagerMenuMessages.ARE_YOU_SURE_FOODTYPE;
     }
 
-    public static ManagerMenuMessages editFoodType(ResturantFoodType[] resturantFoodTypes) {
-        Resturant resturant = Memory.getCurrentResturant();
+    public static ManagerMenuMessages editFoodType(ResturantFoodType[] resturantFoodTypesArr) {
+        ArrayList<ResturantFoodType> resturantFoodTypes = new ArrayList<>(List.of(resturantFoodTypesArr));
+        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
         resturant.setFoodTypes(resturantFoodTypes);
         resturant.getMenu().removeAll(resturant.getMenu());
         return ManagerMenuMessages.RESTAURANT_FOOD_TYPE_CHANGED;
     }
 
     public static ManagerMenuMessages checkAddFood(String name, int price) {
-        Resturant resturant = Memory.getCurrentResturant();
+        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
         if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
         FoodMenu menu = resturant.getMenu();
         Food food = menu.getByName(name);
@@ -98,7 +102,7 @@ public class ManagerMenuController {
     }
 
     public static ManagerMenuMessages checkRemoveFood(String id) {
-        Resturant resturant = Memory.getCurrentResturant();
+        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
         if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
         FoodMenu menu = resturant.getMenu();
         if (menu.size() == 0) return ManagerMenuMessages.EMPTY_MENU;
@@ -114,7 +118,7 @@ public class ManagerMenuController {
 
     public static ManagerMenuMessages checkDeactiveFood(String foodID) {
         // TODO: handle orders
-        Resturant resturant = Memory.getCurrentResturant();
+        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
         if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
         if (resturant.getMenu().size() == 0) return ManagerMenuMessages.EMPTY_MENU;
         Food food = resturant.getMenu().get(foodID);
@@ -124,7 +128,7 @@ public class ManagerMenuController {
     }
 
     public static ManagerMenuMessages checkActiveFood(String foodID) {
-        Resturant resturant = Memory.getCurrentResturant();
+        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
         if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
         if (resturant.getMenu().size() == 0) return ManagerMenuMessages.EMPTY_MENU;
         Food food = resturant.getMenu().get(foodID);

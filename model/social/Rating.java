@@ -9,6 +9,11 @@ public class Rating {
         this.rating = 0;
     }
 
+    public Rating(double rating, int count) {
+        this.rating = rating;
+        this.count = count;
+    }
+
     public void addRating(int rate) {
         rating = ((rating * count) + rate) / (count + 1);
         count++;
@@ -26,5 +31,9 @@ public class Rating {
 
     public double getRating() {
         return rating;
+    }
+
+    public int getCount() {
+        return count;
     }
 }

@@ -9,10 +9,12 @@ import java.util.HashSet;
 
 public class Manager extends Account {
     private final HashMap<String, Resturant> resturants;
+    private Resturant currentRestaurant;
 
     public Manager(String userName, String passWord, String firstName, String lastName) {
         super(userName, passWord, firstName, lastName);
         resturants = new HashMap<>();
+        currentRestaurant = null;
     }
 
     public Resturant getRestaurant(String name) {
@@ -29,5 +31,13 @@ public class Manager extends Account {
 
     public HashMap<String, Resturant> getResturants() {
         return resturants;
+    }
+
+    public Resturant getCurrentRestaurant() {
+        return currentRestaurant;
+    }
+
+    public void setCurrentRestaurant(Resturant currentRestaurant) {
+        this.currentRestaurant = currentRestaurant;
     }
 }

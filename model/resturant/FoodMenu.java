@@ -40,4 +40,8 @@ public class FoodMenu extends FoodList {
         Food food = new Food(newID, name, price, discountPercent);
         add(food);
     }
+
+    public static int getFoodIdCount() {
+        return foodIdCount;
+    }
 }
