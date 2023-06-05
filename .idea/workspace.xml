@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit # 02-test commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit # 03-User functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/LoginMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/LoginMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/accounts/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/accounts/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/accounts/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/accounts/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/LoginMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/UserMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UsenMenuCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuResults.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuCommands.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +82,7 @@
       <workItem from="1684946906465" duration="6944000" />
       <workItem from="1685013265735" duration="31000" />
       <workItem from="1685821394574" duration="2833000" />
-      <workItem from="1685955474866" duration="5114000" />
+      <workItem from="1685955474866" duration="6643000" />
     </task>
     <task id="LOCAL-00001" summary="Commit #017 - Merging?">
       <created>1684826613596</created>
@@ -184,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684952318395</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Commit # 03-User functions">
+      <created>1685962428896</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685962428896</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +242,7 @@
     <MESSAGE value="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu." />
     <MESSAGE value="Commit #01-test commit" />
     <MESSAGE value="Commit # 02-test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit # 02-test commit" />
+    <MESSAGE value="Commit # 03-User functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit # 03-User functions" />
   </component>
 </project>

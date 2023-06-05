@@ -77,15 +77,15 @@ public class User extends Account
     {
 
     }
-    public void displayRating()
+    public void displayRating(FoodList food)
     {
 
     }
-    public void submitRating()
+    public void submitRating(FoodList food)
     {
 
     }
-    public void editRating()
+    public void editRating(FoodList food)
     {
 
     }
