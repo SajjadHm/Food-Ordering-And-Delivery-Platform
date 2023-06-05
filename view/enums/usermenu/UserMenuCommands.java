@@ -34,7 +34,7 @@ public enum UserMenuCommands
 
 
 
-    String regex;
+    final String regex;
 
     UserMenuCommands(String regex) {
         this.regex = regex;
