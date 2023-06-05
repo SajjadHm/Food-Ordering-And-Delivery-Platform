@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit # 03-User functions">
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit # 04-User CommandsBody">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/accounts/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/accounts/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuCommands.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +81,7 @@
       <workItem from="1684946906465" duration="6944000" />
       <workItem from="1685013265735" duration="31000" />
       <workItem from="1685821394574" duration="2833000" />
-      <workItem from="1685955474866" duration="6643000" />
+      <workItem from="1685955474866" duration="8563000" />
     </task>
     <task id="LOCAL-00001" summary="Commit #017 - Merging?">
       <created>1684826613596</created>
@@ -182,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685962428896</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Commit # 04-User CommandsBody">
+      <created>1685964108969</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685964108969</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +249,7 @@
     <MESSAGE value="Commit #01-test commit" />
     <MESSAGE value="Commit # 02-test commit" />
     <MESSAGE value="Commit # 03-User functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit # 03-User functions" />
+    <MESSAGE value="Commit # 04-User CommandsBody" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit # 04-User CommandsBody" />
   </component>
 </project>
