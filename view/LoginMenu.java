@@ -13,15 +13,19 @@ public class LoginMenu {
     private static boolean isRunning;
     private static Matcher matcher;
 
-    public static void printer(LoginMenuMessages message) {
-        if (message != null) System.out.println(message.getMessage() + Colors.RESET);
+    public static void printer(LoginMenuMessages message)
+    {
+        if (message != null)
+            System.out.println(message.getMessage() + Colors.RESET);
     }
 
-    public static LoginMenuResults run(Scanner scanner) {
+    public static LoginMenuResults run(Scanner scanner)
+    {
         isRunning = true;
         String input;
         LoginMenuMessages messages;
-        while (isRunning) {
+        while (isRunning)
+        {
             messages = LoginMenuMessages.INVALID_COMMAND;
             input = scanner.nextLine().trim();
             if ((matcher = LoginMenuCommands.getMatcher(input, LoginMenuCommands.END)) != null)
@@ -47,25 +51,29 @@ public class LoginMenu {
         return null;
     }
 
-    public static LoginMenuMessages checkAddAdmin() {
+    public static LoginMenuMessages checkAddAdmin()
+    {
         String userName = matcher.group("userName");
         String passWord = matcher.group("passWord");
         return LoginMenuController.checkAddAdmin(userName, passWord);
     }
 
-    public static LoginMenuMessages checkAddUser() {
+    public static LoginMenuMessages checkAddUser()
+    {
         String userName = matcher.group("userName");
         String passWord = matcher.group("passWord");
         return LoginMenuController.checkAddUser(userName, passWord);
     }
 
-    public static LoginMenuMessages checkLoginAdmin() {
+    public static LoginMenuMessages checkLoginAdmin()
+    {
         String userName = matcher.group("userName");
         String passWord = matcher.group("passWord");
         return LoginMenuController.checkLoginAdmin(userName, passWord);
     }
 
-    public static LoginMenuMessages checkLoginUser() {
+    public static LoginMenuMessages checkLoginUser()
+    {
         String userName = matcher.group("userName");
         String passWord = matcher.group("passWord");
         return LoginMenuController.checkLoginUser(userName, passWord);

@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #01-test commit">
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit # 02-test commit">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/LoginMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/LoginMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/accounts/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/accounts/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/accounts/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/accounts/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/LoginMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/UserMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UsenMenuCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuResults.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,16 +34,16 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="parsa" />
+        <entry key="$PROJECT_DIR$" value="Sajjad" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -49,20 +60,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Uni-01-02(2)/OOP/project/Phase1/ProjectPhase1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Uni-01-02(2)/OOP/HW/Q1_Quiz&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="view.enums" />
@@ -77,7 +88,10 @@
       <option name="presentableId" value="Default" />
       <updated>1684828309295</updated>
       <workItem from="1684828311195" duration="102000" />
-      <workItem from="1684946906465" duration="3488000" />
+      <workItem from="1684946906465" duration="6944000" />
+      <workItem from="1685013265735" duration="31000" />
+      <workItem from="1685821394574" duration="2833000" />
+      <workItem from="1685955474866" duration="5114000" />
     </task>
     <task id="LOCAL-00001" summary="Commit #017 - Merging?">
       <created>1684826613596</created>
@@ -163,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684947629660</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Commit # 02-test commit">
+      <created>1684952318395</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684952318395</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +243,7 @@
     <MESSAGE value="Commit #026 - UserMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.usermenu.&#10;- enums package structure edited." />
     <MESSAGE value="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu." />
     <MESSAGE value="Commit #01-test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #01-test commit" />
+    <MESSAGE value="Commit # 02-test commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit # 02-test commit" />
   </component>
 </project>

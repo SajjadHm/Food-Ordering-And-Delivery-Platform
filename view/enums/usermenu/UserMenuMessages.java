@@ -1,4 +1,6 @@
 package view.enums.usermenu;
 
-public enum UserMenuMessages {
+public enum UserMenuMessages
+{
+
 }
