@@ -6,12 +6,14 @@ import model.enums.ResturantFoodType;
 import model.resturant.Food;
 import model.resturant.FoodMenu;
 import model.resturant.Resturant;
+import view.enums.managermenu.ManagerMenuCommands;
 import view.enums.managermenu.ManagerMenuMessages;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.PublicKey;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,7 +49,8 @@ public class ManagerMenuController {
         if (foodTypes == null) return ManagerMenuMessages.INVALID_FOOD_TYPE;
         while (manager.getRestaurantById(getID(String.valueOf(idCount), 0, 8)) != null) idCount++;
         resturant = new Resturant(name, foodTypes, location, getID(String.valueOf(idCount), 0, 8));
-        manager.getResturants().put(resturant.getId(), resturant);
+        Memory.getResturantsList().put(resturant.getId(), resturant);
+        manager.getRestaurantsID().add(resturant.getId());
         idCount++;
         return ManagerMenuMessages.RESTAURANT_ADDED;
     }
@@ -135,5 +138,11 @@ public class ManagerMenuController {
         if (food == null) return ManagerMenuMessages.FOOD_NOT_FOUND;
         food.setUnlisted(false);
         return ManagerMenuMessages.FOOD_DEACTIVATED;
+    }
+
+    public static ManagerMenuMessages checkDiscountFood(LocalDateTime timeStamp) {
+
+        //if ()
+        return null;
     }
 }

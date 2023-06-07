@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #048 - active and deactive food&#10;&#10;&#10;- active and deactive food commands implied.">
-      <change afterPath="$PROJECT_DIR$/model/Read.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/Save.java" afterDir="false" />
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #049 - currentRestaurant&#10;&#10;&#10;- currentRestaurant reference edited.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/ManagerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ManagerMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/Memory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/accounts/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/accounts/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/resturant/FoodMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/resturant/FoodMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/resturant/Resturant.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/resturant/Resturant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/social/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/social/Rating.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/ManagerMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuCommands.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +49,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "extract.method.default.visibility": "private",
-    "last_opened_file_path": "D:/OOP/projectCloned",
+    "last_opened_file_path": "D:/OOP/Food-Ordering-And-Delivery-Platform",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
@@ -80,7 +77,8 @@
       <option name="presentableId" value="Default" />
       <updated>1684828309295</updated>
       <workItem from="1684828311195" duration="102000" />
-      <workItem from="1685804288125" duration="6037000" />
+      <workItem from="1685804288125" duration="14191000" />
+      <workItem from="1686142771370" duration="1078000" />
     </task>
     <task id="LOCAL-00001" summary="Commit #017 - Merging?">
       <created>1684826613596</created>
@@ -320,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685806034956</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Commit #049 - currentRestaurant&#10;&#10;&#10;- currentRestaurant reference edited.">
+      <created>1685810433797</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1685810433797</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,26 +336,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu." />
     <MESSAGE value="Commit #028 - Menus&#10;&#10;&#10;- Menus added in packages." />
     <MESSAGE value="Commit #029 - Clearing Files&#10;&#10;&#10;- making ready for merge." />
     <MESSAGE value="Commit #030 - ManagerMenuCommands&#10;&#10;&#10;- ManagerMenuCommands enum added in view.enums.managermenu." />
@@ -375,7 +367,8 @@
     <MESSAGE value="Commit #046 - remove food&#10;&#10;&#10;- remove food command implied." />
     <MESSAGE value="Commit #047 - listed menu&#10;&#10;&#10;- getListedMenu method implied for user use." />
     <MESSAGE value="Commit #048 - active and deactive food&#10;&#10;&#10;- active and deactive food commands implied." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #048 - active and deactive food&#10;&#10;&#10;- active and deactive food commands implied." />
+    <MESSAGE value="Commit #049 - currentRestaurant&#10;&#10;&#10;- currentRestaurant reference edited." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #049 - currentRestaurant&#10;&#10;&#10;- currentRestaurant reference edited." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

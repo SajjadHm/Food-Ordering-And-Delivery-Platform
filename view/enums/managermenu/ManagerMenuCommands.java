@@ -19,7 +19,7 @@ public enum ManagerMenuCommands {
     DELETE_FOOD("delete\\s+food\\s+(?<foodID>\\w+)"),
     DEACTIVE_FOOD("deactive\\s+food\\s+(?<foodID>\\w+)"),
     ACTIVE_FOOD("active\\s+food\\s+(?<foodID>\\w+)"),
-    DISCOUNT_FOOD("discount\\s+food\\s+(?<foodID>\\w+)\\s+(?<percent>\\w+)\\s+(?<timestamp>\\w+)"),
+    DISCOUNT_FOOD("discount\\s+food\\s+(?<foodID>\\w+)\\s+(?<percent>\\w+)\\s+(?<year>\\d{4})\\/(?<month>\\d{2})\\/(?<day>\\d{2})\\s{2}(?<hour>\\d{2}):(?<minute>\\d{2}):(?<second>\\d{2})"),
     SELECT_FOOD("select\\s+food\\s+(?<foodID>\\w+)"),
     DISPLAY_RATINGS("display\\s+ratings"),
     END("end"),

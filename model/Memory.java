@@ -3,12 +3,16 @@ package model;
 import model.accounts.Account;
 import model.accounts.Manager;
 import model.accounts.User;
+import model.resturant.Resturant;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class Memory {
     private final static ArrayList<Manager> managers;
     private final static ArrayList<User> users;
+    private final static HashMap<String, Resturant> resturantsList;
     private static Account currentAccount;
     // private static Resturant currentResturant;
 
@@ -16,6 +20,7 @@ public class Memory {
         managers = new ArrayList<>();
         users = new ArrayList<>();
         currentAccount = null;
+        resturantsList = new HashMap<>();
     }
 
     public static Manager getAdmin(String userName) {
@@ -48,6 +53,10 @@ public class Memory {
 
     public static void setCurrentAccount(Account currentAccount) {
         Memory.currentAccount = currentAccount;
+    }
+
+    public static HashMap<String, Resturant> getResturantsList() {
+        return resturantsList;
     }
 
     /*

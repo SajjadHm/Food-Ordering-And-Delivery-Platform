@@ -12,6 +12,7 @@ import view.enums.managermenu.ManagerMenuMessages;
 import view.enums.managermenu.ManagerMenuResults;
 import view.others.Colors;
 
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -65,6 +66,21 @@ public class ManagerMenu {
             printer(message);
         }
         return null;
+    }
+
+    private static LocalDateTime checkTimeStamp() {
+        int year = Integer.parseInt(matcher.group("year"));
+        int month = Integer.parseInt(matcher.group("month"));
+        int day = Integer.parseInt(matcher.group("day"));
+        int hour = Integer.parseInt(matcher.group("hour"));
+        int minute = Integer.parseInt(matcher.group("minute"));
+        int second = Integer.parseInt(matcher.group("second"));
+        try {
+            LocalDateTime timestamp = LocalDateTime.of(year, month, day, hour, minute, second);
+            return timestamp;
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     public static ManagerMenuMessages checkAddRestaurant() {
