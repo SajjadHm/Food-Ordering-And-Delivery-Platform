@@ -11,6 +11,8 @@ public class User extends Account
 {
     private int balance ;
     private boolean loginStatus;
+
+    private Resturant userCurrentRestaurant;
     String location;
     ArrayList<Comment> userComments = new ArrayList<>();
     ArrayList<Rating> userRatings = new ArrayList<>();
@@ -40,6 +42,14 @@ public class User extends Account
         this.balance = balance;
     }
 
+    public Resturant getUserCurrentRestaurant()
+    {
+        return userCurrentRestaurant;
+    }
+    public void setUserCurrentRestaurant(Resturant userCurrentRestaurant)
+    {
+        this.userCurrentRestaurant = userCurrentRestaurant;
+    }
 
     public void searchRestaurant(String restaurantName)
     {
