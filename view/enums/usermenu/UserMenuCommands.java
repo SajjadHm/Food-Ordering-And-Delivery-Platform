@@ -30,7 +30,10 @@ public enum UserMenuCommands
     CONFIRM_ORDER("CONFIRM\\s+ORDER"),
     SHOW_DELIVERY_TIME("SHOW\\s+ESTIMATED\\s+DELIVERY\\s+TIME"),
     CHARGE_ACCOUNT("CHARGE\\s+ACCOUNT\\s+(?<amount>\\d+)"),
-    DISPLAY_ACCOUNT_CHARGE("DISPLAY\\s+ACCOUNT\\s+CHARGE");
+    DISPLAY_ACCOUNT_CHARGE("DISPLAY\\s+ACCOUNT\\s+CHARGE"),
+    END("end"),
+    BACK("back"),
+    ;
 
 
 

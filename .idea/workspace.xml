@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit # 05-User Commands completed">
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit # 06-UserMenuMessages is set.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/UserMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuResults.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +65,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -80,7 +86,8 @@
       <workItem from="1684946906465" duration="6944000" />
       <workItem from="1685013265735" duration="31000" />
       <workItem from="1685821394574" duration="2833000" />
-      <workItem from="1685955474866" duration="10159000" />
+      <workItem from="1685955474866" duration="13494000" />
+      <workItem from="1686127205490" duration="4933000" />
     </task>
     <task id="LOCAL-00001" summary="Commit #017 - Merging?">
       <created>1684826613596</created>
@@ -194,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685966182582</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Commit # 06-UserMenuMessages is set.">
+      <created>1685977755658</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1685977755658</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +271,7 @@
     <MESSAGE value="Commit # 03-User functions" />
     <MESSAGE value="Commit # 04-User CommandsBody" />
     <MESSAGE value="Commit # 05-User Commands completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit # 05-User Commands completed" />
+    <MESSAGE value="Commit # 06-UserMenuMessages is set." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit # 06-UserMenuMessages is set." />
   </component>
 </project>

@@ -22,18 +22,6 @@ public enum UserMenuMessages
 
     ;
 
-
-
-
-
-
-
-
-
-
-
-
-
     final String message;
 
     UserMenuMessages(String message) {
