@@ -1,5 +1,7 @@
 package view;
 
+import controllers.UserMenuController;
+import model.Memory;
 import view.enums.loginmenu.LoginMenuCommands;
 import view.enums.loginmenu.LoginMenuMessages;
 import view.enums.loginmenu.LoginMenuResults;
@@ -19,7 +21,7 @@ public class UserMenu
     {
         isRunning = true;
         String input;
-        UserMenuMessages messages;
+        UserMenuMessages message;
 
         while (isRunning)
         {
@@ -123,19 +125,24 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.CHARGE_ACCOUNT)) != null)
             {
-
+                message = UserMenuController.chargeAccountController(matcher.group("amount"));
+                print(message.getMessage());
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.DISPLAY_ACCOUNT_CHARGE)) != null)
             {
-
+                System.out.println("YOUR ACCOUNT CHARGE IS "+Memory.getCurrentUser().getBalance()+" IRT");
             }
-
-
-
-
-
-
+            else
+            {
+                System.out.println("Invalid Command!");
+            }
         }
         return null;
     }
+
+    public static void print(String str)
+    {
+        System.out.println(str);
+    }
+
 }

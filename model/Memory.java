@@ -11,6 +11,7 @@ public class Memory {
     private final static ArrayList<Manager> MANAGERS;
     private final static ArrayList<User> users;
     private static Account currentAccount;
+    private static User currentUser;
     private static Resturant currentResturant;
 
     static {
@@ -49,6 +50,13 @@ public class Memory {
 
     public static void setCurrentAccount(Account currentAccount) {
         Memory.currentAccount = currentAccount;
+    }
+
+    public static User getCurrentUser() {
+        return currentUser;
+    }
+    public static void setCurrentUser(User currentUser) {
+        Memory.currentUser = currentUser;
     }
 
     public static Resturant getCurrentResturant() {

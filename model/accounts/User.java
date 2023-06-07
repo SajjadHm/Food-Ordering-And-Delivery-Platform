@@ -9,8 +9,8 @@ import java.util.ArrayList;
 
 public class User extends Account
 {
-    int balance ;
-    boolean loginStatus;
+    private int balance ;
+    private boolean loginStatus;
     String location;
     ArrayList<Comment> userComments = new ArrayList<>();
     ArrayList<Rating> userRatings = new ArrayList<>();
@@ -23,6 +23,22 @@ public class User extends Account
         this.loginStatus = false ;
     }
 
+    public boolean getLoginStatus()
+    {
+        return loginStatus;
+    }
+    public void setLoginStatus(boolean loginStatus)
+    {
+        this.loginStatus = loginStatus;
+    }
+    public int getBalance()
+    {
+        return balance;
+    }
+    public void setBalance(int balance)
+    {
+        this.balance = balance;
+    }
 
 
     public void searchRestaurant(String restaurantName)
@@ -113,14 +129,14 @@ public class User extends Account
     {
 
     }
-    public void chargeAccount()
+    public void chargeAccount(int amount)
     {
-
+        this.balance = this.balance + amount;
     }
-    public void displayAccountCharge()
-    {
-
-    }
+//    public void displayAccountCharge()
+//    {
+//
+//    }
 
 
 

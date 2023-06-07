@@ -59,6 +59,8 @@ public class LoginMenuController
         if (user == null) return LoginMenuMessages.INVALID_USER_USERNAME;
         if (!user.checkPassword(passWord)) return LoginMenuMessages.INVALID_PASSWORD;
         Memory.setCurrentAccount(user);
+        Memory.setCurrentUser(user);
+        user.setLoginStatus(true);
         return LoginMenuMessages.USER_LOGIN_SUCCESSFUL;
     }
 
