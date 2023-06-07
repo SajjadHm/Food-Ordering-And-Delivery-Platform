@@ -51,7 +51,8 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.SELECT_RESTAURANT)) != null)
             {
-
+                message = UserMenuController.selectRestaurantController(matcher.group("restaurantId"));
+                selectRestaurant(message);
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.SEARCH_FOOD)) != null)
             {
@@ -161,6 +162,19 @@ public class UserMenu
         for(int i=0 ;i<searchResult.length;i++)
         {
             System.out.println(searchResult[i].getName()+"      "+searchResult[i].getId());
+        }
+    }
+
+    public static void selectRestaurant(UserMenuMessages message)
+    {
+        if(message == UserMenuMessages.RESTAURANT_SELECTED_SUCCESSFULLY)
+        {
+            print(message.getMessage());
+            //print menu
+        }
+        else
+        {
+            print(UserMenuMessages.RESTAURANT_NOT_FOUND.getMessage());
         }
     }
 

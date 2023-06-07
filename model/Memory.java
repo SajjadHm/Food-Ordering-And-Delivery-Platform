@@ -53,7 +53,7 @@ public class Memory {
         ArrayList<Resturant> sameNameRestaurants = new ArrayList<>();
         for (Resturant resturant : listOfRestaurants)
         {
-            if (name.equals(resturant.getName()))
+            if (resturant.getName().contains(name))
             {
                 sameNameRestaurants.add(resturant);
             }

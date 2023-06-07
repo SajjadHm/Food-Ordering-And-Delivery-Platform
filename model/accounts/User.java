@@ -51,14 +51,14 @@ public class User extends Account
         this.userCurrentRestaurant = userCurrentRestaurant;
     }
 
-    public void searchRestaurant(String restaurantName)
-    {
-
-    }
-    public void selectRestaurant(int restaurantId)
-    {
-
-    }
+//    public void searchRestaurant(String restaurantName)
+//    {
+//
+//    }
+//    public void selectRestaurant(int restaurantId)
+//    {
+//
+//    }
     public void searchFood(String foodName)
     {
 

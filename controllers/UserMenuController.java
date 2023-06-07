@@ -20,5 +20,19 @@ public class UserMenuController
             return UserMenuMessages.SEARCH_RESULTS;
     }
 
+    public static UserMenuMessages selectRestaurantController(String id)
+    {
+        if(Memory.getRestaurant(Integer.parseInt(id))!=null)
+        {
+            Memory.getCurrentUser().setUserCurrentRestaurant(Memory.getRestaurant(Integer.parseInt(id)));
+            return UserMenuMessages.RESTAURANT_SELECTED_SUCCESSFULLY;
+        }
+        else
+        {
+            return null;
+        }
+
+    }
+
 
 }
