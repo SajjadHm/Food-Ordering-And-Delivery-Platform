@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class Memory {
     private final static ArrayList<Manager> MANAGERS;
     private final static ArrayList<User> users;
+    private final static ArrayList<Resturant> listOfRestaurants;
     private static Account currentAccount;
     private static User currentUser;
     private static Resturant currentResturant;
@@ -17,6 +18,7 @@ public class Memory {
     static {
         MANAGERS = new ArrayList<>();
         users = new ArrayList<>();
+        listOfRestaurants = new ArrayList<>();
         currentAccount = null;
     }
 
@@ -36,12 +38,41 @@ public class Memory {
         return null;
     }
 
+    public static Resturant getRestaurant(int id)
+    {
+        if (listOfRestaurants.size() == 0) return null;
+        for (Resturant resturant : listOfRestaurants) {
+            if (id == resturant.getId()) return resturant;
+        }
+        return null;
+    }
+
+    public static ArrayList<Resturant> getRestaurants(String name)
+    {
+        if (listOfRestaurants.size() == 0) return null;
+        ArrayList<Resturant> sameNameRestaurants = new ArrayList<>();
+        for (Resturant resturant : listOfRestaurants)
+        {
+            if (name.equals(resturant.getName()))
+            {
+                sameNameRestaurants.add(resturant);
+            }
+        }
+        if(sameNameRestaurants.size()==0) return null;
+        return sameNameRestaurants;
+    }
+
     public static ArrayList<Manager> getAdmins() {
         return MANAGERS;
     }
 
     public static ArrayList<User> getUsers() {
         return users;
+    }
+
+    public static ArrayList<Resturant> getListOfRestaurants()
+    {
+        return listOfRestaurants;
     }
 
     public static Account getCurrentAccount() {
