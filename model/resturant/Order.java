@@ -1,7 +1,10 @@
 package model.resturant;
 
+import java.time.LocalDateTime;
+
 public class Order extends FoodList {
     private DeliveryStatus status;
+    public final LocalDateTime time;
 
     {
         status = DeliveryStatus.ORDERING;
@@ -9,21 +12,17 @@ public class Order extends FoodList {
 
     public Order(String name, String id) {
         super(name, id);
+        this.time = LocalDateTime.now();
     }
 
     public int getTotalPrice() {
-        if (this.getFoods().size() == 0) return 0;
+        if (size() == 0) return 0;
 
         int totalPrice = 0;
-        for (Food food : this.getFoods()) {
+        for (Food food : this) {
             totalPrice += food.getPrice();
         }
         return totalPrice;
-    }
-
-    public String getTime() {
-        // filling later ! //
-        return null;
     }
 
     public DeliveryStatus getStatus() {

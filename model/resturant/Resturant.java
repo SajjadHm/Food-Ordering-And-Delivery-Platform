@@ -1,23 +1,23 @@
 package model.resturant;
 
+import model.Memory;
 import model.enums.ResturantFoodType;
 
+import java.util.ArrayList;
+
+
 public class Resturant {
-    private String name;
-    private ResturantFoodType foodType;
+    private String name, location;
+    private ArrayList<ResturantFoodType> foodTypes;
+    private final FoodMenu menu;
+    private final String id;
 
-    private final int id;
-    private static int idCount;
-
-    static {
-        idCount = 1;
-    }
-
-    Resturant(String name, ResturantFoodType foodType) {
+    public Resturant(String name, ArrayList<ResturantFoodType> foodTypes, String location, String id) {
         this.name = name;
-        this.foodType = foodType;
-        this.id = idCount;
-        idCount++;
+        this.foodTypes = (ArrayList<ResturantFoodType>) foodTypes.clone();
+        this.id = id;
+        this.location = location;
+        this.menu = new FoodMenu(name, id);
     }
 
     public String getName() {
@@ -28,21 +28,37 @@ public class Resturant {
         this.name = name;
     }
 
-    public ResturantFoodType getFoodType() {
-        return foodType;
+    public ArrayList<ResturantFoodType> getFoodTypes() {
+        return foodTypes;
     }
 
-    public void setFoodType(ResturantFoodType foodType) {
+    public void setFoodTypes(ArrayList<ResturantFoodType> foodTypes) {
         // TODO: empty foods menu
-        this.foodType = foodType;
+        this.foodTypes = (ArrayList<ResturantFoodType>) foodTypes.clone();
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public static int getIdCount() {
-        return idCount;
+    public String getLocation() {
+        return location;
     }
 
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public FoodMenu getMenu() {
+        return menu;
+    }
+
+    public FoodMenu getListedMenu() {
+        if (menu.size() == 0) return null;
+        FoodMenu listedMenu = new FoodMenu();
+        for (Food food : menu) {
+            if (!food.isUnlisted()) listedMenu.add(food);
+        }
+        return listedMenu;
+    }
 }

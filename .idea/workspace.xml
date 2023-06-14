@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit # 12-UserMenu: selectRestaurant method implemented.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #050 - Restaurants saving&#10;&#10;&#10;- restaurants saving method changed.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/resturant/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/resturant/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +30,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../Program Files/Java/lib/src.zip!/java.base/java/util/ArrayList.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;history&quot;: [
@@ -78,6 +84,16 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/OOP/Food-Ordering-And-Delivery-Platform&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Uni-01-02(2)/OOP/HW/Q1_Quiz&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -92,10 +108,20 @@
       <recent name="view.enums" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Food-Ordering-And-Delivery-Platform" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu." />
+      <changelist id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #047 - listed menu&#10;&#10;&#10;- getListedMenu method implied for user use." />
       <created>1684828309295</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -107,6 +133,10 @@
       <workItem from="1685955474866" duration="13494000" />
       <workItem from="1686127205490" duration="22262000" />
       <workItem from="1686727659592" duration="716000" />
+      <workItem from="1685804288125" duration="14191000" />
+      <workItem from="1686142771370" duration="1469000" />
+      <workItem from="1686145592883" duration="6000" />
+      <workItem from="1686724686176" duration="1101000" />
     </task>
     <task id="LOCAL-00001" summary="Commit #017 - Merging?">
       <created>1684826613596</created>
@@ -270,6 +300,182 @@
       <updated>1686173318767</updated>
     </task>
     <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00012" summary="Commit #028 - Menus&#10;&#10;&#10;- Menus added in packages.">
+      <created>1684831033450</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1684831033450</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Commit #029 - Clearing Files&#10;&#10;&#10;- making ready for merge.">
+      <created>1684831091337</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684831091337</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Commit #030 - ManagerMenuCommands&#10;&#10;&#10;- ManagerMenuCommands enum added in view.enums.managermenu.">
+      <created>1685169427789</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685169427789</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Commit #031 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum added in view.enums.managermenu.">
+      <created>1685169632862</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685169632862</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Commit #032 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum edited.">
+      <created>1685169996995</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1685169996995</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Commit #033 - add restaurant&#10;&#10;&#10;- add restaurant command implied.">
+      <created>1685171811455</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1685171811455</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Commit #034 - logout&#10;&#10;&#10;- logout command implied.">
+      <created>1685175982584</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1685175982584</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Commit #035 - remove restaurant&#10;&#10;&#10;- remove restaurant command implied.">
+      <created>1685176494023</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1685176494023</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Commit #036 - remove restaurant (debugged)&#10;&#10;&#10;- remove restaurant command debugged.">
+      <created>1685176811539</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1685176811539</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Commit #037 - show&#10;&#10;&#10;- show command implied.">
+      <created>1685177386357</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1685177386357</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Commit #038 - show (debugged)&#10;&#10;&#10;- show command debugged. (id assignment to restaurants)">
+      <created>1685179591479</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1685179591479</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Commit #039 - show (debugged)&#10;&#10;&#10;- show command debugged. (restaurants id assignment).">
+      <created>1685184028978</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1685184028978</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Commit #039 - select&#10;&#10;&#10;- select command implemented.">
+      <created>1685185153474</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1685185153474</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Commit #040 - select&#10;&#10;&#10;- fixing number count.">
+      <created>1685185207497</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1685185207497</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Commit #041 - edit food type&#10;&#10;&#10;- edit food type command implied.">
+      <created>1685269333650</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1685269333650</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Commit #042 - edit food type (debugged)&#10;&#10;&#10;- edit food type command debugged.">
+      <created>1685269593278</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1685269593278</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Commit #043 - menu commands&#10;&#10;&#10;- menu commands added in enums.loginmenu.ManagerMenuCommands.">
+      <created>1685286198584</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1685286198584</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Commit #044 - select menu&#10;&#10;&#10;- select menu command implied.">
+      <created>1685359080158</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1685359080158</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Commit #045 - add food&#10;&#10;&#10;- add food command implied.">
+      <created>1685362438107</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1685362438107</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Commit #046 - remove food&#10;&#10;&#10;- remove food command implied.">
+      <created>1685367222408</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1685367222408</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Commit #047 - listed menu&#10;&#10;&#10;- getListedMenu method implied for user use.">
+      <created>1685530493114</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1685530493114</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Commit #047 - listed menu&#10;&#10;&#10;- getListedMenu method implied for user use.">
+      <created>1685530670855</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1685530670855</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Commit #048 - active and deactive food&#10;&#10;&#10;- active and deactive food commands implied.">
+      <created>1685806034956</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1685806034956</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Commit #049 - currentRestaurant&#10;&#10;&#10;- currentRestaurant reference edited.">
+      <created>1685810433797</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1685810433797</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Commit #050 - Restaurants saving&#10;&#10;&#10;- restaurants saving method changed.">
+      <created>1686143921631</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1686143921631</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +498,7 @@
       <map>
         <entry key="MAIN">
           <value>
+            <State />
             <State>
               <option name="FILTERS">
                 <map>
@@ -342,6 +549,36 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit #029 - Clearing Files&#10;&#10;&#10;- making ready for merge." />
+    <MESSAGE value="Commit #030 - ManagerMenuCommands&#10;&#10;&#10;- ManagerMenuCommands enum added in view.enums.managermenu." />
+    <MESSAGE value="Commit #031 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum added in view.enums.managermenu." />
+    <MESSAGE value="Commit #032 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum edited." />
+    <MESSAGE value="Commit #033 - add restaurant&#10;&#10;&#10;- add restaurant command implied." />
+    <MESSAGE value="Commit #034 - logout&#10;&#10;&#10;- logout command implied." />
+    <MESSAGE value="Commit #034 - remove restaurant&#10;&#10;&#10;- remove restaurant command implied." />
+    <MESSAGE value="Commit #035 - remove restaurant&#10;&#10;&#10;- remove restaurant command implied." />
+    <MESSAGE value="Commit #036 - remove restaurant (debugged)&#10;&#10;&#10;- remove restaurant command debugged." />
+    <MESSAGE value="Commit #036 - show&#10;&#10;&#10;- show command implied." />
+    <MESSAGE value="Commit #037 - show&#10;&#10;&#10;- show command implied." />
+    <MESSAGE value="Commit #038 - show (debugged)&#10;&#10;&#10;- show command debugged. (id assignment to restaurants)" />
+    <MESSAGE value="Commit #039 - show (debugged)&#10;&#10;&#10;- show command debugged. (restaurants id assignment)." />
+    <MESSAGE value="Commit #039 - select&#10;&#10;&#10;- select command implemented." />
+    <MESSAGE value="Commit #040 - select&#10;&#10;&#10;- fixing number count." />
+    <MESSAGE value="Commit #041 - edit food type&#10;&#10;&#10;- edit food type command implied." />
+    <MESSAGE value="Commit #042 - edit food type (debugged)&#10;&#10;&#10;- edit food type command debugged." />
+    <MESSAGE value="Commit #043 - menu commands&#10;&#10;&#10;- menu commands added in enums.loginmenu.ManagerMenuCommands." />
+    <MESSAGE value="Commit #044 - select menu&#10;&#10;&#10;- select menu command implied." />
+    <MESSAGE value="Commit #045 - add food&#10;&#10;&#10;- add food command implied." />
+    <MESSAGE value="Commit #046 - remove food&#10;&#10;&#10;- remove food command implied." />
+    <MESSAGE value="Commit #047 - listed menu&#10;&#10;&#10;- getListedMenu method implied for user use." />
+    <MESSAGE value="Commit #048 - active and deactive food&#10;&#10;&#10;- active and deactive food commands implied." />
+    <MESSAGE value="Commit #049 - currentRestaurant&#10;&#10;&#10;- currentRestaurant reference edited." />
+    <MESSAGE value="Commit #050 - Restaurants saving&#10;&#10;&#10;- restaurants saving method changed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #050 - Restaurants saving&#10;&#10;&#10;- restaurants saving method changed." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
     <MESSAGE value="Commit #017 - Merging?" />
     <MESSAGE value="Commit #018 - Food&#10;&#10;&#10;- Food class added in model.resturant.&#10;- other classes edited." />
     <MESSAGE value="Commit #019 - Comment&#10;&#10;&#10;- Comment class added in model.social." />

@@ -6,25 +6,27 @@ import model.accounts.User;
 import model.resturant.Resturant;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class Memory {
-    private final static ArrayList<Manager> MANAGERS;
+    private final static ArrayList<Manager> managers;
     private final static ArrayList<User> users;
-    private final static ArrayList<Resturant> listOfRestaurants;
+    private final static HashMap<String, Resturant> resturantsList;
     private static Account currentAccount;
     private static User currentUser;
     private static Resturant currentResturant;
 
     static {
-        MANAGERS = new ArrayList<>();
+        managers = new ArrayList<>();
         users = new ArrayList<>();
-        listOfRestaurants = new ArrayList<>();
         currentAccount = null;
+        resturantsList = new HashMap<>();
     }
 
     public static Manager getAdmin(String userName) {
-        if (MANAGERS.size() == 0) return null;
-        for (Manager manager : MANAGERS) {
+        if (managers.size() == 0) return null;
+        for (Manager manager : managers) {
             if (userName.equals(manager.getUserName())) return manager;
         }
         return null;
@@ -38,20 +40,16 @@ public class Memory {
         return null;
     }
 
-    public static Resturant getRestaurant(int id)
+    public static Resturant getRestaurant(String id)
     {
-        if (listOfRestaurants.size() == 0) return null;
-        for (Resturant resturant : listOfRestaurants) {
-            if (id == resturant.getId()) return resturant;
-        }
-        return null;
+        return resturantsList.get(id);
     }
 
     public static ArrayList<Resturant> getRestaurants(String name)
     {
-        if (listOfRestaurants.size() == 0) return null;
+        if (resturantsList.size() == 0) return null;
         ArrayList<Resturant> sameNameRestaurants = new ArrayList<>();
-        for (Resturant resturant : listOfRestaurants)
+        for (Resturant resturant : resturantsList.values())
         {
             if (resturant.getName().contains(name))
             {
@@ -63,16 +61,11 @@ public class Memory {
     }
 
     public static ArrayList<Manager> getAdmins() {
-        return MANAGERS;
+        return managers;
     }
 
     public static ArrayList<User> getUsers() {
         return users;
-    }
-
-    public static ArrayList<Resturant> getListOfRestaurants()
-    {
-        return listOfRestaurants;
     }
 
     public static Account getCurrentAccount() {
@@ -83,6 +76,10 @@ public class Memory {
         Memory.currentAccount = currentAccount;
     }
 
+    public static HashMap<String, Resturant> getResturantsList() {
+        return resturantsList;
+    }
+
     public static User getCurrentUser() {
         return currentUser;
     }
@@ -90,11 +87,5 @@ public class Memory {
         Memory.currentUser = currentUser;
     }
 
-    public static Resturant getCurrentResturant() {
-        return currentResturant;
-    }
 
-    public static void setCurrentResturant(Resturant currentResturant) {
-        Memory.currentResturant = currentResturant;
-    }
 }
