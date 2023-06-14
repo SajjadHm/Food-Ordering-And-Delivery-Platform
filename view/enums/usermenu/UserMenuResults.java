@@ -3,6 +3,7 @@ import java.util.regex.Matcher;
 public enum UserMenuResults
 {
         BACK,
+        LOG_OUT,
         END;
         Matcher matcher;
         public Matcher getMatcher()

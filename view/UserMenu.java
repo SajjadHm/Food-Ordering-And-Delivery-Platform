@@ -34,9 +34,11 @@ public class UserMenu
             {
                 return UserMenuResults.END;
             }
-            else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.BACK)) != null)
+            else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.LOGOUT)) != null)
             {
-                return UserMenuResults.BACK;
+                message = UserMenuController.logoutController();
+                print(message.getMessage());
+                return UserMenuResults.LOG_OUT;
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.SEARCH_RESTAURANT)) != null)
             {
@@ -158,10 +160,10 @@ public class UserMenu
 
     public static void printSearchedRestaurant(String name)
     {
-        Resturant[] searchResult= (Resturant[]) Memory.getRestaurants(name).toArray();
-        for(int i=0 ;i<searchResult.length;i++)
+        ArrayList<Resturant> searchResult = Memory.getRestaurants(name);
+        for(int i=0 ;i<searchResult.size();i++)
         {
-            System.out.println(searchResult[i].getName()+"      "+searchResult[i].getId());
+            System.out.println("Name: "+searchResult.get(i).getName()+"      "+"ID: "+searchResult.get(i).getId());
         }
     }
 

@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public enum UserMenuCommands
 {
     SEARCH_RESTAURANT("SEARCH\\s+RESTAURANT\\s+(?<restaurantName>\\S+)"),
-    SELECT_RESTAURANT("SELECT\\s+RESTAURANT\\s+(?<restaurantId>\\d+)"),
+    SELECT_RESTAURANT("SELECT\\s+RESTAURANT\\s+(?<restaurantId>\\S+)"),
     SEARCH_FOOD("SEARCH\\s+FOOD\\s+(?<foodName>\\S+)"),
     SELECT_FOOD("SELECT\\s+FOOD\\s+(?<foodId>\\d+)"),
     DISPLAY_COMMENTS("DISPLAY\\s+COMMENTS"),
@@ -33,6 +33,7 @@ public enum UserMenuCommands
     DISPLAY_ACCOUNT_CHARGE("DISPLAY\\s+ACCOUNT\\s+CHARGE"),
     END("end"),
     BACK("back"),
+    LOGOUT("logout"),
     ;
 
 

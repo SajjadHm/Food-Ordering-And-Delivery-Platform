@@ -19,20 +19,29 @@ public class MainMenu {
         LoginMenuResults loginMenuResult;
         UserMenuResults userMenuResults;
 
-        while (isRunning) {
+        while (isRunning)
+        {
             ManagerMenuResults managerMenuResult;
-            while (isRunning) {
+            while (isRunning)
+            {
                 loginMenuResult = LoginMenu.run(scanner);
 
-                if (loginMenuResult == LoginMenuResults.END) {
+                if (loginMenuResult == LoginMenuResults.END)
+                {
                     isRunning = false;
-                } else if (loginMenuResult == LoginMenuResults.USER_LOGIN) {
+                }
+                else if (loginMenuResult == LoginMenuResults.USER_LOGIN)
+                {
                     userMenuResults = UserMenu.run(scanner);
-                    System.out.println(userMenuResults);
-                } else if (loginMenuResult == LoginMenuResults.ADMIN_LOGIN) {
+                    if(userMenuResults==UserMenuResults.END)
+                        isRunning = false;
+                }
+                else if (loginMenuResult == LoginMenuResults.ADMIN_LOGIN)
+                {
                     managerMenuResult = ManagerMenu.run(scanner);
                     if (managerMenuResult == ManagerMenuResults.END) isRunning = false;
-                } else System.out.println(loginMenuResult.toString());
+                }
+                else System.out.println(loginMenuResult.toString());
             }
         }
     }

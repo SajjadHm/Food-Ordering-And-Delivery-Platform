@@ -4,8 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74e76636-cb27-485c-ab7f-563733166d72" name="Changes" comment="Commit #014 debugging">
+    <list default="true" id="74e76636-cb27-485c-ab7f-563733166d72" name="Changes" comment="Commit #015 debugging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/accounts/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/accounts/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/controllers/UserMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/controllers/UserMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/accounts/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/accounts/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/MainMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/UserMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/UserMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuCommands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuMessages.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuMessages.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuResults.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuResults.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/UserMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuResults.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -376,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686733875642</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Commit #015 debugging">
+      <created>1686734526865</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1686734526865</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +428,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit #014 debugging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #014 debugging" />
+    <MESSAGE value="Commit #015 debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #015 debugging" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

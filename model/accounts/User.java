@@ -143,10 +143,11 @@ public class User extends Account
     {
         this.balance = this.balance + amount;
     }
-//    public void displayAccountCharge()
-//    {
-//
-//    }
+    public void logout()
+    {
+        this.setLoginStatus(false);
+    }
+
 
 
 

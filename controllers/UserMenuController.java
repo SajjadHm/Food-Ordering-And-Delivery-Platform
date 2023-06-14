@@ -6,6 +6,12 @@ import view.enums.usermenu.UserMenuMessages;
 
 public class UserMenuController
 {
+    public static UserMenuMessages logoutController()
+    {
+        Memory.getCurrentUser().logout();
+        Memory.setCurrentUser(null);
+        return UserMenuMessages.LOGOUT;
+    }
     public static UserMenuMessages chargeAccountController(String amount)
     {
         Memory.getCurrentUser().chargeAccount(Integer.parseInt(amount));
