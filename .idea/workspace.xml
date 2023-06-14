@@ -4,53 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74e76636-cb27-485c-ab7f-563733166d72" name="Changes" comment="">
+    <list default="true" id="74e76636-cb27-485c-ab7f-563733166d72" name="Changes" comment="Commit #014 debugging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ManagerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ManagerMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/.idea/Food-Ordering-And-Delivery-Platform.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/controllers/LoginMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/controllers/ManagerMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/controllers/UserMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/Memory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/Read.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/Save.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/accounts/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/accounts/Manager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/accounts/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/enums/ResturantFoodType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/resturant/DeliveryStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/resturant/Food.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/resturant/FoodList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/resturant/FoodMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/resturant/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/resturant/Resturant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/social/Comment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/social/Rating.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/LoginMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/MainMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/ManagerMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/UserMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/loginmenu/LoginMenuCommands.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/loginmenu/LoginMenuMessages.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/loginmenu/LoginMenuResults.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/managermenu/ManagerMenuCommands.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/managermenu/ManagerMenuMessages.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/managermenu/ManagerMenuResults.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UsenMenuCommands.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuCommands.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuMessages.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuResults.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/others/Colors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/ManagerMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -414,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686143921631</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Commit #014 debugging">
+      <created>1686733875642</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1686733875642</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,6 +393,21 @@
         <option value="Space.CommitStatus" />
       </list>
     </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit #014 debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #014 debugging" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
