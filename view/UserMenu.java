@@ -3,10 +3,13 @@ package view;
 import com.sun.xml.internal.bind.v2.TODO;
 import controllers.UserMenuController;
 import model.Memory;
+import model.resturant.Food;
+import model.resturant.FoodMenu;
 import model.resturant.Resturant;
 import view.enums.loginmenu.LoginMenuCommands;
 import view.enums.loginmenu.LoginMenuMessages;
 import view.enums.loginmenu.LoginMenuResults;
+import view.enums.managermenu.ManagerMenuMessages;
 import view.enums.usermenu.UserMenuCommands;
 import view.enums.usermenu.UserMenuMessages;
 import view.enums.usermenu.UserMenuResults;
@@ -172,7 +175,29 @@ public class UserMenu
         if(message == UserMenuMessages.RESTAURANT_SELECTED_SUCCESSFULLY)
         {
             print(message.getMessage());
-            //print menu
+            //printing menu
+            System.out.println("");
+            System.out.println("The Menu:");
+            Resturant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
+            FoodMenu menu =userCurrentRestaurant.getMenu();
+            if (menu.size() == 0)
+                System.out.println("MENU IS EMPTY!");
+            else
+            {
+                for (Food food : menu)
+                {
+                    System.out.print("ID: "+food.getId()+"    Name: "+food.getName()+"    Price: "+food.getPrice()+"IRT    ");
+                    if(!food.isUnlisted())
+                        System.out.print("Status: Available");
+                    else
+                        System.out.print("Status: UnAvailable");
+                    if(food.getDiscountPercent()>0)
+                        System.out.println("    DiscountPercent: "+food.getDiscountPercent()+"%");
+                    else
+                        System.out.println("");
+                }
+            }
+
         }
         else
         {
