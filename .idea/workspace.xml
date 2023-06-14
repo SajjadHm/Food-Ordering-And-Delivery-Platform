@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #049 - currentRestaurant&#10;&#10;&#10;- currentRestaurant reference edited.">
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #050 - Restaurants saving&#10;&#10;&#10;- restaurants saving method changed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ManagerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ManagerMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/Memory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/accounts/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/accounts/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/ManagerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/resturant/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/resturant/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,18 +37,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
-    "last_opened_file_path": "D:/OOP/Food-Ordering-And-Delivery-Platform",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/OOP/Food-Ordering-And-Delivery-Platform&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="view.enums" />
@@ -78,7 +73,9 @@
       <updated>1684828309295</updated>
       <workItem from="1684828311195" duration="102000" />
       <workItem from="1685804288125" duration="14191000" />
-      <workItem from="1686142771370" duration="1078000" />
+      <workItem from="1686142771370" duration="1469000" />
+      <workItem from="1686145592883" duration="6000" />
+      <workItem from="1686724686176" duration="1101000" />
     </task>
     <task id="LOCAL-00001" summary="Commit #017 - Merging?">
       <created>1684826613596</created>
@@ -325,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685810433797</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Commit #050 - Restaurants saving&#10;&#10;&#10;- restaurants saving method changed.">
+      <created>1686143921631</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1686143921631</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +347,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commit #028 - Menus&#10;&#10;&#10;- Menus added in packages." />
     <MESSAGE value="Commit #029 - Clearing Files&#10;&#10;&#10;- making ready for merge." />
     <MESSAGE value="Commit #030 - ManagerMenuCommands&#10;&#10;&#10;- ManagerMenuCommands enum added in view.enums.managermenu." />
     <MESSAGE value="Commit #031 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum added in view.enums.managermenu." />
@@ -368,7 +371,8 @@
     <MESSAGE value="Commit #047 - listed menu&#10;&#10;&#10;- getListedMenu method implied for user use." />
     <MESSAGE value="Commit #048 - active and deactive food&#10;&#10;&#10;- active and deactive food commands implied." />
     <MESSAGE value="Commit #049 - currentRestaurant&#10;&#10;&#10;- currentRestaurant reference edited." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #049 - currentRestaurant&#10;&#10;&#10;- currentRestaurant reference edited." />
+    <MESSAGE value="Commit #050 - Restaurants saving&#10;&#10;&#10;- restaurants saving method changed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #050 - Restaurants saving&#10;&#10;&#10;- restaurants saving method changed." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
