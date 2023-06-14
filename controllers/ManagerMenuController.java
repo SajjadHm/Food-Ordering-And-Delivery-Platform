@@ -15,6 +15,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.PublicKey;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ManagerMenuController {
@@ -42,7 +43,7 @@ public class ManagerMenuController {
 
 
     public static ManagerMenuMessages checkAddRestaurant(String name, String location, ResturantFoodType[] foodTypesArr) {
-        ArrayList<ResturantFoodType> foodTypes = new ArrayList<>(List.of(foodTypesArr));
+        ArrayList<ResturantFoodType> foodTypes = new ArrayList<>(Arrays.asList(foodTypesArr));
         Manager manager = (Manager) Memory.getCurrentAccount();
         Resturant resturant = manager.getRestaurant(name);
         if (resturant != null) return ManagerMenuMessages.RESTAURANT_EXISTS;
@@ -85,7 +86,7 @@ public class ManagerMenuController {
     }
 
     public static ManagerMenuMessages editFoodType(ResturantFoodType[] resturantFoodTypesArr) {
-        ArrayList<ResturantFoodType> resturantFoodTypes = new ArrayList<>(List.of(resturantFoodTypesArr));
+        ArrayList<ResturantFoodType> resturantFoodTypes = new ArrayList<>(Arrays.asList(resturantFoodTypesArr));
         Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
         if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
         resturant.setFoodTypes(resturantFoodTypes);

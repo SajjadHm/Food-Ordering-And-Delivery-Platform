@@ -4,11 +4,53 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit # 12-UserMenu: selectRestaurant method implemented.">
+    <list default="true" id="74e76636-cb27-485c-ab7f-563733166d72" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #050 - Restaurants saving&#10;&#10;&#10;- restaurants saving method changed.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/resturant/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/resturant/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ManagerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ManagerMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/.idea/Food-Ordering-And-Delivery-Platform.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/controllers/LoginMenuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/controllers/ManagerMenuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/controllers/UserMenuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/Memory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/Read.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/Save.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/accounts/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/accounts/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/accounts/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/enums/ResturantFoodType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/resturant/DeliveryStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/resturant/Food.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/resturant/FoodList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/resturant/FoodMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/resturant/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/resturant/Resturant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/social/Comment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/social/Rating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/LoginMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/MainMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/ManagerMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/UserMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/loginmenu/LoginMenuCommands.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/loginmenu/LoginMenuMessages.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/loginmenu/LoginMenuResults.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/managermenu/ManagerMenuCommands.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/managermenu/ManagerMenuMessages.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/managermenu/ManagerMenuResults.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UsenMenuCommands.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuCommands.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuMessages.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuResults.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/others/Colors.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/ManagerMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +72,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$PROJECT_DIR$/../../Program Files/Java/lib/src.zip!/java.base/java/util/ArrayList.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;history&quot;: [
@@ -84,16 +123,6 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/OOP/Food-Ordering-And-Delivery-Platform&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Uni-01-02(2)/OOP/HW/Q1_Quiz&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -103,11 +132,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="view.enums" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -215,91 +239,6 @@
       <option name="project" value="LOCAL" />
       <updated>1684830857908</updated>
     </task>
-    <task id="LOCAL-00012" summary="Commit #01-test commit">
-      <created>1684947629660</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1684947629660</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Commit # 02-test commit">
-      <created>1684952318395</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1684952318395</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Commit # 03-User functions">
-      <created>1685962428896</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1685962428896</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Commit # 04-User CommandsBody">
-      <created>1685964108969</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1685964108969</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Commit # 05-User Commands completed">
-      <created>1685966182582</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1685966182582</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Commit # 06-UserMenuMessages is set.">
-      <created>1685977755658</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1685977755658</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Commit # 07-UserMenu is started.">
-      <created>1686135416036</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1686135416036</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Commit # 08-UserMenu : Charge and displayCharge methods implemented.">
-      <created>1686139094408</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1686139094408</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Commit # 09-UserMenu : Charge and displayCharge methods implemented.">
-      <created>1686139163142</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1686139163142</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Commit # 10-Memory : listOfRestaurants and related methods for search them implemented.">
-      <created>1686147460779</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1686147460779</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Commit # 11-UserMenu: SearchRestaurant method implemented.">
-      <created>1686153130629</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1686153130629</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Commit # 12-UserMenu: selectRestaurant method implemented.">
-      <created>1686173318767</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1686173318767</updated>
-    </task>
-    <option name="localTasksCounter" value="24" />
     <task id="LOCAL-00012" summary="Commit #028 - Menus&#10;&#10;&#10;- Menus added in packages.">
       <created>1684831033450</created>
       <option name="number" value="00012" />
@@ -492,89 +431,6 @@
         <option value="Space.CommitStatus" />
       </list>
     </option>
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/Sajjad" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/Sajjad" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/parsa" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="*" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commit #029 - Clearing Files&#10;&#10;&#10;- making ready for merge." />
-    <MESSAGE value="Commit #030 - ManagerMenuCommands&#10;&#10;&#10;- ManagerMenuCommands enum added in view.enums.managermenu." />
-    <MESSAGE value="Commit #031 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum added in view.enums.managermenu." />
-    <MESSAGE value="Commit #032 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum edited." />
-    <MESSAGE value="Commit #033 - add restaurant&#10;&#10;&#10;- add restaurant command implied." />
-    <MESSAGE value="Commit #034 - logout&#10;&#10;&#10;- logout command implied." />
-    <MESSAGE value="Commit #034 - remove restaurant&#10;&#10;&#10;- remove restaurant command implied." />
-    <MESSAGE value="Commit #035 - remove restaurant&#10;&#10;&#10;- remove restaurant command implied." />
-    <MESSAGE value="Commit #036 - remove restaurant (debugged)&#10;&#10;&#10;- remove restaurant command debugged." />
-    <MESSAGE value="Commit #036 - show&#10;&#10;&#10;- show command implied." />
-    <MESSAGE value="Commit #037 - show&#10;&#10;&#10;- show command implied." />
-    <MESSAGE value="Commit #038 - show (debugged)&#10;&#10;&#10;- show command debugged. (id assignment to restaurants)" />
-    <MESSAGE value="Commit #039 - show (debugged)&#10;&#10;&#10;- show command debugged. (restaurants id assignment)." />
-    <MESSAGE value="Commit #039 - select&#10;&#10;&#10;- select command implemented." />
-    <MESSAGE value="Commit #040 - select&#10;&#10;&#10;- fixing number count." />
-    <MESSAGE value="Commit #041 - edit food type&#10;&#10;&#10;- edit food type command implied." />
-    <MESSAGE value="Commit #042 - edit food type (debugged)&#10;&#10;&#10;- edit food type command debugged." />
-    <MESSAGE value="Commit #043 - menu commands&#10;&#10;&#10;- menu commands added in enums.loginmenu.ManagerMenuCommands." />
-    <MESSAGE value="Commit #044 - select menu&#10;&#10;&#10;- select menu command implied." />
-    <MESSAGE value="Commit #045 - add food&#10;&#10;&#10;- add food command implied." />
-    <MESSAGE value="Commit #046 - remove food&#10;&#10;&#10;- remove food command implied." />
-    <MESSAGE value="Commit #047 - listed menu&#10;&#10;&#10;- getListedMenu method implied for user use." />
-    <MESSAGE value="Commit #048 - active and deactive food&#10;&#10;&#10;- active and deactive food commands implied." />
-    <MESSAGE value="Commit #049 - currentRestaurant&#10;&#10;&#10;- currentRestaurant reference edited." />
-    <MESSAGE value="Commit #050 - Restaurants saving&#10;&#10;&#10;- restaurants saving method changed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #050 - Restaurants saving&#10;&#10;&#10;- restaurants saving method changed." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

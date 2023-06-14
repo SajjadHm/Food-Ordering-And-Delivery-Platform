@@ -22,9 +22,9 @@ public class UserMenuController
 
     public static UserMenuMessages selectRestaurantController(String id)
     {
-        if(Memory.getRestaurant(Integer.parseInt(id))!=null)
+        if(Memory.getRestaurant(id)!=null)
         {
-            Memory.getCurrentUser().setUserCurrentRestaurant(Memory.getRestaurant(Integer.parseInt(id)));
+            Memory.getCurrentUser().setUserCurrentRestaurant(Memory.getRestaurant(id));
             return UserMenuMessages.RESTAURANT_SELECTED_SUCCESSFULLY;
         }
         else

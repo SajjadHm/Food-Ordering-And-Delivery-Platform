@@ -33,6 +33,7 @@ public class ManagerMenu {
     }
 
     public static ManagerMenuResults run(Scanner scanner) {
+        System.out.println(1);
         isRunning = true;
         while (isRunning) {
             message = ManagerMenuMessages.INVALID_COMMAND;
