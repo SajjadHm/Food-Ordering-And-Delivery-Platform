@@ -17,6 +17,7 @@ import view.enums.usermenu.UserMenuResults;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 
@@ -112,7 +113,16 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.EDIT_COMMENT)) != null)
             {
-
+                message = UserMenuController.editCommentController(matcher.group("commentId"));
+                if(message.getMessage().equals(UserMenuMessages.COMMENT_ID_INCORRECT.getMessage()))
+                    print(message.getMessage());
+                else
+                {
+                    print(message.getMessage());
+                    String newText = scanner.nextLine().trim();
+                    editComment(matcher.group("commentId"),newText);
+                    print(UserMenuMessages.COMMENT_EDITED_SUCCESSFULLY.getMessage());
+                }
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.DISPLAY_RATING)) != null)
             {
@@ -319,9 +329,37 @@ public class UserMenu
     {
         Resturant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
         int id = userCurrentRestaurant.getComments().size();
-        Comment newComment = new Comment(text,text.length()+id+"rc");
+        Comment newComment = new Comment(text,id+"rc");
         userCurrentRestaurant.getComments().add(newComment);
         Memory.getCurrentUser().getUserComments().put(newComment,userCurrentRestaurant);
+
+    }
+
+    public static boolean checkEditComment(String commentId)
+    {
+        boolean edit = false;
+        HashMap<Comment, Resturant> comments = Memory.getCurrentUser().getUserComments();
+        for(Map.Entry<Comment, Resturant> entry:comments.entrySet())
+        {
+            if(entry.getKey().getId().equals(commentId))
+            {
+                edit = true;
+                break;
+            }
+        }
+        return edit;
+    }
+    public static void editComment(String commentId,String newText)
+    {
+        HashMap<Comment, Resturant> comments = Memory.getCurrentUser().getUserComments();
+        for(Map.Entry<Comment, Resturant> entry:comments.entrySet())
+        {
+            if(entry.getKey().getId().equals(commentId))
+            {
+                entry.getKey().setMessage(newText);
+                break;
+            }
+        }
 
     }
 

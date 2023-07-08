@@ -84,4 +84,12 @@ public class UserMenuController
     }
 
 
+    public static UserMenuMessages editCommentController(String commentId)
+    {
+        if(!UserMenu.checkEditComment(commentId))
+            return UserMenuMessages.COMMENT_ID_INCORRECT;
+        else
+            return UserMenuMessages.ENTER_COMMENT;
+
+    }
 }
