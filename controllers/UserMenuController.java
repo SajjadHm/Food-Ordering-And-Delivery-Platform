@@ -49,5 +49,16 @@ public class UserMenuController
             return UserMenuMessages.SEARCH_RESULTS;
     }
 
+    public static UserMenuMessages selectFoodController(String id)
+    {
+        if(UserMenu.selectFood(id)==null)
+            return UserMenuMessages.FOOD_NOT_FOUND;
+        else
+        {
+            Memory.getCurrentUser().setUserCurrentFood(Memory.getFood(id));
+            return UserMenuMessages.FOOD_SELECTED_SUCCESSFULLY;
+        }
+    }
+
 
 }

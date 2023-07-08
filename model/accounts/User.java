@@ -1,5 +1,6 @@
 package model.accounts;
 
+import model.resturant.Food;
 import model.resturant.FoodList;
 import model.resturant.Resturant;
 import model.social.Comment;
@@ -13,6 +14,9 @@ public class User extends Account
     private boolean loginStatus;
 
     private Resturant userCurrentRestaurant;
+
+    private Food userCurrentFood;
+
     String location;
     ArrayList<Comment> userComments = new ArrayList<>();
     ArrayList<Rating> userRatings = new ArrayList<>();
@@ -51,14 +55,17 @@ public class User extends Account
         this.userCurrentRestaurant = userCurrentRestaurant;
     }
 
-//    public void searchRestaurant(String restaurantName)
-//    {
-//
-//    }
-//    public void selectRestaurant(int restaurantId)
-//    {
-//
-//    }
+    public Food getUserCurrentFood()
+    {
+        return userCurrentFood;
+    }
+
+    public void setUserCurrentFood(Food userCurrentFood)
+    {
+        this.userCurrentFood = userCurrentFood;
+    }
+
+
     public void searchFood(String foodName)
     {
 

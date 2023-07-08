@@ -73,6 +73,14 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.SELECT_FOOD)) != null)
             {
+                message= UserMenuController.selectFoodController(matcher.group("foodId"));
+                if(message.getMessage().equals(UserMenuMessages.FOOD_NOT_FOUND.getMessage()))
+                    print(message.getMessage());
+                else
+                {
+                    print(message.getMessage());
+                    selectFood(matcher.group("foodId"));
+                }
 
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.DISPLAY_COMMENTS)) != null)
@@ -218,7 +226,7 @@ public class UserMenu
         HashMap<String,Food> searchResults = searchFood(name);
         for (HashMap.Entry<String, Food> entry : searchResults.entrySet())
         {
-            String restaurantId = entry.getKey();
+            String restaurantId = entry.getKey().split(" ")[0];
             Food food = entry.getValue();
             System.out.print("Restaurant Name: "+Memory.getRestaurant(restaurantId).getName());
             System.out.print("    Restaurant Id: "+restaurantId);
@@ -237,16 +245,16 @@ public class UserMenu
 
     }
 
-    public static HashMap<String,Food> searchFood(String foodName)//Key:id of the restaurant
+    public static HashMap<String,Food> searchFood(String foodName)//Key:id of the restaurant" "id of the food//value:the food
     {
         HashMap<String,Food> foodSearchResult = new HashMap<>();
-        ///implement the search engine
+
         for(HashMap.Entry<String, Resturant> resturantEntry :Memory.getResturantsList().entrySet())
         {
             for(Food food:resturantEntry.getValue().getMenu())
             {
-                if(food.getName().equals(foodName))
-                    foodSearchResult.put(resturantEntry.getKey(), food);
+                if(food.getName().contains(foodName))
+                    foodSearchResult.put(resturantEntry.getKey()+" "+food.getId(), food);
             }
         }
 
@@ -254,6 +262,14 @@ public class UserMenu
         {
             return foodSearchResult;
         }
+        else
+            return null;
+    }
+
+    public static Food selectFood(String id)
+    {
+        if(Memory.getFood(id)!=null)
+            return Memory.getFood(id);
         else
             return null;
     }

@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74e76636-cb27-485c-ab7f-563733166d72" name="Changes" comment="Commit #017 UserMenu:selectRestaurant method completed.">
+    <list default="true" id="74e76636-cb27-485c-ab7f-563733166d72" name="Changes" comment="Commit #018 UserMenu:Search food functionality implemented.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/Memory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/accounts/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/accounts/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/UserMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +126,7 @@
       <workItem from="1687717839170" duration="34000" />
       <workItem from="1687788817927" duration="6549000" />
       <workItem from="1688547252227" duration="333000" />
-      <workItem from="1688814544315" duration="1984000" />
+      <workItem from="1688814544315" duration="8410000" />
     </task>
     <task id="LOCAL-00001" summary="Commit #017 - Merging?">
       <created>1684826613596</created>
@@ -405,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686777014478</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Commit #018 UserMenu:Search food functionality implemented.">
+      <created>1688825598501</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1688825598501</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,7 +461,8 @@
     <MESSAGE value="Commit #015 debugging" />
     <MESSAGE value="Commit #016 debugging:user logout and search restaurant methode." />
     <MESSAGE value="Commit #017 UserMenu:selectRestaurant method completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #017 UserMenu:selectRestaurant method completed." />
+    <MESSAGE value="Commit #018 UserMenu:Search food functionality implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #018 UserMenu:Search food functionality implemented." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
