@@ -98,8 +98,16 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.ADD_NEW_COMMENT)) != null)
             {
-
-
+                message = UserMenuController.addCommentController();
+                if(message.getMessage().equals(UserMenuMessages.RESTAURANT_NOT_SELECTED.getMessage()))
+                    print(message.getMessage());
+                else
+                {
+                    print(message.getMessage());
+                    String text = scanner.nextLine().trim();
+                    addNewComment(text);
+                    print(UserMenuMessages.COMMENT_ADDED_SUCCESSFULLY.getMessage());
+                }
 
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.EDIT_COMMENT)) != null)
@@ -304,6 +312,16 @@ public class UserMenu
 
         }
 
+
+    }
+
+    public static void addNewComment(String text)
+    {
+        Resturant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
+        int id = userCurrentRestaurant.getComments().size();
+        Comment newComment = new Comment(text,text.length()+id+"rc");
+        userCurrentRestaurant.getComments().add(newComment);
+        Memory.getCurrentUser().getUserComments().put(newComment,userCurrentRestaurant);
 
     }
 

@@ -7,6 +7,7 @@ import model.social.Comment;
 import model.social.Rating;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class User extends Account
 {
@@ -18,7 +19,8 @@ public class User extends Account
     private Food userCurrentFood;
 
     String location;
-    ArrayList<Comment> userComments = new ArrayList<>();
+
+    private  HashMap<Comment,Resturant> userComments = new HashMap<>();
     ArrayList<Rating> userRatings = new ArrayList<>();
 
 
@@ -65,15 +67,13 @@ public class User extends Account
         this.userCurrentFood = userCurrentFood;
     }
 
-
-    public void searchFood(String foodName)
+    public HashMap<Comment, Resturant> getUserComments()
     {
-
+        return userComments;
     }
-    public void selectFood(int foodId)
-    {
 
-    }
+
+
     public void displayComments(Resturant restaurant)
     {
 
