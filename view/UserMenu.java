@@ -15,6 +15,7 @@ import view.enums.usermenu.UserMenuMessages;
 import view.enums.usermenu.UserMenuResults;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 
@@ -61,7 +62,14 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.SEARCH_FOOD)) != null)
             {
-
+                message= UserMenuController.searchFoodController(matcher.group("foodName"));
+                if(message.getMessage().equals(UserMenuMessages.FOOD_NOT_FOUND.getMessage()))
+                    print(message.getMessage());
+                else
+                {
+                    print(message.getMessage());
+                    printSearchedFood(matcher.group("foodName"));
+                }
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.SELECT_FOOD)) != null)
             {
@@ -203,6 +211,51 @@ public class UserMenu
         {
             print(UserMenuMessages.RESTAURANT_NOT_FOUND.getMessage());
         }
+    }
+
+    public static void printSearchedFood(String name)
+    {
+        HashMap<String,Food> searchResults = searchFood(name);
+        for (HashMap.Entry<String, Food> entry : searchResults.entrySet())
+        {
+            String restaurantId = entry.getKey();
+            Food food = entry.getValue();
+            System.out.print("Restaurant Name: "+Memory.getRestaurant(restaurantId).getName());
+            System.out.print("    Restaurant Id: "+restaurantId);
+            System.out.print("    Food Name: "+food.getName());
+            System.out.print("    Food Id: "+food.getId());
+            System.out.print("    Price: "+food.getPrice());
+            if(!food.isUnlisted())
+                System.out.print("    Status: Available");
+            else
+                System.out.print("    Status: UnAvailable");
+            if(food.getDiscountPercent()>0)
+                System.out.println("    Discount: "+food.getDiscountPercent()+"%");
+            else
+                System.out.println();
+        }
+
+    }
+
+    public static HashMap<String,Food> searchFood(String foodName)//Key:id of the restaurant
+    {
+        HashMap<String,Food> foodSearchResult = new HashMap<>();
+        ///implement the search engine
+        for(HashMap.Entry<String, Resturant> resturantEntry :Memory.getResturantsList().entrySet())
+        {
+            for(Food food:resturantEntry.getValue().getMenu())
+            {
+                if(food.getName().equals(foodName))
+                    foodSearchResult.put(resturantEntry.getKey(), food);
+            }
+        }
+
+        if(foodSearchResult.size()!=0)
+        {
+            return foodSearchResult;
+        }
+        else
+            return null;
     }
 
 }

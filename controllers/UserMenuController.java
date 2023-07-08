@@ -2,6 +2,7 @@ package controllers;
 
 import model.Memory;
 import model.resturant.Resturant;
+import view.UserMenu;
 import view.enums.usermenu.UserMenuMessages;
 
 public class UserMenuController
@@ -38,6 +39,14 @@ public class UserMenuController
             return null;
         }
 
+    }
+
+    public static UserMenuMessages searchFoodController(String name)
+    {
+        if(UserMenu.searchFood(name)==null)
+            return UserMenuMessages.FOOD_NOT_FOUND;
+        else
+            return UserMenuMessages.SEARCH_RESULTS;
     }
 
 
