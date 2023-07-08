@@ -83,7 +83,6 @@ public class UserMenuController
         }
     }
 
-
     public static UserMenuMessages editCommentController(String commentId)
     {
         if(!UserMenu.checkEditComment(commentId))
@@ -92,4 +91,32 @@ public class UserMenuController
             return UserMenuMessages.ENTER_COMMENT;
 
     }
+
+    public static UserMenuMessages displayRatingsController()
+    {
+        if(Memory.getCurrentUser().getUserCurrentRestaurant()==null)
+            return UserMenuMessages.RESTAURANT_NOT_SELECTED;
+        else
+        {
+            if(Memory.getCurrentUser().getUserCurrentRestaurant().getRatings().size()==0)
+                return UserMenuMessages.RESTAURANT_WITHOUT_RATING;
+            else
+                return UserMenuMessages.THE_RATING;
+        }
+    }
+
+
+    public static UserMenuMessages addRatingController()
+    {
+        if(Memory.getCurrentUser().getUserCurrentRestaurant()==null)
+            return UserMenuMessages.RESTAURANT_NOT_SELECTED;
+        else
+        {
+            return UserMenuMessages.ENTER_RATING;
+        }
+
+    }
+
+
+
 }

@@ -3,6 +3,7 @@ package model.resturant;
 import model.Memory;
 import model.enums.ResturantFoodType;
 import model.social.Comment;
+import model.social.Rating;
 
 import java.util.ArrayList;
 
@@ -13,6 +14,8 @@ public class Resturant {
     private final FoodMenu menu;
     private final String id;
     private ArrayList<Comment> comments = new ArrayList<>();
+
+    private ArrayList<Rating> ratings = new ArrayList<>();
 
     public Resturant(String name, ArrayList<ResturantFoodType> foodTypes, String location, String id) {
         this.name = name;
@@ -68,6 +71,11 @@ public class Resturant {
     public ArrayList<Comment> getComments()
     {
         return comments;
+    }
+
+    public ArrayList<Rating> getRatings()
+    {
+        return ratings;
     }
 
 

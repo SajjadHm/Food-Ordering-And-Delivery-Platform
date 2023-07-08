@@ -1,8 +1,19 @@
 package model.social;
 
+import java.util.ArrayList;
+
 public class Rating {
     private double rating;
     private int count;
+
+    private String id;
+
+
+    public Rating(double rating ,String id)
+    {
+        this.rating = rating;
+        this.id = id;
+    }
 
     public Rating() {
         this.count = 0;
@@ -35,5 +46,31 @@ public class Rating {
 
     public int getCount() {
         return count;
+    }
+
+    public String getId()
+    {
+        return id;
+    }
+
+    public void setId(String id)
+    {
+        this.id = id;
+    }
+
+
+
+    public static double avgRatings(ArrayList<Rating> ratings)
+    {
+        int num = ratings.size();
+        if(num==0)
+            return 0;
+        double avg  = 0;
+        for(Rating rate:ratings)
+        {
+           avg += rate.getRating();
+        }
+
+        return avg/num;
     }
 }

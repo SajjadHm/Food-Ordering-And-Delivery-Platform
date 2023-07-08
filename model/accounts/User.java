@@ -21,7 +21,8 @@ public class User extends Account
     String location;
 
     private  HashMap<Comment,Resturant> userComments = new HashMap<>();
-    ArrayList<Rating> userRatings = new ArrayList<>();
+    private  HashMap<Rating,Resturant> userRatings = new HashMap<>();
+
 
 
     public User(String userName, String passWord, String firstName, String lastName)
@@ -70,6 +71,11 @@ public class User extends Account
     public HashMap<Comment, Resturant> getUserComments()
     {
         return userComments;
+    }
+
+    public HashMap<Rating, Resturant> getUserRatings()
+    {
+        return userRatings;
     }
 
 

@@ -7,6 +7,7 @@ import model.resturant.Food;
 import model.resturant.FoodMenu;
 import model.resturant.Resturant;
 import model.social.Comment;
+import model.social.Rating;
 import view.enums.loginmenu.LoginMenuCommands;
 import view.enums.loginmenu.LoginMenuMessages;
 import view.enums.loginmenu.LoginMenuResults;
@@ -126,11 +127,25 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.DISPLAY_RATING)) != null)
             {
-
+                message = UserMenuController.displayRatingsController();
+                if(message.getMessage().equals(UserMenuMessages.THE_RATING.getMessage()))
+                {
+                    System.out.print(message.getMessage());
+                    System.out.printf("%.2f\n",displayRating());
+                }
+                else
+                    print(message.getMessage());
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.SUBMIT_RATING)) != null)
             {
-
+                message = UserMenuController.addRatingController();
+                if(message.getMessage().equals(UserMenuMessages.RESTAURANT_NOT_SELECTED.getMessage()))
+                    print(message.getMessage());
+                else
+                {
+                    addNewRating(matcher.group("rating"));
+                    print(UserMenuMessages.RATE_SUBMIT_SUCCESSFULLY.getMessage());
+                }
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.EDIT_RATING)) != null)
             {
@@ -362,5 +377,23 @@ public class UserMenu
         }
 
     }
+
+    public static double displayRating()
+    {
+        double avgRatings = Rating.avgRatings(Memory.getCurrentUser().getUserCurrentRestaurant().getRatings());
+        return avgRatings;
+    }
+
+    public static void addNewRating(String rate)
+    {
+            Resturant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
+            int id = userCurrentRestaurant.getRatings().size();
+            Rating newRate= new Rating(Double.parseDouble(rate),id+"rr");
+            userCurrentRestaurant.getRatings().add(newRate);
+            Memory.getCurrentUser().getUserRatings().put(newRate,userCurrentRestaurant);
+    }
+
+
+
 
 }
