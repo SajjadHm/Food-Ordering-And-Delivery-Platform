@@ -6,6 +6,7 @@ import model.Memory;
 import model.resturant.Food;
 import model.resturant.FoodMenu;
 import model.resturant.Resturant;
+import model.social.Comment;
 import view.enums.loginmenu.LoginMenuCommands;
 import view.enums.loginmenu.LoginMenuMessages;
 import view.enums.loginmenu.LoginMenuResults;
@@ -85,10 +86,20 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.DISPLAY_COMMENTS)) != null)
             {
-
+                message = UserMenuController.displayCommentsController();
+                if(message.getMessage().equals(UserMenuMessages.Comments.getMessage()))
+                {
+                    print(message.getMessage());
+                    System.out.println("");
+                    displayComments();
+                }
+                else
+                    print(message.getMessage());
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.ADD_NEW_COMMENT)) != null)
             {
+
+
 
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.EDIT_COMMENT)) != null)
@@ -272,6 +283,28 @@ public class UserMenu
             return Memory.getFood(id);
         else
             return null;
+    }
+
+    public static void displayComments()
+    {
+        for(Comment comment:Memory.getCurrentUser().getUserCurrentRestaurant().getComments())
+        {
+            System.out.println("CommentText: "+comment.getMessage());
+            System.out.println("CommentID: "+comment.getId());
+            if(comment.getReplies().size()!=0)
+            {
+                System.out.println("The Reply(s)");
+                for (Comment reply:comment.getReplies())
+                {
+                    System.out.println("ReplyText: "+reply.getMessage());
+                    System.out.println("ReplyID: "+reply.getId());
+                }
+            }
+            System.out.println("---------------------------------------");
+
+        }
+
+
     }
 
 }

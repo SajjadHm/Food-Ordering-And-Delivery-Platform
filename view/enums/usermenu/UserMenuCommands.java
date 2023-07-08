@@ -12,7 +12,7 @@ public enum UserMenuCommands
     SEARCH_FOOD("SEARCH\\s+FOOD\\s+(?<foodName>\\S+)"),
     SELECT_FOOD("SELECT\\s+FOOD\\s+(?<foodId>\\S+)"),
     DISPLAY_COMMENTS("DISPLAY\\s+COMMENTS"),
-    ADD_NEW_COMMENT("ADD\\s+NEW\\s+COMMENTS"),
+    ADD_NEW_COMMENT("ADD\\s+NEW\\s+COMMENT"),
     EDIT_COMMENT("EDIT\\s+COMMENT\\s+(?<commentId>\\S+)"),
     DISPLAY_RATING("DISPLAY\\s+RATING"),
     SUBMIT_RATING("SUBMIT\\s+RATING\\s+(?<rating>\\S+)"),

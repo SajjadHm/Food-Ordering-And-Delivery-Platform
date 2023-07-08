@@ -59,6 +59,18 @@ public class UserMenuController
             return UserMenuMessages.FOOD_SELECTED_SUCCESSFULLY;
         }
     }
+    public static UserMenuMessages displayCommentsController()
+    {
+        if(Memory.getCurrentUser().getUserCurrentRestaurant()==null)
+            return UserMenuMessages.RESTAURANT_NOT_SELECTED;
+        else
+        {
+            if(Memory.getCurrentUser().getUserCurrentRestaurant().getComments().size()==0)
+                return UserMenuMessages.RESTAURANT_WITHOUT_COMMENT;
+            else
+                return UserMenuMessages.Comments;
+        }
+    }
 
 
 }

@@ -13,7 +13,7 @@ public class User extends Account
     private int balance ;
     private boolean loginStatus;
 
-    private Resturant userCurrentRestaurant;
+    private Resturant userCurrentRestaurant = null;
 
     private Food userCurrentFood;
 

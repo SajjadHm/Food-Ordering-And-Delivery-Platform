@@ -2,6 +2,7 @@ package model.resturant;
 
 import model.Memory;
 import model.enums.ResturantFoodType;
+import model.social.Comment;
 
 import java.util.ArrayList;
 
@@ -11,6 +12,7 @@ public class Resturant {
     private ArrayList<ResturantFoodType> foodTypes;
     private final FoodMenu menu;
     private final String id;
+    private ArrayList<Comment> comments = new ArrayList<>();
 
     public Resturant(String name, ArrayList<ResturantFoodType> foodTypes, String location, String id) {
         this.name = name;
@@ -61,4 +63,12 @@ public class Resturant {
         }
         return listedMenu;
     }
+
+
+    public ArrayList<Comment> getComments()
+    {
+        return comments;
+    }
+
+
 }
