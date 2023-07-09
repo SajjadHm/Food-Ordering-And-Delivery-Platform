@@ -162,4 +162,17 @@ public class UserMenuController
             return UserMenuMessages.ENTER_COMMENT;
 
     }
+
+    public static UserMenuMessages displayRatingsControllerFood()
+    {
+        if(Memory.getCurrentUser().getUserCurrentFood()==null)
+            return UserMenuMessages.FOOD_NOT_SELECTED;
+        else
+        {
+            if(Memory.getCurrentUser().getUserCurrentFood().getRatings().size()==0)
+                return UserMenuMessages.FOOD_WITHOUT_RATING;
+            else
+                return UserMenuMessages.THE_RATING;
+        }
+    }
 }

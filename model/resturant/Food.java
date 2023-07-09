@@ -12,6 +12,8 @@ public class Food {
     private double discountPercent;
     private boolean isUnlisted;
     private ArrayList<Comment> comments;
+
+    private ArrayList<Rating> ratings = new ArrayList<>();
     private Rating rating;
 
     {
@@ -70,6 +72,14 @@ public class Food {
 
     public Rating getRating() {
         return rating;
+    }
+
+    public ArrayList<Rating> getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(ArrayList<Rating> ratings) {
+        this.ratings = ratings;
     }
 
 }

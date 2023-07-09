@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74e76636-cb27-485c-ab7f-563733166d72" name="Changes" comment="Commit #026 UserMenu:add comment food implemented.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="74e76636-cb27-485c-ab7f-563733166d72" name="Changes" comment="Commit #027 UserMenu:edit comment food implemented.">
       <change beforePath="$PROJECT_DIR$/controllers/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/controllers/UserMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/controllers/UserMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/UserMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/UserMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuMessages.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuMessages.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/resturant/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/resturant/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/UserMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,14 +123,7 @@
       <workItem from="1687788817927" duration="6549000" />
       <workItem from="1688547252227" duration="333000" />
       <workItem from="1688814544315" duration="25425000" />
-      <workItem from="1688891813743" duration="7210000" />
-    </task>
-    <task id="LOCAL-00001" summary="Commit #017 - Merging?">
-      <created>1684826613596</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1684826613596</updated>
+      <workItem from="1688891813743" duration="7915000" />
     </task>
     <task id="LOCAL-00002" summary="Commit #018 - Food&#10;&#10;&#10;- Food class added in model.resturant.&#10;- other classes edited.">
       <created>1684828121262</created>
@@ -472,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688898086192</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Commit #027 UserMenu:edit comment food implemented.">
+      <created>1688899334649</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1688899334649</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +523,8 @@
     <MESSAGE value="Commit #024 UserMenu:edit rating implemented." />
     <MESSAGE value="Commit #025 UserMenu:display comment food implemented." />
     <MESSAGE value="Commit #026 UserMenu:add comment food implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #026 UserMenu:add comment food implemented." />
+    <MESSAGE value="Commit #027 UserMenu:edit comment food implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #027 UserMenu:edit comment food implemented." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

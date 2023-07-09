@@ -204,7 +204,14 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.DISPLAY_RATINGS_FOOD)) != null)
             {
-
+                message = UserMenuController.displayRatingsControllerFood();
+                if(message.getMessage().equals(UserMenuMessages.THE_RATING.getMessage()))
+                {
+                    System.out.print(message.getMessage());
+                    System.out.printf("%.2f\n",displayRatingFood());
+                }
+                else
+                    print(message.getMessage());
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.SUBMIT_RATING_FOOD)) != null)
             {
@@ -527,6 +534,11 @@ public class UserMenu
             }
         }
 
+    }
+    public static double displayRatingFood()
+    {
+        double avgRatings = Rating.avgRatings(Memory.getCurrentUser().getUserCurrentFood().getRatings());
+        return avgRatings;
     }
 
 
