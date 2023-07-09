@@ -3,12 +3,10 @@ package view;
 import controllers.UserMenuController;
 import model.Cart;
 import model.Memory;
-import model.resturant.Food;
-import model.resturant.FoodMenu;
-import model.resturant.Order;
-import model.resturant.Resturant;
+import model.resturant.*;
 import model.social.Comment;
 import model.social.Rating;
+import sun.dc.pr.PRError;
 import view.enums.usermenu.UserMenuCommands;
 import view.enums.usermenu.UserMenuMessages;
 import view.enums.usermenu.UserMenuResults;
@@ -283,11 +281,25 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.CONFIRM_ORDER)) != null)
             {
-
+                message = UserMenuController.confirmOrderController();
+                if(message.getMessage().equals(UserMenuMessages.EMPTY_CART.getMessage()))
+                    print(message.getMessage());
+                else
+                {
+                    print(message.getMessage());
+                    String orderId = scanner.nextLine();
+                    if(!checkConfirmOrder(orderId))
+                        print(UserMenuMessages.ORDER_NOT_FOUND.getMessage());
+                    else
+                    {
+                        print(confirmOrder(orderId).getMessage());
+                    }
+                }
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.SHOW_DELIVERY_TIME)) != null)
             {
-                // TODO:get it from navigation!
+
+                System.out.println("ESTIMATED DELIVERY TIME: ");
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.CHARGE_ACCOUNT)) != null)
             {
@@ -710,6 +722,38 @@ public class UserMenu
             System.out.println("--------------------------------------------------------");
 
         }
+    }
+
+    public static boolean checkConfirmOrder(String orderId)
+    {
+        for(Cart cart:Memory.getCurrentUser().getUserCart())
+        {
+            if(cart.getOrder().getId().equals(orderId))
+                return true;
+        }
+        return false;
+    }
+
+    public static UserMenuMessages confirmOrder(String orderId)
+    {
+        for(Cart cart:Memory.getCurrentUser().getUserCart())
+        {
+            if(cart.getOrder().getId().equals(orderId))
+            {
+                if(Memory.getCurrentUser().getBalance()>cart.getOrder().getTotalPrice())
+                {
+                    Memory.getCurrentUser().setBalance(Memory.getCurrentUser().getBalance()-cart.getOrder().getTotalPrice());
+                    cart.getOrder().setStatus(DeliveryStatus.PREPARING);
+                    Memory.getCurrentUser().getOrdersHistory().add(cart.getOrder());
+                    Memory.getCurrentUser().getUserCart().remove(cart);
+                    return UserMenuMessages.CONFIRMED_SUCCESSFULLY;
+                }
+                return UserMenuMessages.BALANCE_NOT_ENOUGH;
+
+            }
+
+        }
+        return null;
     }
 
 

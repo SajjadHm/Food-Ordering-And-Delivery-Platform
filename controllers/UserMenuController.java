@@ -243,4 +243,12 @@ public class UserMenuController
         else
             return UserMenuMessages.CART_STATUS;
     }
+
+    public static UserMenuMessages confirmOrderController()
+    {
+        if(Memory.getCurrentUser().getUserCart().size()==0)
+            return UserMenuMessages.EMPTY_CART;
+        else
+            return UserMenuMessages.ENTER_ORDER_ID;
+    }
 }
