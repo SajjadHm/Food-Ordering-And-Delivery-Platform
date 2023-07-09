@@ -105,7 +105,6 @@ public class UserMenuController
         }
     }
 
-
     public static UserMenuMessages addRatingController()
     {
         if(Memory.getCurrentUser().getUserCurrentRestaurant()==null)
@@ -116,7 +115,6 @@ public class UserMenuController
         }
 
     }
-
 
     public static UserMenuMessages editRatingController()
     {
@@ -144,4 +142,15 @@ public class UserMenuController
         }
     }
 
+    public static UserMenuMessages addCommentControllerFood()
+    {
+        if(Memory.getCurrentUser().getUserCurrentFood()==null)
+            return UserMenuMessages.FOOD_NOT_SELECTED;
+        else if(!UserMenu.isInOrders(Memory.getCurrentUser().getUserCurrentFood().getId()))
+        {
+            return UserMenuMessages.ADD_BLIND_COMMENT_FOOD;
+        }
+        else
+            return UserMenuMessages.ENTER_COMMENT;
+    }
 }

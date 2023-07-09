@@ -5,6 +5,7 @@ import controllers.UserMenuController;
 import model.Memory;
 import model.resturant.Food;
 import model.resturant.FoodMenu;
+import model.resturant.Order;
 import model.resturant.Resturant;
 import model.social.Comment;
 import model.social.Rating;
@@ -174,7 +175,17 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.ADD_NEW_COMMENT_FOOD)) != null)
             {
-
+                message = UserMenuController.addCommentControllerFood();
+                if(message.getMessage().equals(UserMenuMessages.ENTER_COMMENT.getMessage()))
+                {
+                    print(message.getMessage());
+                    addNewCommentFood(scanner.nextLine());
+                    print(UserMenuMessages.COMMENT_ADDED_SUCCESSFULLY.getMessage());
+                }
+                else
+                {
+                    print(message.getMessage());
+                }
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.EDIT_COMMENT_FOOD)) != null)
             {
@@ -458,6 +469,28 @@ public class UserMenu
     }
 
 
+    public static boolean isInOrders(String foodId)
+    {
+        for(Order order:Memory.getCurrentUser().getOrders())
+        {
+            for (Food food :order)
+            {
+                if(food.getId().equals(foodId))
+                    return true;
+            }
+        }
+        return false;
+    }
+
+    public static void addNewCommentFood(String text)
+    {
+        Food userCurrentFood = Memory.getCurrentUser().getUserCurrentFood();
+        int id = userCurrentFood.getComments().size();
+        Comment newComment = new Comment(text,id+"fc");
+        userCurrentFood.getComments().add(newComment);
+        Memory.getCurrentUser().getUserCommentsFood().put(newComment,userCurrentFood);
+
+    }
 
 
 }

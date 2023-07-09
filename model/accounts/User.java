@@ -2,6 +2,7 @@ package model.accounts;
 
 import model.resturant.Food;
 import model.resturant.FoodList;
+import model.resturant.Order;
 import model.resturant.Resturant;
 import model.social.Comment;
 import model.social.Rating;
@@ -16,32 +17,15 @@ public class User extends Account
 
     private Resturant userCurrentRestaurant = null;
 
-    private Food userCurrentFood;
+    private Food userCurrentFood = null;
 
     String location;
 
     private  HashMap<Comment,Resturant> userComments = new HashMap<>();
     private  HashMap<Rating,Resturant> userRatings = new HashMap<>();
-
-    public HashMap<Comment, Food> getUserCommentsFood() {
-        return userCommentsFood;
-    }
-
-    public void setUserCommentsFood(HashMap<Comment, Food> userCommentsFood) {
-        this.userCommentsFood = userCommentsFood;
-    }
-
-    public HashMap<Rating, Food> getUserRatingsFood() {
-        return userRatingsFood;
-    }
-
-    public void setUserRatingsFood(HashMap<Rating, Food> userRatingsFood) {
-        this.userRatingsFood = userRatingsFood;
-    }
-
     private  HashMap<Comment,Food> userCommentsFood = new HashMap<>();
     private  HashMap<Rating,Food> userRatingsFood = new HashMap<>();
-
+    private ArrayList<Order> orders = new ArrayList<>();
 
 
     public User(String userName, String passWord, String firstName, String lastName)
@@ -96,81 +80,32 @@ public class User extends Account
     {
         return userRatings;
     }
-
-
-
-    public void displayComments(Resturant restaurant)
-    {
-
+    public HashMap<Comment, Food> getUserCommentsFood() {
+        return userCommentsFood;
     }
-    public void addNewComments(Resturant restaurant)
-    {
 
+    public void setUserCommentsFood(HashMap<Comment, Food> userCommentsFood) {
+        this.userCommentsFood = userCommentsFood;
     }
-    public void editComments(int commentId ,Resturant restaurant)
-    {
 
+    public HashMap<Rating, Food> getUserRatingsFood() {
+        return userRatingsFood;
     }
-    public void displayRating(Resturant restaurant)
-    {
 
+    public void setUserRatingsFood(HashMap<Rating, Food> userRatingsFood) {
+        this.userRatingsFood = userRatingsFood;
     }
-    public void submitRating(Resturant restaurant)
-    {
 
+    public ArrayList<Order> getOrders() {
+        return orders;
     }
-    public void editRating(Resturant restaurant)
-    {
 
+    public void setOrders(ArrayList<Order> orders) {
+        this.orders = orders;
     }
-    public void displayComments(FoodList food)
-    {
 
-    }
-    public void addNewComments(FoodList food)
-    {
 
-    }
-    public void editComments(int commentId , FoodList food)
-    {
 
-    }
-    public void displayRating(FoodList food)
-    {
-
-    }
-    public void submitRating(FoodList food)
-    {
-
-    }
-    public void editRating(FoodList food)
-    {
-
-    }
-    public void addFoodTOCart()
-    {
-
-    }
-    public void orderHistory()
-    {
-
-    }
-    public void selectOrder()
-    {
-
-    }
-    public  void displayCartStatus()
-    {
-
-    }
-    public void confirmOrder()
-    {
-
-    }
-    public void showDeliveryTime()
-    {
-
-    }
     public void chargeAccount(int amount)
     {
         this.balance = this.balance + amount;
