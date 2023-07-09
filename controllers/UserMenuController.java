@@ -4,6 +4,8 @@ import model.Memory;
 import view.UserMenu;
 import view.enums.usermenu.UserMenuMessages;
 
+import javax.jws.soap.SOAPBinding;
+
 public class UserMenuController
 {
     public static UserMenuMessages logoutController()
@@ -223,5 +225,14 @@ public class UserMenuController
             return UserMenuMessages.NO_HISTORY;
         else
             return UserMenuMessages.YOUR_HISTORY;
+    }
+
+    public static UserMenuMessages selectOrderController(String orderId)
+    {
+        if(!UserMenu.checkSelectOrder(orderId))
+            return UserMenuMessages.ORDER_NOT_FOUND;
+        else
+            return UserMenuMessages.ORDER_SELECTED_SUCCESSFULLY;
+
     }
 }

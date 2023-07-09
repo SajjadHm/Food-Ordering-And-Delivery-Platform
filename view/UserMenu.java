@@ -260,6 +260,14 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.SELECT_ORDER)) != null)
             {
+                message = UserMenuController.selectOrderController(matcher.group("orderId"));
+                if(message.getMessage().equals(UserMenuMessages.ORDER_NOT_FOUND.getMessage()))
+                    print(message.getMessage());
+                else
+                {
+                    print(message.getMessage());
+                    selectOrder(matcher.group("orderId"));
+                }
 
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.DISPLAY_CART_STATUS)) != null)
@@ -645,5 +653,40 @@ public class UserMenu
             System.out.println("-------------------------------------------------------");
         }
     }
+
+
+    public static boolean checkSelectOrder(String orderId)
+    {
+        for(Order order:Memory.getCurrentUser().getOrdersHistory())
+        {
+            if(order.getId().equals(orderId))
+                return true;
+        }
+        return false;
+    }
+
+    public static void selectOrder(String orderId)
+    {
+        Order foundedOrder=null;
+        for(Order order:Memory.getCurrentUser().getOrdersHistory())
+        {
+            if(order.getId().equals(orderId))
+            {
+                foundedOrder = order;
+                break;
+            }
+        }
+
+        System.out.print("Restaurant Name: "+foundedOrder.getRestaurant().getName()+"||");
+        System.out.print("Order Id: "+foundedOrder.getId()+"||");
+        System.out.println("Total Price: "+foundedOrder.getTotalPrice()+"IRT");
+        System.out.println("Order Food(s)");
+        for(Food food:foundedOrder)
+        {
+            System.out.println("Food Name: "+food.getName()+"||"+"Food Id: "+food.getId()+"||"+"Food Price: "+food.getPrice()+"IRT");
+        }
+    }
+
+
 
 }
