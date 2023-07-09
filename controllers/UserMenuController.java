@@ -5,6 +5,8 @@ import model.resturant.Resturant;
 import view.UserMenu;
 import view.enums.usermenu.UserMenuMessages;
 
+import javax.jws.soap.SOAPBinding;
+
 public class UserMenuController
 {
     public static UserMenuMessages logoutController()
@@ -202,6 +204,19 @@ public class UserMenuController
         else
             return UserMenuMessages.ENTER_RATING;
 
+    }
+
+    public static UserMenuMessages addFoodToCartController()
+    {
+        if(Memory.getCurrentUser().getUserCurrentFood()==null)
+            return UserMenuMessages.FOOD_NOT_SELECTED;
+        else
+        {
+            if(Memory.getCurrentUser().getUserCurrentFood().isUnlisted())
+                return UserMenuMessages.CANT_ADD_TO_CART;
+            else
+                return UserMenuMessages.ADD_FOOD_TO_CART_SUCCESSFULLY;
+        }
     }
 
 

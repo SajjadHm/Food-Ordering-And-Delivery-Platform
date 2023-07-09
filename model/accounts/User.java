@@ -1,7 +1,7 @@
 package model.accounts;
 
+import model.Cart;
 import model.resturant.Food;
-import model.resturant.FoodList;
 import model.resturant.Order;
 import model.resturant.Resturant;
 import model.social.Comment;
@@ -14,18 +14,16 @@ public class User extends Account
 {
     private int balance ;
     private boolean loginStatus;
-
     private Resturant userCurrentRestaurant = null;
-
     private Food userCurrentFood = null;
-
     String location;
-
     private  HashMap<Comment,Resturant> userComments = new HashMap<>();
     private  HashMap<Rating,Resturant> userRatings = new HashMap<>();
     private  HashMap<Comment,Food> userCommentsFood = new HashMap<>();
     private  HashMap<Rating,Food> userRatingsFood = new HashMap<>();
     private ArrayList<Order> orders = new ArrayList<>();
+    private ArrayList<Cart> userCart  = new ArrayList<>();
+
 
 
     public User(String userName, String passWord, String firstName, String lastName)
@@ -51,7 +49,6 @@ public class User extends Account
     {
         this.balance = balance;
     }
-
     public Resturant getUserCurrentRestaurant()
     {
         return userCurrentRestaurant;
@@ -60,7 +57,6 @@ public class User extends Account
     {
         this.userCurrentRestaurant = userCurrentRestaurant;
     }
-
     public Food getUserCurrentFood()
     {
         return userCurrentFood;
@@ -104,7 +100,13 @@ public class User extends Account
         this.orders = orders;
     }
 
+    public void setUserCart(ArrayList<Cart> userCart) {
+        this.userCart = userCart;
+    }
 
+    public ArrayList<Cart> getUserCart() {
+        return userCart;
+    }
 
     public void chargeAccount(int amount)
     {

@@ -2,6 +2,7 @@ package view;
 
 import com.sun.xml.internal.bind.v2.TODO;
 import controllers.UserMenuController;
+import model.Cart;
 import model.Memory;
 import model.resturant.Food;
 import model.resturant.FoodMenu;
@@ -17,6 +18,7 @@ import view.enums.usermenu.UserMenuCommands;
 import view.enums.usermenu.UserMenuMessages;
 import view.enums.usermenu.UserMenuResults;
 
+import javax.print.attribute.standard.OrientationRequested;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -241,6 +243,14 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.ADD_FOOD_TO_CART)) != null)
             {
+                message = UserMenuController.addFoodToCartController();
+                if(message.getMessage().equals(UserMenuMessages.ADD_FOOD_TO_CART_SUCCESSFULLY.getMessage()))
+                {
+                    addFoodToCart();
+                    print(message.getMessage());
+                }
+                else
+                    print(message.getMessage());
 
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.ORDER_HISTORY)) != null)
@@ -594,6 +604,34 @@ public class UserMenu
             }
         }
 
+    }
+
+    public static void addFoodToCart()
+    {
+        Resturant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
+        Food userCurrentFood = Memory.getCurrentUser().getUserCurrentFood();
+        if(checkRestaurantInCart()!=null)
+        {
+            checkRestaurantInCart().getOrder().add(userCurrentFood);
+        }
+        else
+        {
+            Order order = new Order(userCurrentRestaurant.getName(),userCurrentRestaurant.getId());
+            order.add(userCurrentFood);
+            Memory.getCurrentUser().getUserCart().add(new Cart(userCurrentRestaurant,order));
+        }
+
+    }
+
+    public static Cart checkRestaurantInCart()
+    {
+        Resturant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
+        for(Cart cart:Memory.getCurrentUser().getUserCart())
+        {
+            if(cart.getRestaurant().getId().equals(userCurrentRestaurant.getId()))
+                return cart;
+        }
+        return null;
     }
 
 }
