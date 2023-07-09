@@ -248,7 +248,7 @@ public class UserMenu
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.ORDER_HISTORY)) != null)
             {
                 message = UserMenuController.accessOrderHistoryController();
-                if(message.getMessage().equals(UserMenuMessages.NO_HISTORY))
+                if(message.getMessage().equals(UserMenuMessages.NO_HISTORY.getMessage()))
                     print(message.getMessage());
                 else
                 {
@@ -644,7 +644,8 @@ public class UserMenu
         }
         else
         {
-            Order order = new Order(userCurrentRestaurant.getName(),userCurrentRestaurant.getId());
+            Order order = new Order(userCurrentRestaurant.getName(),userCurrentRestaurant.getId()+Memory.getCurrentUser().getOrdersHistory().size());
+            order.setRestaurant(userCurrentRestaurant);
             order.add(userCurrentFood);
             Memory.getCurrentUser().getUserCart().add(new Cart(userCurrentRestaurant,order));
         }
@@ -695,8 +696,15 @@ public class UserMenu
                 break;
             }
         }
+        try
+        {
+            System.out.print("Restaurant Name: "+foundedOrder.getRestaurant().getName()+"||");
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
 
-        System.out.print("Restaurant Name: "+foundedOrder.getRestaurant().getName()+"||");
         System.out.print("Order Id: "+foundedOrder.getId()+"||");
         System.out.println("Total Price: "+foundedOrder.getTotalPrice()+"IRT");
         System.out.println("Order Food(s)");

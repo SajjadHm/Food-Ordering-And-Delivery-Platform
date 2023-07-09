@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74e76636-cb27-485c-ab7f-563733166d72" name="Changes" comment="Commit #034 UserMenu:display cart status debugged.">
-      <change beforePath="$PROJECT_DIR$/controllers/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserMenuController.java" afterDir="false" />
+    <list default="true" id="74e76636-cb27-485c-ab7f-563733166d72" name="Changes" comment="Commit #035 UserMenu:confirm order implemented.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/controllers/UserMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/controllers/UserMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/UserMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/UserMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuMessages.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuMessages.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/UserMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,14 +125,7 @@
       <workItem from="1687788817927" duration="6549000" />
       <workItem from="1688547252227" duration="333000" />
       <workItem from="1688814544315" duration="25425000" />
-      <workItem from="1688891813743" duration="27042000" />
-    </task>
-    <task id="LOCAL-00010" summary="Commit #026 - UserMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.usermenu.&#10;- enums package structure edited.">
-      <created>1684830748974</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1684830748974</updated>
+      <workItem from="1688891813743" duration="29767000" />
     </task>
     <task id="LOCAL-00011" summary="Commit #027 - ManagerMenu Enums&#10;&#10;&#10;- UserMenu enums added in enums.managermenu.">
       <created>1684830857908</created>
@@ -468,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688930144218</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Commit #035 UserMenu:confirm order implemented.">
+      <created>1688932694614</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1688932694614</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +534,8 @@
     <MESSAGE value="Commit #032 UserMenu:select order  implemented." />
     <MESSAGE value="Commit #033 UserMenu:display cart status implemented." />
     <MESSAGE value="Commit #034 UserMenu:display cart status debugged." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #034 UserMenu:display cart status debugged." />
+    <MESSAGE value="Commit #035 UserMenu:confirm order implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #035 UserMenu:confirm order implemented." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
