@@ -21,7 +21,7 @@ public class User extends Account
     private  HashMap<Rating,Resturant> userRatings = new HashMap<>();
     private  HashMap<Comment,Food> userCommentsFood = new HashMap<>();
     private  HashMap<Rating,Food> userRatingsFood = new HashMap<>();
-    private ArrayList<Order> orders = new ArrayList<>();
+    private ArrayList<Order> ordersHistory = new ArrayList<>();
     private ArrayList<Cart> userCart  = new ArrayList<>();
 
 
@@ -92,12 +92,12 @@ public class User extends Account
         this.userRatingsFood = userRatingsFood;
     }
 
-    public ArrayList<Order> getOrders() {
-        return orders;
+    public ArrayList<Order> getOrdersHistory() {
+        return ordersHistory;
     }
 
-    public void setOrders(ArrayList<Order> orders) {
-        this.orders = orders;
+    public void setOrdersHistory(ArrayList<Order> ordersHistory) {
+        this.ordersHistory = ordersHistory;
     }
 
     public void setUserCart(ArrayList<Cart> userCart) {

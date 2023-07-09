@@ -1,11 +1,8 @@
 package controllers;
 
 import model.Memory;
-import model.resturant.Resturant;
 import view.UserMenu;
 import view.enums.usermenu.UserMenuMessages;
-
-import javax.jws.soap.SOAPBinding;
 
 public class UserMenuController
 {
@@ -220,4 +217,11 @@ public class UserMenuController
     }
 
 
+    public static UserMenuMessages accessOrderHistoryController()
+    {
+        if(Memory.getCurrentUser().getOrdersHistory().size()==0)
+            return UserMenuMessages.NO_HISTORY;
+        else
+            return UserMenuMessages.YOUR_HISTORY;
+    }
 }

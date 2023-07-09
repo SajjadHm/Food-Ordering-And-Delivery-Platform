@@ -1,6 +1,5 @@
 package view;
 
-import com.sun.xml.internal.bind.v2.TODO;
 import controllers.UserMenuController;
 import model.Cart;
 import model.Memory;
@@ -10,15 +9,10 @@ import model.resturant.Order;
 import model.resturant.Resturant;
 import model.social.Comment;
 import model.social.Rating;
-import view.enums.loginmenu.LoginMenuCommands;
-import view.enums.loginmenu.LoginMenuMessages;
-import view.enums.loginmenu.LoginMenuResults;
-import view.enums.managermenu.ManagerMenuMessages;
 import view.enums.usermenu.UserMenuCommands;
 import view.enums.usermenu.UserMenuMessages;
 import view.enums.usermenu.UserMenuResults;
 
-import javax.print.attribute.standard.OrientationRequested;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -255,7 +249,14 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.ORDER_HISTORY)) != null)
             {
-
+                message = UserMenuController.accessOrderHistoryController();
+                if(message.getMessage().equals(UserMenuMessages.NO_HISTORY))
+                    print(message.getMessage());
+                else
+                {
+                    print(message.getMessage());
+                    accessOrderHistory();
+                }
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.SELECT_ORDER)) != null)
             {
@@ -516,7 +517,7 @@ public class UserMenu
 
     public static boolean isInOrders(String foodId)
     {
-        for(Order order:Memory.getCurrentUser().getOrders())
+        for(Order order:Memory.getCurrentUser().getOrdersHistory())
         {
             for (Food food :order)
             {
@@ -632,6 +633,17 @@ public class UserMenu
                 return cart;
         }
         return null;
+    }
+
+    public static void accessOrderHistory()
+    {
+        for(Order order:Memory.getCurrentUser().getOrdersHistory())
+        {
+            System.out.print("Restaurant Name: "+order.getRestaurant().getName()+"||");
+            System.out.print("Order Id: "+order.getId()+"||");
+            System.out.println("Total Price: "+order.getTotalPrice()+"IRT");
+            System.out.println("-------------------------------------------------------");
+        }
     }
 
 }
