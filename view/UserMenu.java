@@ -189,7 +189,18 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.EDIT_COMMENT_FOOD)) != null)
             {
-
+                message = UserMenuController.editCommentControllerFood(matcher.group("commentId"));
+                if(message.getMessage().equals(UserMenuMessages.ENTER_COMMENT.getMessage()))
+                {
+                    print(message.getMessage());
+                    String newText = scanner.nextLine().trim();
+                    editCommentFood(matcher.group("commentId"),newText);
+                    print(UserMenuMessages.COMMENT_EDITED_SUCCESSFULLY.getMessage());
+                }
+                else
+                {
+                    print(message.getMessage());
+                }
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.DISPLAY_RATINGS_FOOD)) != null)
             {
@@ -468,7 +479,6 @@ public class UserMenu
         }
     }
 
-
     public static boolean isInOrders(String foodId)
     {
         for(Order order:Memory.getCurrentUser().getOrders())
@@ -489,6 +499,33 @@ public class UserMenu
         Comment newComment = new Comment(text,id+"fc");
         userCurrentFood.getComments().add(newComment);
         Memory.getCurrentUser().getUserCommentsFood().put(newComment,userCurrentFood);
+
+    }
+
+    public static boolean checkEditCommentFood(String commentId)
+    {
+
+        HashMap<Comment, Food> comments = Memory.getCurrentUser().getUserCommentsFood();
+        for(Map.Entry<Comment, Food> entry:comments.entrySet())
+        {
+            if(entry.getKey().getId().equals(commentId))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    public static void editCommentFood(String commentId,String newText)
+    {
+        HashMap<Comment, Food> comments = Memory.getCurrentUser().getUserCommentsFood();
+        for(Map.Entry<Comment, Food> entry:comments.entrySet())
+        {
+            if(entry.getKey().getId().equals(commentId))
+            {
+                entry.getKey().setMessage(newText);
+                break;
+            }
+        }
 
     }
 

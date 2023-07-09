@@ -153,4 +153,13 @@ public class UserMenuController
         else
             return UserMenuMessages.ENTER_COMMENT;
     }
+
+    public static UserMenuMessages editCommentControllerFood(String commentId)
+    {
+        if(!UserMenu.checkEditCommentFood(commentId))
+            return UserMenuMessages.COMMENT_ID_INCORRECT;
+        else
+            return UserMenuMessages.ENTER_COMMENT;
+
+    }
 }
