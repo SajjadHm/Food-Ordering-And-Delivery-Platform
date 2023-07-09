@@ -181,13 +181,28 @@ public class UserMenuController
         if(Memory.getCurrentUser().getUserCurrentFood()==null)
             return UserMenuMessages.FOOD_NOT_SELECTED;
 
-//        else if(!UserMenu.isInOrders(Memory.getCurrentUser().getUserCurrentFood().getId()))
-//        {
-//            return UserMenuMessages.SUBMIT_BLIND_RATING_FOOD;
-//        }
+        else if(!UserMenu.isInOrders(Memory.getCurrentUser().getUserCurrentFood().getId()))
+        {
+            return UserMenuMessages.SUBMIT_BLIND_RATING_FOOD;
+        }
         else
         {
             return UserMenuMessages.ENTER_RATING;
         }
     }
+
+    public static UserMenuMessages editRatingControllerFood()
+    {
+        if(Memory.getCurrentUser().getUserCurrentFood()==null)
+            return UserMenuMessages.FOOD_NOT_SELECTED;
+        else if(!UserMenu.checkEditRatingFood())
+        {
+            return UserMenuMessages.NOT_RATED_YET;
+        }
+        else
+            return UserMenuMessages.ENTER_RATING;
+
+    }
+
+
 }

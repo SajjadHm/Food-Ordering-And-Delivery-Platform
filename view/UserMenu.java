@@ -228,6 +228,15 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.EDIT_RATING_FOOD)) != null)
             {
+                message = UserMenuController.editRatingControllerFood();
+                if(message.getMessage().equals(UserMenuMessages.ENTER_RATING.getMessage()))
+                {
+                    print(message.getMessage());
+                    editRatingFood(Integer.parseInt(scanner.nextLine().trim()));
+                    print(UserMenuMessages.RATE_EDIT_SUCCESSFULLY.getMessage());
+                }
+                else
+                    print(message.getMessage());
 
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.ADD_FOOD_TO_CART)) != null)
@@ -560,5 +569,31 @@ public class UserMenu
         Memory.getCurrentUser().getUserRatingsFood().put(newRate,userCurrentFood);
     }
 
+    public static boolean checkEditRatingFood()
+    {
+        HashMap<Rating, Food> ratings = Memory.getCurrentUser().getUserRatingsFood();
+        for(Map.Entry<Rating, Food> entry:ratings.entrySet())
+        {
+            if(entry.getValue().getId().equals(Memory.getCurrentUser().getUserCurrentFood().getId()))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void editRatingFood(int newRating)
+    {
+        HashMap<Rating, Food> ratings = Memory.getCurrentUser().getUserRatingsFood();
+        for(Map.Entry<Rating, Food> entry:ratings.entrySet())
+        {
+            if(entry.getValue().getId().equals(Memory.getCurrentUser().getUserCurrentFood().getId()))
+            {
+                entry.getKey().setRating(newRating);
+                break;
+            }
+        }
+
+    }
 
 }
