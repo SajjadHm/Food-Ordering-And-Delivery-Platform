@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74e76636-cb27-485c-ab7f-563733166d72" name="Changes" comment="Commit #032 UserMenu:access order history implemented.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/UserMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" afterDir="false" />
-    </list>
+    <list default="true" id="74e76636-cb27-485c-ab7f-563733166d72" name="Changes" comment="Commit #032 UserMenu:select order  implemented." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,14 +119,7 @@
       <workItem from="1687788817927" duration="6549000" />
       <workItem from="1688547252227" duration="333000" />
       <workItem from="1688814544315" duration="25425000" />
-      <workItem from="1688891813743" duration="21769000" />
-    </task>
-    <task id="LOCAL-00007" summary="Commit #023 - FoodMenu&#10;&#10;&#10;- FoodMenu class added in model.resturant.">
-      <created>1684829458365</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1684829458365</updated>
+      <workItem from="1688891813743" duration="22211000" />
     </task>
     <task id="LOCAL-00008" summary="Commit #024 - Order and DeliveryStatus&#10;&#10;&#10;- Order class added in model.resturant.&#10;- DeliveryStatus enum in model.resturant.">
       <created>1684830019010</created>
@@ -469,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688926031473</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Commit #032 UserMenu:select order  implemented.">
+      <created>1688927638696</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1688927638696</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,7 +525,8 @@
     <MESSAGE value="Commit #030 UserMenu:edit rating food implemented." />
     <MESSAGE value="Commit #031 UserMenu:add food to cart implemented." />
     <MESSAGE value="Commit #032 UserMenu:access order history implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #032 UserMenu:access order history implemented." />
+    <MESSAGE value="Commit #032 UserMenu:select order  implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #032 UserMenu:select order  implemented." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

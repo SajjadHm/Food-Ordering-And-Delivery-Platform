@@ -235,4 +235,12 @@ public class UserMenuController
             return UserMenuMessages.ORDER_SELECTED_SUCCESSFULLY;
 
     }
+
+    public static UserMenuMessages displayCartStatusController()
+    {
+        if(Memory.getCurrentUser().getUserCart().size()==0)
+            return UserMenuMessages.EMPTY_CART;
+        else
+            return UserMenuMessages.CART_STATUS;
+    }
 }

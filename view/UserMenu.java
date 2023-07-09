@@ -272,7 +272,14 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.DISPLAY_CART_STATUS)) != null)
             {
-
+                message = UserMenuController.displayCartStatusController();
+                if(message.getMessage().equals(UserMenuMessages.EMPTY_CART.getMessage()))
+                    print(message.getMessage());
+                else
+                {
+                    print(message.getMessage());
+                    displayCartStatus();
+                }
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.CONFIRM_ORDER)) != null)
             {
@@ -684,6 +691,24 @@ public class UserMenu
         for(Food food:foundedOrder)
         {
             System.out.println("Food Name: "+food.getName()+"||"+"Food Id: "+food.getId()+"||"+"Food Price: "+food.getPrice()+"IRT");
+        }
+    }
+
+
+    public static void displayCartStatus()
+    {
+        ArrayList<Cart> userCarts = Memory.getCurrentUser().getUserCart();
+        for(Cart cart:userCarts)
+        {
+            System.out.print("Restaurant Name"+cart.getRestaurant()+"||");
+            System.out.println("Order Id: "+cart.getOrder().getId()+"||"+"Order Total Price: "+cart.getOrder().getTotalPrice());
+            System.out.println("Order Details: ");
+            for (Food food: cart.getOrder())
+            {
+                System.out.println("Food Name: "+food.getName()+"||"+"Food Price: "+food.getPrice()+"IRT");
+            }
+            System.out.println("---------------------------");
+
         }
     }
 
