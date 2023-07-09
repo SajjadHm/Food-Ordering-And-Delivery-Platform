@@ -175,4 +175,19 @@ public class UserMenuController
                 return UserMenuMessages.THE_RATING;
         }
     }
+
+    public static UserMenuMessages addRatingControllerFood()
+    {
+        if(Memory.getCurrentUser().getUserCurrentFood()==null)
+            return UserMenuMessages.FOOD_NOT_SELECTED;
+
+//        else if(!UserMenu.isInOrders(Memory.getCurrentUser().getUserCurrentFood().getId()))
+//        {
+//            return UserMenuMessages.SUBMIT_BLIND_RATING_FOOD;
+//        }
+        else
+        {
+            return UserMenuMessages.ENTER_RATING;
+        }
+    }
 }

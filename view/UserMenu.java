@@ -215,7 +215,16 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.SUBMIT_RATING_FOOD)) != null)
             {
-
+                message = UserMenuController.addRatingControllerFood();
+                if(message.getMessage().equals(UserMenuMessages.FOOD_NOT_SELECTED.getMessage()))
+                    print(message.getMessage());
+                else if(message.getMessage().equals(UserMenuMessages.SUBMIT_BLIND_RATING_FOOD.getMessage()))
+                    print(message.getMessage());
+                else
+                {
+                    addNewRatingFood(matcher.group("rating"));
+                    print(UserMenuMessages.RATE_SUBMIT_SUCCESSFULLY.getMessage());
+                }
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.EDIT_RATING_FOOD)) != null)
             {
@@ -538,7 +547,17 @@ public class UserMenu
     public static double displayRatingFood()
     {
         double avgRatings = Rating.avgRatings(Memory.getCurrentUser().getUserCurrentFood().getRatings());
+        System.out.print("");
         return avgRatings;
+    }
+
+    public static void addNewRatingFood(String rate)
+    {
+        Food userCurrentFood = Memory.getCurrentUser().getUserCurrentFood();
+        int id = userCurrentFood.getRatings().size();
+        Rating newRate= new Rating(Double.parseDouble(rate),id+"fr");
+        userCurrentFood.getRatings().add(newRate);
+        Memory.getCurrentUser().getUserRatingsFood().put(newRate,userCurrentFood);
     }
 
 
