@@ -700,14 +700,14 @@ public class UserMenu
         ArrayList<Cart> userCarts = Memory.getCurrentUser().getUserCart();
         for(Cart cart:userCarts)
         {
-            System.out.print("Restaurant Name"+cart.getRestaurant()+"||");
-            System.out.println("Order Id: "+cart.getOrder().getId()+"||"+"Order Total Price: "+cart.getOrder().getTotalPrice());
+            System.out.print("Restaurant Name: "+cart.getRestaurant().getName()+"||");
+            System.out.println("Order Id: "+cart.getOrder().getId()+"||"+"Order Total Price: "+cart.getOrder().getTotalPrice()+"IRT");
             System.out.println("Order Details: ");
             for (Food food: cart.getOrder())
             {
                 System.out.println("Food Name: "+food.getName()+"||"+"Food Price: "+food.getPrice()+"IRT");
             }
-            System.out.println("---------------------------");
+            System.out.println("--------------------------------------------------------");
 
         }
     }
