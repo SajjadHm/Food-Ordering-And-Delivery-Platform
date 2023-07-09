@@ -149,6 +149,15 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.EDIT_RATING)) != null)
             {
+                message = UserMenuController.editRatingController();
+                if(message.getMessage().equals(UserMenuMessages.ENTER_RATING.getMessage()))
+                {
+                    print(message.getMessage());
+                    editRating(Integer.parseInt(scanner.nextLine().trim()));
+                    print(UserMenuMessages.RATE_EDIT_SUCCESSFULLY.getMessage());
+                }
+                else
+                    print(message.getMessage());
 
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.DISPLAY_COMMENTS_FOOD)) != null)
@@ -392,6 +401,37 @@ public class UserMenu
             userCurrentRestaurant.getRatings().add(newRate);
             Memory.getCurrentUser().getUserRatings().put(newRate,userCurrentRestaurant);
     }
+
+    public static boolean checkEditRating()
+    {
+        boolean edit = false;
+        HashMap<Rating, Resturant> ratings = Memory.getCurrentUser().getUserRatings();
+        for(Map.Entry<Rating, Resturant> entry:ratings.entrySet())
+        {
+            if(entry.getValue().getId().equals(Memory.getCurrentUser().getUserCurrentRestaurant().getId()))
+            {
+                edit = true;
+                break;
+            }
+        }
+        return edit;
+    }
+
+    public static void editRating(int newRating)
+    {
+        HashMap<Rating, Resturant> ratings = Memory.getCurrentUser().getUserRatings();
+        for(Map.Entry<Rating, Resturant> entry:ratings.entrySet())
+        {
+            if(entry.getValue().getId().equals(Memory.getCurrentUser().getUserCurrentRestaurant().getId()))
+            {
+                entry.getKey().setRating(newRating);
+                break;
+            }
+        }
+
+    }
+
+
 
 
 

@@ -3,6 +3,8 @@ package model.social;
 import java.util.ArrayList;
 
 public class Rating {
+
+
     private double rating;
     private int count;
 
@@ -42,6 +44,11 @@ public class Rating {
 
     public double getRating() {
         return rating;
+    }
+
+    public void setRating(double rating)
+    {
+        this.rating = rating;
     }
 
     public int getCount() {

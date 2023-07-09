@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74e76636-cb27-485c-ab7f-563733166d72" name="Changes" comment="Commit #022 UserMenu:edit comment implemented.">
+    <list default="true" id="74e76636-cb27-485c-ab7f-563733166d72" name="Changes" comment="Commit #023 UserMenu:edit and display rating implemented.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/accounts/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/accounts/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/resturant/Resturant.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/resturant/Resturant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/social/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/social/Rating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/controllers/UserMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/controllers/UserMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/accounts/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/accounts/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/resturant/Resturant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/resturant/Resturant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/social/Rating.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/model/social/Rating.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/UserMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/UserMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuMessages.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Food-Ordering-And-Delivery-Platform/view/enums/usermenu/UserMenuMessages.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/UserMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/usermenu/UserMenuMessages.java" afterDir="false" />
     </list>
@@ -132,7 +124,8 @@
       <workItem from="1687717839170" duration="34000" />
       <workItem from="1687788817927" duration="6549000" />
       <workItem from="1688547252227" duration="333000" />
-      <workItem from="1688814544315" duration="25309000" />
+      <workItem from="1688814544315" duration="25425000" />
+      <workItem from="1688891813743" duration="2126000" />
     </task>
     <task id="LOCAL-00001" summary="Commit #017 - Merging?">
       <created>1684826613596</created>
@@ -449,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688846538439</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Commit #023 UserMenu:edit and display rating implemented.">
+      <created>1688855783598</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1688855783598</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +500,8 @@
     <MESSAGE value="Commit #020 UserMenu:display comment implemented." />
     <MESSAGE value="Commit #021 UserMenu:add comment implemented." />
     <MESSAGE value="Commit #022 UserMenu:edit comment implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #022 UserMenu:edit comment implemented." />
+    <MESSAGE value="Commit #023 UserMenu:edit and display rating implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #023 UserMenu:edit and display rating implemented." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -118,5 +118,16 @@ public class UserMenuController
     }
 
 
+    public static UserMenuMessages editRatingController()
+    {
+        if(Memory.getCurrentUser().getUserCurrentRestaurant()==null)
+            return UserMenuMessages.RESTAURANT_NOT_SELECTED;
+        else if(!UserMenu.checkEditRating())
+        {
+            return UserMenuMessages.NOT_RATED_YET;
+        }
+        else
+            return UserMenuMessages.ENTER_RATING;
 
+    }
 }
