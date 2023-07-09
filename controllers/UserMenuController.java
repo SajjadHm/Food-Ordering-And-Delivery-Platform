@@ -130,4 +130,18 @@ public class UserMenuController
             return UserMenuMessages.ENTER_RATING;
 
     }
+
+    public static UserMenuMessages displayCommentsFoodController()
+    {
+        if(Memory.getCurrentUser().getUserCurrentFood()==null)
+            return UserMenuMessages.FOOD_NOT_SELECTED;
+        else
+        {
+            if(Memory.getCurrentUser().getUserCurrentFood().getComments().size()==0)
+                return UserMenuMessages.FOOD_WITHOUT_COMMENT;
+            else
+                return UserMenuMessages.Comments;
+        }
+    }
+
 }

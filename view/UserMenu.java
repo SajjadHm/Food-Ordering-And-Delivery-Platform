@@ -162,7 +162,15 @@ public class UserMenu
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.DISPLAY_COMMENTS_FOOD)) != null)
             {
-
+                message = UserMenuController.displayCommentsFoodController();
+                if(message.getMessage().equals(UserMenuMessages.Comments.getMessage()))
+                {
+                    print(message.getMessage());
+                    System.out.println("");
+                    displayCommentsFood();
+                }
+                else
+                    print(message.getMessage());
             }
             else if ((matcher = UserMenuCommands.getMatcher(input, UserMenuCommands.ADD_NEW_COMMENT_FOOD)) != null)
             {
@@ -346,7 +354,6 @@ public class UserMenu
 
         }
 
-
     }
 
     public static void addNewComment(String text)
@@ -431,7 +438,24 @@ public class UserMenu
 
     }
 
-
+    private static void displayCommentsFood()
+    {
+        for(Comment comment:Memory.getCurrentUser().getUserCurrentFood().getComments())
+        {
+            System.out.println("CommentText: "+ comment.getMessage());
+            System.out.println("CommentID: "+comment.getId());
+            if(comment.getReplies().size()!=0)
+            {
+                System.out.println("The Reply(s)");
+                for (Comment reply:comment.getReplies())
+                {
+                    System.out.println("ReplyText: "+reply.getMessage());
+                    System.out.println("ReplyID: "+reply.getId());
+                }
+            }
+            System.out.println("---------------------------------------");
+        }
+    }
 
 
 

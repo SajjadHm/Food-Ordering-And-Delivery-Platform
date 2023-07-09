@@ -23,6 +23,25 @@ public class User extends Account
     private  HashMap<Comment,Resturant> userComments = new HashMap<>();
     private  HashMap<Rating,Resturant> userRatings = new HashMap<>();
 
+    public HashMap<Comment, Food> getUserCommentsFood() {
+        return userCommentsFood;
+    }
+
+    public void setUserCommentsFood(HashMap<Comment, Food> userCommentsFood) {
+        this.userCommentsFood = userCommentsFood;
+    }
+
+    public HashMap<Rating, Food> getUserRatingsFood() {
+        return userRatingsFood;
+    }
+
+    public void setUserRatingsFood(HashMap<Rating, Food> userRatingsFood) {
+        this.userRatingsFood = userRatingsFood;
+    }
+
+    private  HashMap<Comment,Food> userCommentsFood = new HashMap<>();
+    private  HashMap<Rating,Food> userRatingsFood = new HashMap<>();
+
 
 
     public User(String userName, String passWord, String firstName, String lastName)
