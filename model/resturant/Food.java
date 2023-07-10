@@ -2,6 +2,7 @@ package model.resturant;
 
 import model.social.Comment;
 import model.social.Rating;
+import org.omg.CORBA.PRIVATE_MEMBER;
 
 import java.util.ArrayList;
 
@@ -11,6 +12,7 @@ public class Food {
     private int price;
     private double discountPercent;
     private boolean isUnlisted;
+    private Resturant resturant;
     private ArrayList<Comment> comments;
 
     private ArrayList<Rating> ratings = new ArrayList<>();
@@ -80,6 +82,15 @@ public class Food {
 
     public void setRatings(ArrayList<Rating> ratings) {
         this.ratings = ratings;
+    }
+
+
+    public Resturant getResturant() {
+        return resturant;
+    }
+
+    public void setResturant(Resturant resturant) {
+        this.resturant = resturant;
     }
 
 }

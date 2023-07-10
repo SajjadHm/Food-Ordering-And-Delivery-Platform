@@ -1,5 +1,8 @@
 package model.resturant;
 
+import model.Memory;
+import model.accounts.Manager;
+
 public class FoodMenu extends FoodList {
     private static int foodIdCount = 0;
     public FoodMenu(String name, String id) {
@@ -38,6 +41,7 @@ public class FoodMenu extends FoodList {
         }
         foodIdCount++;
         Food food = new Food(newID, name, price, discountPercent);
+        food.setResturant(((Manager) Memory.getCurrentAccount()).getCurrentRestaurant());
         add(food);
     }
 
