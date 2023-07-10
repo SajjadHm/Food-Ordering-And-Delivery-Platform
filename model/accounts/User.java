@@ -1,21 +1,29 @@
 package model.accounts;
 
-import model.resturant.FoodList;
+import model.Cart;
+import model.resturant.Food;
+import model.resturant.Order;
 import model.resturant.Resturant;
 import model.social.Comment;
 import model.social.Rating;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class User extends Account
 {
     private int balance ;
     private boolean loginStatus;
-
-    private Resturant userCurrentRestaurant;
+    private Resturant userCurrentRestaurant = null;
+    private Food userCurrentFood = null;
     String location;
-    ArrayList<Comment> userComments = new ArrayList<>();
-    ArrayList<Rating> userRatings = new ArrayList<>();
+    private  HashMap<Comment,Resturant> userComments = new HashMap<>();
+    private  HashMap<Rating,Resturant> userRatings = new HashMap<>();
+    private  HashMap<Comment,Food> userCommentsFood = new HashMap<>();
+    private  HashMap<Rating,Food> userRatingsFood = new HashMap<>();
+    private ArrayList<Order> ordersHistory = new ArrayList<>();
+    private ArrayList<Cart> userCart  = new ArrayList<>();
+
 
 
     public User(String userName, String passWord, String firstName, String lastName)
@@ -41,7 +49,6 @@ public class User extends Account
     {
         this.balance = balance;
     }
-
     public Resturant getUserCurrentRestaurant()
     {
         return userCurrentRestaurant;
@@ -50,103 +57,66 @@ public class User extends Account
     {
         this.userCurrentRestaurant = userCurrentRestaurant;
     }
-
-//    public void searchRestaurant(String restaurantName)
-//    {
-//
-//    }
-//    public void selectRestaurant(int restaurantId)
-//    {
-//
-//    }
-    public void searchFood(String foodName)
+    public Food getUserCurrentFood()
     {
-
+        return userCurrentFood;
     }
-    public void selectFood(int foodId)
+
+    public void setUserCurrentFood(Food userCurrentFood)
     {
-
+        this.userCurrentFood = userCurrentFood;
     }
-    public void displayComments(Resturant restaurant)
+
+    public HashMap<Comment, Resturant> getUserComments()
     {
-
+        return userComments;
     }
-    public void addNewComments(Resturant restaurant)
+
+    public HashMap<Rating, Resturant> getUserRatings()
     {
-
+        return userRatings;
     }
-    public void editComments(int commentId ,Resturant restaurant)
-    {
-
+    public HashMap<Comment, Food> getUserCommentsFood() {
+        return userCommentsFood;
     }
-    public void displayRating(Resturant restaurant)
-    {
 
+    public void setUserCommentsFood(HashMap<Comment, Food> userCommentsFood) {
+        this.userCommentsFood = userCommentsFood;
     }
-    public void submitRating(Resturant restaurant)
-    {
 
+    public HashMap<Rating, Food> getUserRatingsFood() {
+        return userRatingsFood;
     }
-    public void editRating(Resturant restaurant)
-    {
 
+    public void setUserRatingsFood(HashMap<Rating, Food> userRatingsFood) {
+        this.userRatingsFood = userRatingsFood;
     }
-    public void displayComments(FoodList food)
-    {
 
+    public ArrayList<Order> getOrdersHistory() {
+        return ordersHistory;
     }
-    public void addNewComments(FoodList food)
-    {
 
+    public void setOrdersHistory(ArrayList<Order> ordersHistory) {
+        this.ordersHistory = ordersHistory;
     }
-    public void editComments(int commentId , FoodList food)
-    {
 
+    public void setUserCart(ArrayList<Cart> userCart) {
+        this.userCart = userCart;
     }
-    public void displayRating(FoodList food)
-    {
 
+    public ArrayList<Cart> getUserCart() {
+        return userCart;
     }
-    public void submitRating(FoodList food)
-    {
 
-    }
-    public void editRating(FoodList food)
-    {
-
-    }
-    public void addFoodTOCart()
-    {
-
-    }
-    public void orderHistory()
-    {
-
-    }
-    public void selectOrder()
-    {
-
-    }
-    public  void displayCartStatus()
-    {
-
-    }
-    public void confirmOrder()
-    {
-
-    }
-    public void showDeliveryTime()
-    {
-
-    }
     public void chargeAccount(int amount)
     {
         this.balance = this.balance + amount;
     }
-//    public void displayAccountCharge()
-//    {
-//
-//    }
+    public void logout()
+    {
+        this.setLoginStatus(false);
+    }
+
 
 
 

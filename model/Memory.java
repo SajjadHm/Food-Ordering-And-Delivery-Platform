@@ -3,6 +3,7 @@ package model;
 import model.accounts.Account;
 import model.accounts.Manager;
 import model.accounts.User;
+import model.resturant.Food;
 import model.resturant.Resturant;
 
 import java.util.ArrayList;
@@ -88,4 +89,22 @@ public class Memory {
     }
 
 
+    public static Food getFood(String id)
+    {
+        Food food = null;
+        for(HashMap.Entry<String, Resturant> resturantEntry :Memory.getResturantsList().entrySet())
+        {
+            for(Food foodLoop:resturantEntry.getValue().getMenu())
+            {
+                if(foodLoop.getId().equals(id))
+                {
+                    food = foodLoop;
+                    break;
+                }
+
+            }
+        }
+
+       return food;
+    }
 }

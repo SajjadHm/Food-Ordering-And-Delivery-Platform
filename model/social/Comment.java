@@ -30,6 +30,12 @@ public class Comment {
         this.isModified = false;
     }
 
+    public Comment(String message, String id )
+    {
+        this.message = message;
+        this.id = id;
+    }
+
     public String getMessage() {
         return message;
     }

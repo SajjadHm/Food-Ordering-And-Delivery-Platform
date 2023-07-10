@@ -14,7 +14,10 @@ public class Food {
     private int price;
     private double discountPercent;
     private boolean isUnlisted;
+    private Resturant resturant;
     private ArrayList<Comment> comments;
+
+    private ArrayList<Rating> ratings = new ArrayList<>();
     private Rating rating;
     private LocalDateTime discountTime;
 
@@ -89,6 +92,23 @@ public class Food {
 
     public Rating getRating() {
         return rating;
+    }
+
+    public ArrayList<Rating> getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(ArrayList<Rating> ratings) {
+        this.ratings = ratings;
+    }
+
+
+    public Resturant getResturant() {
+        return resturant;
+    }
+
+    public void setResturant(Resturant resturant) {
+        this.resturant = resturant;
     }
 
     public LocalDateTime getDiscountTime() {
