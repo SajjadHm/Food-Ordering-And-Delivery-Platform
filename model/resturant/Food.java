@@ -50,6 +50,7 @@ public class Food {
     }
 
     public boolean isDiscounted() {
+        if (discountTime == null) return false;
         return LocalDateTime.now().compareTo(discountTime) <= 0;
     }
 
