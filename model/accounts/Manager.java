@@ -12,7 +12,8 @@ public class Manager extends Account {
     private final ArrayList<String> restaurantsID;
     private Resturant currentRestaurant;
 
-    public Manager(String userName, String passWord, String firstName, String lastName) {
+    public Manager(String userName, String passWord, String firstName, String lastName)
+    {
         super(userName, passWord, firstName, lastName);
         restaurantsID = new ArrayList<>();
         currentRestaurant = null;

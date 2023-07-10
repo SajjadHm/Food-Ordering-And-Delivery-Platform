@@ -14,7 +14,8 @@ public class Memory {
     private final static ArrayList<User> users;
     private final static HashMap<String, Resturant> resturantsList;
     private static Account currentAccount;
-    // private static Resturant currentResturant;
+    private static User currentUser;
+    private static Resturant currentResturant;
 
     static {
         managers = new ArrayList<>();
@@ -39,6 +40,26 @@ public class Memory {
         return null;
     }
 
+    public static Resturant getRestaurant(String id)
+    {
+        return resturantsList.get(id);
+    }
+
+    public static ArrayList<Resturant> getRestaurants(String name)
+    {
+        if (resturantsList.size() == 0) return null;
+        ArrayList<Resturant> sameNameRestaurants = new ArrayList<>();
+        for (Resturant resturant : resturantsList.values())
+        {
+            if (resturant.getName().contains(name))
+            {
+                sameNameRestaurants.add(resturant);
+            }
+        }
+        if(sameNameRestaurants.size()==0) return null;
+        return sameNameRestaurants;
+    }
+
     public static ArrayList<Manager> getAdmins() {
         return managers;
     }
@@ -59,13 +80,12 @@ public class Memory {
         return resturantsList;
     }
 
-    /*
-    public static Resturant getCurrentResturant() {
-        return currentResturant;
+    public static User getCurrentUser() {
+        return currentUser;
+    }
+    public static void setCurrentUser(User currentUser) {
+        Memory.currentUser = currentUser;
     }
 
-    public static void setCurrentResturant(Resturant currentResturant) {
-        Memory.currentResturant = currentResturant;
-    }
-     */
+
 }

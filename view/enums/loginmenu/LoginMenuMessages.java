@@ -21,7 +21,7 @@ public enum LoginMenuMessages {
     ADMIN_LOGIN_SUCCESSFUL("Admin account logged in successfully."),
     USER_LOGIN_SUCCESSFUL("User account logged in successfully."),
     LOGOUT("Logged Out"),
-    INVALID_COMMAND("Inavlid Command!"),
+    INVALID_COMMAND("Invalid Command!"),
     ;
 
     final String message;
