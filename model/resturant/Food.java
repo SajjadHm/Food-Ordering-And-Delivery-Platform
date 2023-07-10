@@ -3,8 +3,10 @@ package model.resturant;
 import model.social.Comment;
 import model.social.Rating;
 
+import java.time.DateTimeException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Food {
     private final String id;
@@ -45,6 +47,10 @@ public class Food {
         if (discountTime == null) return price;
         if (LocalDateTime.now().compareTo(discountTime) > 0) return price;
         return (int) Math.round(price * discountPercent / 100);
+    }
+
+    public boolean isDiscounted() {
+        return LocalDateTime.now().compareTo(discountTime) <= 0;
     }
 
     public String getTextPrice() {
