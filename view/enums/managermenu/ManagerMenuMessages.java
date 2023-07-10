@@ -29,6 +29,8 @@ public enum ManagerMenuMessages {
     FOOD_SELECTED("Food selected successfully."),
     NO_FOOD_SELECTED("No food has been selected."),
     DISPLAY_RATINGS(""),
+    DISPLAY_COMMENTS(""),
+
     ;
 
     private String message;

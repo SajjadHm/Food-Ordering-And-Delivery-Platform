@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #052 - Select Food&#10;&#10;&#10;- selecting food implied.">
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #055 - Display Ratings&#10;&#10;&#10;- displaying ratings implied.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/ManagerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ManagerMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/social/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/social/Rating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/social/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/social/Comment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/ManagerMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuMessages.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +80,7 @@
       <workItem from="1686142771370" duration="1469000" />
       <workItem from="1686145592883" duration="6000" />
       <workItem from="1686724686176" duration="1101000" />
-      <workItem from="1688984985867" duration="4687000" />
+      <workItem from="1688984985867" duration="6307000" />
     </task>
     <task id="LOCAL-00001" summary="Commit #017 - Merging?">
       <created>1684826613596</created>
@@ -360,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688995076991</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Commit #055 - Display Ratings&#10;&#10;&#10;- displaying ratings implied.">
+      <created>1688995727991</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1688995727991</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +386,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="parsa" />
                       </list>
                     </value>
                   </entry>
@@ -390,7 +399,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commit #032 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum edited." />
     <MESSAGE value="Commit #033 - add restaurant&#10;&#10;&#10;- add restaurant command implied." />
     <MESSAGE value="Commit #034 - logout&#10;&#10;&#10;- logout command implied." />
     <MESSAGE value="Commit #034 - remove restaurant&#10;&#10;&#10;- remove restaurant command implied." />
@@ -415,7 +423,8 @@
     <MESSAGE value="Commit #051 - Food Discount&#10;&#10;&#10;- food discounting implied." />
     <MESSAGE value="Commit #052 - Food Discount&#10;&#10;&#10;- food discounting debugged." />
     <MESSAGE value="Commit #052 - Select Food&#10;&#10;&#10;- selecting food implied." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #052 - Select Food&#10;&#10;&#10;- selecting food implied." />
+    <MESSAGE value="Commit #055 - Display Ratings&#10;&#10;&#10;- displaying ratings implied." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #055 - Display Ratings&#10;&#10;&#10;- displaying ratings implied." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

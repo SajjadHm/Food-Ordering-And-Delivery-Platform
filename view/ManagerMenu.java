@@ -7,12 +7,14 @@ import model.enums.ResturantFoodType;
 import model.resturant.Food;
 import model.resturant.FoodMenu;
 import model.resturant.Resturant;
+import model.social.Comment;
 import view.enums.managermenu.ManagerMenuCommands;
 import view.enums.managermenu.ManagerMenuMessages;
 import view.enums.managermenu.ManagerMenuResults;
 import view.others.Colors;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -69,6 +71,8 @@ public class ManagerMenu {
                 message = checkSelectFood();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.DISPLAY_RATINGS)) != null)
                 message = checkDisplayRatings();
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.DISPLAY_COMMENTS)) != null)
+                message = checkDisplayComments();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.LOGOUT)) != null) {
                 message = checkLogOut();
                 isRunning = false;
@@ -200,6 +204,21 @@ public class ManagerMenu {
         Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
         Food food = resturant.getSelectedFood();
         printer(food.getRating().toString());
+        return null;
+    }
+
+    public static ManagerMenuMessages checkDisplayComments() {
+        ManagerMenuMessages result = ManagerMenuController.checkDisplayComments();
+        if (result != ManagerMenuMessages.DISPLAY_COMMENTS) return result;
+        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        Food food = resturant.getSelectedFood();
+        ArrayList<Comment> comments = food.getComments();
+        if (comments.size() == 0) {
+            printer("There is no comments for this food.");
+            return null;
+        }
+        for (Comment comment : comments)
+            printer(comment.toString() + "\n");
         return null;
     }
 }

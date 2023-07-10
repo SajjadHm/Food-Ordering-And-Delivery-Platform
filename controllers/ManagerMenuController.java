@@ -173,4 +173,12 @@ public class ManagerMenuController {
         if (food == null) return ManagerMenuMessages.NO_FOOD_SELECTED;
         return ManagerMenuMessages.DISPLAY_RATINGS;
     }
+
+    public static ManagerMenuMessages checkDisplayComments() {
+        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (resturant == null) return ManagerMenuMessages.INVALID_COMMAND;
+        Food food = resturant.getSelectedFood();
+        if (food == null) return ManagerMenuMessages.NO_FOOD_SELECTED;
+        return ManagerMenuMessages.DISPLAY_COMMENTS;
+    }
 }

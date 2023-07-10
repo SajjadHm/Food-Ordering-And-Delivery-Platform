@@ -22,6 +22,7 @@ public enum ManagerMenuCommands {
     DISCOUNT_FOOD("discount\\s+food\\s+(?<foodID>\\w+)\\s+(?<percent>\\d+\\.?\\d+?)\\s+(?<year>\\d{4})\\/(?<month>\\d{2})\\/(?<day>\\d{2})\\s{2}(?<hour>\\d{2}):(?<minute>\\d{2}):(?<second>\\d{2})"),
     SELECT_FOOD("select\\s+food\\s+(?<foodID>\\w+)"),
     DISPLAY_RATINGS("display\\s+ratings"),
+    DISPLAY_COMMENTS("display\\s+comments"),
     END("end"),
     ;
 
