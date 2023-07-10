@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="1200.0" prefHeight="620.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1200.0" minWidth="-Infinity" prefWidth="1200.0">
+         <children>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="45.0" prefWidth="65.0" text="Account" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="150.0" />
+               </HBox.margin>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="45.0" prefWidth="65.0" text="History" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="1.0" />
+               </HBox.margin>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="45.0" prefWidth="65.0" text="Cart" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="1.0" />
+               </HBox.margin>
+            </Button>
+            <TextField alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="45.0" prefWidth="288.0" promptText="Search In SUTFood!" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="1.0" />
+               </HBox.margin>
+            </TextField>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="45.0" prefWidth="77.0" text="Search!" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="1.0" />
+               </HBox.margin>
+            </Button>
+            <TextArea editable="false" maxWidth="1.7976931348623157E308" prefHeight="41.0" prefWidth="101.0" style="-fx-background-color: red;" text="SUTFOOD!">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="1.0" right="150.0" top="20.0" />
+               </HBox.margin>
+            </TextArea>
+         </children>
+      </HBox>
+      <HBox layoutY="75.0" maxWidth="1.7976931348623157E308" prefHeight="21.0" prefWidth="1200.0">
+         <children>
+            <Separator maxWidth="1.7976931348623157E308" prefWidth="1200.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="176.0" maxWidth="1221.0" prefHeight="25.0" prefWidth="1200.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="   Restaurent" textAlignment="CENTER" wrappingWidth="100.54497694969177">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Text>
+            <Text layoutX="555.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SuperMarket" textAlignment="CENTER" wrappingWidth="110.54497730731964">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Text>
+            <Text layoutX="610.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cafe" textAlignment="CENTER" wrappingWidth="83.87829029560089">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Text>
+            <Text layoutX="665.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="         Sweetness" textAlignment="CENTER" wrappingWidth="123.87829792499542">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Text>
+            <Text layoutX="721.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="        Bakery" textAlignment="CENTER" wrappingWidth="110.54497730731964">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Text>
+            <Text layoutX="776.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="          Fruit" textAlignment="CENTER" wrappingWidth="110.54497730731964">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Text>
+            <Text layoutX="831.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Protein" textAlignment="CENTER" wrappingWidth="110.54497730731964">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Text>
+            <Text layoutX="887.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="More" textAlignment="CENTER" wrappingWidth="110.54497730731964">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="45.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="1.0" layoutY="79.0" maxWidth="1213.0" prefHeight="108.0" prefWidth="1200.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="34.0" prefWidth="110.0" text="Resaurant">
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="77.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/restaurant.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="573.0" layoutY="17.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="110.0" text="Super Market">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="77.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/supermarket.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="610.0" layoutY="17.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="110.0" text="Cafe">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="77.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/cafe.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="647.0" layoutY="17.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="110.0" text="Sweetness">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="77.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/sweet.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="683.0" layoutY="17.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="110.0" text="Bakary">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="77.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/bakery.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="720.0" layoutY="17.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="110.0" text="Fruit">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="77.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/fruit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="34.0" prefWidth="110.0" text="Protein">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="77.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/meat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="34.0" prefWidth="110.0" text="More">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="77.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/other.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="1.0" layoutY="204.0" maxWidth="1200.0" prefHeight="10.0" prefWidth="1200.0">
+         <children>
+            <Separator maxWidth="1200.0" prefHeight="0.0" prefWidth="1200.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <ScrollPane layoutY="208.0" prefHeight="411.0" prefWidth="1200.0">
+         <content>
+            <VBox prefHeight="399.0" prefWidth="1197.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Categories" wrappingWidth="116.98114013671875">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <ScrollPane minHeight="135.0" prefHeight="142.0" prefWidth="1187.0">
+                     <content>
+                        <HBox prefHeight="119.0" prefWidth="2104.0">
+                           <children>
+                              <Button contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="Iranian">
+                                 <graphic>
+                                    <ImageView accessibleRole="BUTTON" fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/irani.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="TOP" graphicTextGap="0.0" layoutX="137.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="FastFood" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView accessibleRole="BUTTON" fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/fastfood.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="TOP" graphicTextGap="0.0" layoutX="137.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="Barbecue">
+                                 <graphic>
+                                    <ImageView accessibleRole="BUTTON" fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/kebab.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="TOP" graphicTextGap="0.0" layoutX="281.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="Pizza">
+                                 <graphic>
+                                    <ImageView accessibleRole="BUTTON" fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/pizza.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="TOP" graphicTextGap="0.0" layoutX="416.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="Burger">
+                                 <graphic>
+                                    <ImageView accessibleRole="BUTTON" fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/burger.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="TOP" graphicTextGap="0.0" layoutX="631.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="Fried">
+                                 <graphic>
+                                    <ImageView accessibleRole="BUTTON" fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/sokhari.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="TOP" graphicTextGap="0.0" layoutX="551.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="Sandwich">
+                                 <graphic>
+                                    <ImageView accessibleRole="BUTTON" fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/sandwich.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="TOP" graphicTextGap="0.0" layoutX="687.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="Italy">
+                                 <graphic>
+                                    <ImageView fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/italy.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="TOP" graphicTextGap="0.0" layoutX="822.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="Salad">
+                                 <graphic>
+                                    <ImageView fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/salad.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="TOP" graphicTextGap="0.0" layoutX="957.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="SeaFood">
+                                 <graphic>
+                                    <ImageView fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/seafood.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="TOP" graphicTextGap="0.0" layoutX="1173.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="International">
+                                 <graphic>
+                                    <ImageView fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/asian.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="TOP" graphicTextGap="0.0" layoutX="1443.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="Gilani">
+                                 <graphic>
+                                    <ImageView fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/gilani.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </content>
+                  </ScrollPane>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nearby Restaurants" wrappingWidth="194.13668823242188">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="10.0" top="5.0" />
+                     </VBox.margin>
+                  </Text>
+                  <ScrollPane layoutX="10.0" layoutY="42.0" minHeight="135.0" prefHeight="142.0" prefWidth="1187.0">
+                     <content>
+                        <HBox prefHeight="119.0" prefWidth="2104.0">
+                           <children>
+                              <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="num1">
+                                 <graphic>
+                                    <ImageView accessibleRole="BUTTON" fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/temp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="CENTER" layoutX="137.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="num2">
+                                 <graphic>
+                                    <ImageView accessibleRole="BUTTON" fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/temp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="GRAPHIC_ONLY" layoutX="137.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="num3">
+                                 <graphic>
+                                    <ImageView accessibleRole="BUTTON" fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/temp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="GRAPHIC_ONLY" layoutX="281.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="num4">
+                                 <graphic>
+                                    <ImageView accessibleRole="BUTTON" fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/temp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="GRAPHIC_ONLY" layoutX="416.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="num5">
+                                 <graphic>
+                                    <ImageView accessibleRole="BUTTON" fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/temp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="GRAPHIC_ONLY" layoutX="631.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="num6">
+                                 <graphic>
+                                    <ImageView accessibleRole="BUTTON" fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/temp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="GRAPHIC_ONLY" layoutX="551.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="num7">
+                                 <graphic>
+                                    <ImageView accessibleRole="BUTTON" fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/temp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="GRAPHIC_ONLY" layoutX="687.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="num8">
+                                 <graphic>
+                                    <ImageView fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/temp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="GRAPHIC_ONLY" layoutX="822.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="num9">
+                                 <graphic>
+                                    <ImageView fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/temp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="GRAPHIC_ONLY" layoutX="957.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="num10">
+                                 <graphic>
+                                    <ImageView fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/temp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="GRAPHIC_ONLY" layoutX="1173.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="num11">
+                                 <graphic>
+                                    <ImageView fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/temp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button contentDisplay="GRAPHIC_ONLY" layoutX="1443.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="93.0" text="num12">
+                                 <graphic>
+                                    <ImageView fitHeight="85.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Media/temp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </content>
+                  </ScrollPane>
+                  <Text fill="#848484" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you a business owner?">
+                     <font>
+                        <Font name="System Italic" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="25.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fill="#8f8d8d" strokeType="OUTSIDE" strokeWidth="0.0" text="Bring your business online with  SUTFOOD! and increase your sales." wrappingWidth="298.8033752441406">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Button mnemonicParsing="false" text="Rgisteration of sellers">
+                     <VBox.margin>
+                        <Insets left="70.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Text fill="#848080" strokeType="OUTSIDE" strokeWidth="0.0" text="SUTFOOD! in Iran cities">
+                     <VBox.margin>
+                        <Insets left="500.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="400.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/cities.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="200.0" top="25.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Text fill="#848080" layoutX="510.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Us">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="560.0" top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <ImageView fitHeight="150.0" fitWidth="300.0" layoutX="210.0" layoutY="541.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/contact.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="450.0" top="25.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>
