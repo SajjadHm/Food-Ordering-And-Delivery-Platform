@@ -25,7 +25,8 @@ public enum ManagerMenuMessages {
     FOOD_ACTIVATED("Food activated."),
     INVALID_DISCOUNT_PERCENT("Discount percent value is between 0 and 100."),
     INVALID_TIMESTAMP("You can't travel in the time!"),
-    FOOD_DISCOUNTED("Food discounted successfully.")
+    FOOD_DISCOUNTED("Food discounted successfully."),
+    FOOD_SELECTED("Food selected successfully.")
     ;
 
     private String message;

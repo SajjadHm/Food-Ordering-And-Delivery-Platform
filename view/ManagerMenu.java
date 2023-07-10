@@ -61,6 +61,8 @@ public class ManagerMenu {
                 message = checkActiveFood();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.DISCOUNT_FOOD)) != null)
                 message = checkDiscountFood();
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.SELECT_FOOD)) != null)
+                message = checkSelectFood();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.LOGOUT)) != null) {
                 message = checkLogOut();
                 isRunning = false;
@@ -179,5 +181,10 @@ public class ManagerMenu {
         double discountPercent = Double.parseDouble(matcher.group("percent"));
         LocalDateTime timeStamp = checkTimeStamp();
         return ManagerMenuController.checkDiscountFood(foodID, discountPercent, timeStamp);
+    }
+
+    public static ManagerMenuMessages checkSelectFood() {
+        String foodID = matcher.group("foodID");
+        return ManagerMenuController.checkSelectFood(foodID);
     }
 }

@@ -11,6 +11,7 @@ public class Resturant {
     private ArrayList<ResturantFoodType> foodTypes;
     private final FoodMenu menu;
     private final String id;
+    private Food selectedFood;
 
     public Resturant(String name, ArrayList<ResturantFoodType> foodTypes, String location, String id) {
         this.name = name;
@@ -60,5 +61,13 @@ public class Resturant {
             if (!food.isUnlisted()) listedMenu.add(food);
         }
         return listedMenu;
+    }
+
+    public Food getSelectedFood() {
+        return selectedFood;
+    }
+
+    public void setSelectedFood(Food selectedFood) {
+        this.selectedFood = selectedFood;
     }
 }
