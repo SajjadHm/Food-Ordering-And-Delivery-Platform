@@ -18,6 +18,8 @@ public class Food {
     private Rating rating;
     private LocalDateTime discountTime;
 
+    //TODO: adding refrence back to restaurant
+
     {
         isUnlisted = false;
         comments = new ArrayList<>();
