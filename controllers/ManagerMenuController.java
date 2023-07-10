@@ -6,6 +6,7 @@ import model.enums.ResturantFoodType;
 import model.resturant.Food;
 import model.resturant.FoodMenu;
 import model.resturant.Resturant;
+import view.ManagerMenu;
 import view.enums.managermenu.ManagerMenuCommands;
 import view.enums.managermenu.ManagerMenuMessages;
 
@@ -163,5 +164,13 @@ public class ManagerMenuController {
         if (food == null) return ManagerMenuMessages.FOOD_NOT_FOUND;
         resturant.setSelectedFood(food);
         return ManagerMenuMessages.FOOD_SELECTED;
+    }
+
+    public static ManagerMenuMessages checkDisplayRatings() {
+        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (resturant == null) return ManagerMenuMessages.INVALID_COMMAND;
+        Food food = resturant.getSelectedFood();
+        if (food == null) return ManagerMenuMessages.NO_FOOD_SELECTED;
+        return ManagerMenuMessages.DISPLAY_RATINGS;
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #052 - Food Discount&#10;&#10;&#10;- food discounting debugged.">
+    <list default="true" id="93833bd5-84cd-41ce-a3f6-6b3e7a2dd6b0" name="Changes" comment="Commit #052 - Select Food&#10;&#10;&#10;- selecting food implied.">
       <change beforePath="$PROJECT_DIR$/controllers/ManagerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ManagerMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/resturant/Resturant.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/resturant/Resturant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/social/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/social/Rating.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/ManagerMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/enums/managermenu/ManagerMenuMessages.java" afterDir="false" />
     </list>
@@ -78,7 +78,7 @@
       <workItem from="1686142771370" duration="1469000" />
       <workItem from="1686145592883" duration="6000" />
       <workItem from="1686724686176" duration="1101000" />
-      <workItem from="1688984985867" duration="4141000" />
+      <workItem from="1688984985867" duration="4687000" />
     </task>
     <task id="LOCAL-00001" summary="Commit #017 - Merging?">
       <created>1684826613596</created>
@@ -353,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688994729129</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Commit #052 - Select Food&#10;&#10;&#10;- selecting food implied.">
+      <created>1688995076991</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1688995076991</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,7 +390,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commit #031 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum added in view.enums.managermenu." />
     <MESSAGE value="Commit #032 - ManagerMenuMessages&#10;&#10;&#10;- ManagerMenuMessages enum edited." />
     <MESSAGE value="Commit #033 - add restaurant&#10;&#10;&#10;- add restaurant command implied." />
     <MESSAGE value="Commit #034 - logout&#10;&#10;&#10;- logout command implied." />
@@ -408,7 +414,8 @@
     <MESSAGE value="Commit #050 - Restaurants saving&#10;&#10;&#10;- restaurants saving method changed." />
     <MESSAGE value="Commit #051 - Food Discount&#10;&#10;&#10;- food discounting implied." />
     <MESSAGE value="Commit #052 - Food Discount&#10;&#10;&#10;- food discounting debugged." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit #052 - Food Discount&#10;&#10;&#10;- food discounting debugged." />
+    <MESSAGE value="Commit #052 - Select Food&#10;&#10;&#10;- selecting food implied." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit #052 - Select Food&#10;&#10;&#10;- selecting food implied." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

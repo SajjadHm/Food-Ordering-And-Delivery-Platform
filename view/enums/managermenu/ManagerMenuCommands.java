@@ -46,5 +46,7 @@ add food khoresh fesenjan 100
 select menu
 discount food ab0dc 50 2023/07/13  12:00:00
 select menu
+select food ab0dc
+display ratings
 
  */

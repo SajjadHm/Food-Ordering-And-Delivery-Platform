@@ -36,4 +36,9 @@ public class Rating {
     public int getCount() {
         return count;
     }
+
+    public String toString() {
+        if (count == 0) return "There's no votes for this food.";
+        return rating + " (" + count + " votes)";
+    }
 }

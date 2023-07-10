@@ -32,6 +32,10 @@ public class ManagerMenu {
         if (message != null) System.out.println(message.getMessage() + Colors.RESET);
     }
 
+    public static void printer(String message) {
+        if (message != null) System.out.println(message + Colors.RESET);
+    }
+
     public static ManagerMenuResults run(Scanner scanner) {
         isRunning = true;
         while (isRunning) {
@@ -63,6 +67,8 @@ public class ManagerMenu {
                 message = checkDiscountFood();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.SELECT_FOOD)) != null)
                 message = checkSelectFood();
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.DISPLAY_RATINGS)) != null)
+                message = checkDisplayRatings();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.LOGOUT)) != null) {
                 message = checkLogOut();
                 isRunning = false;
@@ -186,5 +192,14 @@ public class ManagerMenu {
     public static ManagerMenuMessages checkSelectFood() {
         String foodID = matcher.group("foodID");
         return ManagerMenuController.checkSelectFood(foodID);
+    }
+
+    public static ManagerMenuMessages checkDisplayRatings() {
+        ManagerMenuMessages result = ManagerMenuController.checkDisplayRatings();
+        if (result != ManagerMenuMessages.DISPLAY_RATINGS) return result;
+        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        Food food = resturant.getSelectedFood();
+        printer(food.getRating().toString());
+        return null;
     }
 }
