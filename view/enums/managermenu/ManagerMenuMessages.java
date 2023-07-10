@@ -23,6 +23,9 @@ public enum ManagerMenuMessages {
     ACTIVE_ORDER("You can't deactivate this food. There's an order ongoing."),
     FOOD_DEACTIVATED("Food deactivated."),
     FOOD_ACTIVATED("Food activated."),
+    INVALID_DISCOUNT_PERCENT("Discount percent value is between 0 and 100."),
+    INVALID_TIMESTAMP("You can't travel in the time!"),
+    FOOD_DISCOUNTED("Food discounted successfully.")
     ;
 
     private String message;

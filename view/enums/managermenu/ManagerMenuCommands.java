@@ -19,7 +19,7 @@ public enum ManagerMenuCommands {
     DELETE_FOOD("delete\\s+food\\s+(?<foodID>\\w+)"),
     DEACTIVE_FOOD("deactive\\s+food\\s+(?<foodID>\\w+)"),
     ACTIVE_FOOD("active\\s+food\\s+(?<foodID>\\w+)"),
-    DISCOUNT_FOOD("discount\\s+food\\s+(?<foodID>\\w+)\\s+(?<percent>\\w+)\\s+(?<year>\\d{4})\\/(?<month>\\d{2})\\/(?<day>\\d{2})\\s{2}(?<hour>\\d{2}):(?<minute>\\d{2}):(?<second>\\d{2})"),
+    DISCOUNT_FOOD("discount\\s+food\\s+(?<foodID>\\w+)\\s+(?<percent>\\d+\\.?\\d+?)\\s+(?<year>\\d{4})\\/(?<month>\\d{2})\\/(?<day>\\d{2})\\s{2}(?<hour>\\d{2}):(?<minute>\\d{2}):(?<second>\\d{2})"),
     SELECT_FOOD("select\\s+food\\s+(?<foodID>\\w+)"),
     DISPLAY_RATINGS("display\\s+ratings"),
     END("end"),
@@ -36,3 +36,15 @@ public enum ManagerMenuCommands {
         return null;
     }
 }
+/*
+add admin parsa Pass1234!
+login admin parsa Pass1234!
+add restaurant sagPaz inja Persian
+show restaurants
+select b6589fc6
+add food khoresh fesenjan 100
+select menu
+discount food ab0dc 50 2023/07/13  12:00:00
+select menu
+
+ */

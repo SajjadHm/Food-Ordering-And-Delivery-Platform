@@ -140,9 +140,18 @@ public class ManagerMenuController {
         return ManagerMenuMessages.FOOD_DEACTIVATED;
     }
 
-    public static ManagerMenuMessages checkDiscountFood(LocalDateTime timeStamp) {
-
-        //if ()
-        return null;
+    public static ManagerMenuMessages checkDiscountFood(String foodID, double discountPercent, LocalDateTime timeStamp) {
+        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (resturant == null) return ManagerMenuMessages.INVALID_COMMAND;
+        FoodMenu menu = resturant.getMenu();
+        if (menu.size() == 0) return ManagerMenuMessages.EMPTY_MENU;
+        Food food = menu.get(foodID);
+        if (food == null) return ManagerMenuMessages.FOOD_NOT_FOUND;
+        System.out.println(discountPercent < 100.0);
+        if (discountPercent <= 0.0 || discountPercent > 100.0) return ManagerMenuMessages.INVALID_DISCOUNT_PERCENT;
+        if (LocalDateTime.now().compareTo(timeStamp) > 0) return ManagerMenuMessages.INVALID_TIMESTAMP;
+        food.setDiscountPercent(discountPercent);
+        food.setDiscountTime(timeStamp);
+        return ManagerMenuMessages.FOOD_DISCOUNTED;
     }
 }

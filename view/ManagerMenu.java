@@ -59,6 +59,8 @@ public class ManagerMenu {
                 message = checkDeactiveFood();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.ACTIVE_FOOD)) != null)
                 message = checkActiveFood();
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.DISCOUNT_FOOD)) != null)
+                message = checkDiscountFood();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.LOGOUT)) != null) {
                 message = checkLogOut();
                 isRunning = false;
@@ -75,8 +77,9 @@ public class ManagerMenu {
         int hour = Integer.parseInt(matcher.group("hour"));
         int minute = Integer.parseInt(matcher.group("minute"));
         int second = Integer.parseInt(matcher.group("second"));
+        LocalDateTime timestamp;
         try {
-            LocalDateTime timestamp = LocalDateTime.of(year, month, day, hour, minute, second);
+            timestamp = LocalDateTime.of(year, month, day, hour, minute, second);
             return timestamp;
         } catch (Exception e) {
             return null;
@@ -145,7 +148,7 @@ public class ManagerMenu {
         FoodMenu menu = resturant.getMenu();
         if (menu.size() == 0) return ManagerMenuMessages.EMPTY_MENU;
         for (Food food : menu) {
-            System.out.printf("%s. %s  %d$    isUnlisted: %b\n", food.getId(), food.getName(), food.getPrice(), food.isUnlisted());
+            System.out.printf("%s. %s  %s$    isUnlisted: %b\n", food.getId(), food.getName(), food.getTextPrice(), food.isUnlisted());
         }
         return null;
     }
@@ -169,5 +172,12 @@ public class ManagerMenu {
     public static ManagerMenuMessages checkActiveFood() {
         String foodID = matcher.group("foodID");
         return ManagerMenuController.checkActiveFood(foodID);
+    }
+
+    public static ManagerMenuMessages checkDiscountFood() {
+        String foodID = matcher.group("foodID");
+        double discountPercent = Double.parseDouble(matcher.group("percent"));
+        LocalDateTime timeStamp = checkTimeStamp();
+        return ManagerMenuController.checkDiscountFood(foodID, discountPercent, timeStamp);
     }
 }

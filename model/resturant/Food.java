@@ -3,6 +3,7 @@ package model.resturant;
 import model.social.Comment;
 import model.social.Rating;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Food {
@@ -13,6 +14,7 @@ public class Food {
     private boolean isUnlisted;
     private ArrayList<Comment> comments;
     private Rating rating;
+    private LocalDateTime discountTime;
 
     {
         isUnlisted = false;
@@ -40,7 +42,15 @@ public class Food {
     }
 
     public int getPrice() {
-        return price;
+        if (discountTime == null) return price;
+        if (LocalDateTime.now().compareTo(discountTime) > 0) return price;
+        return (int) Math.round(price * discountPercent / 100);
+    }
+
+    public String getTextPrice() {
+        if (discountTime == null) return String.valueOf(price);
+        if (LocalDateTime.now().compareTo(discountTime) > 0) return String.valueOf(price);
+        return "\u001B[9m" + String.valueOf(price) + "$" + "\u001B[0m" + "  " + String.valueOf((int) Math.round(price * discountPercent / 100));
     }
 
     public void setPrice(int price) {
@@ -72,4 +82,11 @@ public class Food {
         return rating;
     }
 
+    public LocalDateTime getDiscountTime() {
+        return discountTime;
+    }
+
+    public void setDiscountTime(LocalDateTime discountTime) {
+        this.discountTime = discountTime;
+    }
 }

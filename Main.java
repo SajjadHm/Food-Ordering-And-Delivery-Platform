@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         MainMenu mainMenu = new MainMenu();
         mainMenu.run();
-        /*
+/*
         DateTimeFormatter formatter = new DateTimeFormatterBuilder()
                 .appendPattern("yyyy").appendLiteral("/")
                 .appendPattern("MM").appendLiteral("/")
@@ -30,7 +30,6 @@ public class Main {
         }
         int a = LocalDateTime.now().compareTo(time);
         System.out.println(a);
-
-         */
+        */
     }
 }
