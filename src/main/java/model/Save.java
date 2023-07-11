@@ -8,7 +8,13 @@ import model.social.Comment;
 import model.social.Rating;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import view.Main;
+import view.MainMenu;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URL;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 
@@ -104,6 +110,7 @@ public class Save {
 
     public static JSONObject saveManager(Manager manager) {
         JSONObject object = new JSONObject();
+        if (manager == null) return object;
         object.put("userName", manager.getUserName());
         object.put("hashedPassWord", manager.getHashedPassWord());
         object.put("firstName", manager.getFirstName());
@@ -144,6 +151,7 @@ public class Save {
 
     public static JSONObject saveUser(User user) {
         JSONObject object = new JSONObject();
+        if (user == null) return object;
         object.put("userName", user.getUserName());
         object.put("hashedPassWord", user.getHashedPassWord());
         object.put("firstName", user.getFirstName());
@@ -201,4 +209,16 @@ public class Save {
         return object;
     }
 
+    public static void saveData() {
+        JSONObject jsonObject = saveMemory();
+        try {
+            FileWriter fileWriter = new FileWriter("D:/OOP/Food-Ordering-And-Delivery-Platform/src/main/resources/JSON/memory.json");
+            fileWriter.write(jsonObject.toJSONString());
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+        System.out.println("saved!");
+    }
 }

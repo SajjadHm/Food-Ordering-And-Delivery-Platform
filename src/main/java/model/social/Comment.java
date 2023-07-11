@@ -2,6 +2,7 @@ package model.social;
 
 import model.Memory;
 import model.accounts.Account;
+import model.accounts.User;
 import view.others.Colors;
 
 import java.time.LocalDateTime;
@@ -42,12 +43,12 @@ public class Comment {
         this.isModified = false;
     }
 
-    public Comment(String message, String id, String authorID )
+    public Comment(String message, String id, User author )
     {
         this.message = message;
         this.id = id;
         this.timeCreated = LocalDateTime.now();
-        this.authorID = authorID;
+        this.authorID = author.getUserName();
     }
 
     public Comment(String message, String id, String authorID, LocalDateTime timeCreated, int rating, boolean isModified )

@@ -12,10 +12,17 @@ import model.social.Comment;
 import model.social.Rating;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import view.Main;
 import view.ManagerMenu;
 
 import javax.jws.Oneway;
 import javax.management.ObjectName;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.net.URL;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -199,6 +206,24 @@ public class Read {
         for (Object restaurantID : restaurantsListObject.keySet())
             restaurantsList.put((String) restaurantID, readRestaurant((JSONObject) restaurantsListObject.get(restaurantID)));
         Memory.getRestaurantsList().putAll(restaurantsList);
+    }
+
+    public static void loadData() {
+        JSONObject jsonObject = null;
+        try {
+            JSONParser parser = new JSONParser();
+            Object obj = parser.parse(new FileReader("D:/OOP/Food-Ordering-And-Delivery-Platform/src/main/resources/JSON/memory.json"));
+            jsonObject = (JSONObject) obj;
+        } catch (ParseException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            // e.printStackTrace();
+            // throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        Read.readMemory(jsonObject);
+        System.out.println("loaded!");
     }
 
 }

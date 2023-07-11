@@ -1,3 +1,7 @@
+package view;
+
+import model.Read;
+import model.Save;
 import org.w3c.dom.html.HTMLIsIndexElement;
 import view.MainMenu;
 
@@ -8,10 +12,13 @@ import java.time.format.DateTimeFormatterBuilder;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
-    public static void main(String[] args) {/*
+    public static void main(String[] args) {
+        Save.saveData();
+        Read.loadData();
         MainMenu mainMenu = new MainMenu();
         mainMenu.run();
-        */
+        Save.saveData();
+        /*
         DateTimeFormatter formatter = new DateTimeFormatterBuilder()
                 .appendPattern("yyyy").appendLiteral("/")
                 .appendPattern("MM").appendLiteral("/")
@@ -30,5 +37,6 @@ public class Main {
         }
         int a = LocalDateTime.now().compareTo(time);
         System.out.println(a);
+        */
     }
 }
