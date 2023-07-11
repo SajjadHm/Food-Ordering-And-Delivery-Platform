@@ -751,6 +751,7 @@ public class UserMenu
                 {
                     Memory.getCurrentUser().setBalance(Memory.getCurrentUser().getBalance()-cart.getOrder().getTotalPrice());
                     cart.getOrder().setStatus(DeliveryStatus.PREPARING);
+                    cart.getOrder().getRestaurant().getCurrentOrders().add(cart.getOrder());
                     Memory.getCurrentUser().getOrdersHistory().add(cart.getOrder());
                     Memory.getCurrentUser().getUserCart().remove(cart);
                     return UserMenuMessages.CONFIRMED_SUCCESSFULLY;

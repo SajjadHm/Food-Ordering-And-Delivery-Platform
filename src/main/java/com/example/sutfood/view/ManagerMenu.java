@@ -5,6 +5,7 @@ import com.example.sutfood.model.Memory;
 import com.example.sutfood.model.accounts.Manager;
 import com.example.sutfood.model.enums.ResturantFoodType;
 import com.example.sutfood.model.resturant.Food;
+import com.example.sutfood.model.resturant.Order;
 import com.example.sutfood.model.resturant.Restaurant;
 import com.example.sutfood.view.enums.managermenu.ManagerMenuResults;
 import com.example.sutfood.model.resturant.FoodMenu;
@@ -12,6 +13,7 @@ import com.example.sutfood.model.social.Comment;
 import com.example.sutfood.view.enums.managermenu.ManagerMenuCommands;
 import com.example.sutfood.view.enums.managermenu.ManagerMenuMessages;
 import com.example.sutfood.view.others.Colors;
+import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -78,6 +80,8 @@ public class ManagerMenu {
                 message = checkDisplayComments();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.ADD_NEW_RESPONSE)) != null)
                 message = checkAddNewResponse();
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.DISPLAY_OPEN_ORDERS)) != null)
+                message = checkDisplayOpenOrders();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.LOGOUT)) != null) {
                 message = checkLogOut();
                 isRunning = false;
@@ -265,5 +269,15 @@ public class ManagerMenu {
         String commentID = matcher.group("commentID");
         String message = matcher.group("message");
         return ManagerMenuController.checkAddResponse(commentID, message);
+    }
+
+    public static ManagerMenuMessages checkDisplayOpenOrders() {
+        ManagerMenuMessages result = ManagerMenuController.checkDisplayOrders();
+        if (result != ManagerMenuMessages.DISPLAY_CURRENT_ORDERS) return result;
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        ArrayList<Order> currentOrders = restaurant.getCurrentOrders();
+        for (Order order : currentOrders)
+            System.out.println(order.toString());
+        return null;
     }
 }

@@ -25,6 +25,9 @@ public enum ManagerMenuCommands {
     DISPLAY_RATINGS("DISPLAY\\s+RATINGS"),
     DISPLAY_COMMENTS("DISPLAY\\s+COMMENTS"),
     ADD_NEW_RESPONSE("ADD\\s+NEW\\s+RESPONSE\\s+(?<commentID>\\w+)\\s+(?<message>[^\n]+)"),
+    DISPLAY_OPEN_ORDERS("DISPLAY\\s+OPEN\\s+ORDERS"),
+    EDIT_ORDER("EDIT\\s+ORDER\\s+(?<orderID>\\w+)"),
+    SHOW_ORDER_HISTORY("SHOW\\s+ORDER\\s+HISTORY"),
     END("end"),
     ;
 

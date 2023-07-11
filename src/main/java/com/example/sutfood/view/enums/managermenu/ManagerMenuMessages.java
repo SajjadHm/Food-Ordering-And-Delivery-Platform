@@ -33,7 +33,9 @@ public enum ManagerMenuMessages {
     DISPLAY_COMMENTS(""),
     REPLY_ADDED("Response added to the comment successfully."),
     COMMENT_NOT_FOUND("There's no comment with given id for this section."),
-    NO_MORE_REPLIES("You can't add more responses to this comment.")
+    NO_MORE_REPLIES("You can't add more responses to this comment."),
+    NO_CURRENT_ORDERS("There is no orders right now."),
+    DISPLAY_CURRENT_ORDERS(""),
     ;
 
     private String message;

@@ -13,6 +13,8 @@ public class Restaurant {
     private final FoodMenu menu;
     private final String id;
     private Food selectedFood;
+    private ArrayList<Order> orderHistory = new ArrayList<>();
+    private ArrayList<Order> currentOrders = new ArrayList<>();
     private final ArrayList<Comment> comments = new ArrayList<>();
 
     private ArrayList<Rating> ratings = new ArrayList<>();
@@ -94,5 +96,19 @@ public class Restaurant {
         return ratings;
     }
 
+    public ArrayList<Order> getOrderHistory() {
+        return orderHistory;
+    }
 
+    public void setOrderHistory(ArrayList<Order> orderHistory) {
+        this.orderHistory = orderHistory;
+    }
+
+    public ArrayList<Order> getCurrentOrders() {
+        return currentOrders;
+    }
+
+    public void setCurrentOrders(ArrayList<Order> currentOrders) {
+        this.currentOrders = currentOrders;
+    }
 }

@@ -1,6 +1,7 @@
 package com.example.sutfood.model.resturant;
 
 import com.example.sutfood.model.Memory;
+import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.time.LocalDateTime;
 
@@ -57,5 +58,14 @@ public class Order extends FoodList {
 
     public void setRestaurantID(String restaurantID) {
         this.restaurantID = restaurantID;
+    }
+
+    public String toString() {
+        String self = "";
+        self += this.getId() + "  " + this.getName() + "\n";
+        for (Food food : this)
+            self += "\t" + food.toString() + "\n";
+        self += "\n";
+        return self;
     }
 }

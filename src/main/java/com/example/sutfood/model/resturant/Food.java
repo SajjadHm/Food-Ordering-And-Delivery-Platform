@@ -2,6 +2,7 @@ package com.example.sutfood.model.resturant;
 
 import com.example.sutfood.model.social.Comment;
 import com.example.sutfood.model.social.Rating;
+import com.example.sutfood.view.others.Colors;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -122,5 +123,13 @@ public class Food {
 
     public void setRating(Rating rating) {
         this.rating = rating;
+    }
+
+    public String toString() {
+        String self = "";
+        self += "#" + Colors.ITALIC + id + " " + Colors.BOLD + name + Colors.RESET + "  " + price + "$";
+        if (isDiscounted()) self += "  discount:" + discountPercent + "%";
+        self += "  rate:" + rating.getRating();
+        return self;
     }
 }

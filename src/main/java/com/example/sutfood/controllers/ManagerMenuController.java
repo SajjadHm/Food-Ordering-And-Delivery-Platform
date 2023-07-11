@@ -4,10 +4,12 @@ import com.example.sutfood.model.Memory;
 import com.example.sutfood.model.accounts.Manager;
 import com.example.sutfood.model.enums.ResturantFoodType;
 import com.example.sutfood.model.resturant.Food;
+import com.example.sutfood.model.resturant.Order;
 import com.example.sutfood.model.resturant.Restaurant;
 import com.example.sutfood.model.resturant.FoodMenu;
 import com.example.sutfood.model.social.Comment;
 import com.example.sutfood.view.enums.managermenu.ManagerMenuMessages;
+import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
@@ -125,6 +127,10 @@ public class ManagerMenuController {
         if (restaurant.getMenu().size() == 0) return ManagerMenuMessages.EMPTY_MENU;
         Food food = restaurant.getMenu().get(foodID);
         if (food == null) return ManagerMenuMessages.FOOD_NOT_FOUND;
+        for (Order order : restaurant.getCurrentOrders())
+            for (Food f : order)
+                if (f.getId().equals(foodID))
+                    return ManagerMenuMessages.ACTIVE_ORDER;
         food.setUnlisted(true);
         return ManagerMenuMessages.FOOD_DEACTIVATED;
     }
@@ -210,5 +216,13 @@ public class ManagerMenuController {
         if (food == null) return ManagerMenuMessages.NO_FOOD_SELECTED;
         restaurant.setSelectedFood(null);
         return ManagerMenuMessages.FOOD_DESELECTED;
+    }
+
+    public static ManagerMenuMessages checkDisplayOrders() {
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (restaurant == null) return ManagerMenuMessages.INVALID_COMMAND;
+        ArrayList<Order> currentOrders = restaurant.getCurrentOrders();
+        if (currentOrders.size() == 0) return ManagerMenuMessages.NO_CURRENT_ORDERS;
+        return ManagerMenuMessages.DISPLAY_CURRENT_ORDERS;
     }
 }
