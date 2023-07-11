@@ -30,10 +30,12 @@ public class Comment {
         this.isModified = false;
     }
 
-    public Comment(String message, String id )
+    public Comment(String message, String id, Account author )
     {
         this.message = message;
         this.id = id;
+        this.timeCreated = LocalDateTime.now();
+        this.author = author;
     }
 
     public String getMessage() {

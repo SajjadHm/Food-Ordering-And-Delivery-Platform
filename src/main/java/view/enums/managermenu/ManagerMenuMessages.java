@@ -27,10 +27,10 @@ public enum ManagerMenuMessages {
     INVALID_TIMESTAMP("You can't travel in the time!"),
     FOOD_DISCOUNTED("Food discounted successfully."),
     FOOD_SELECTED("Food selected successfully."),
+    FOOD_DESELECTED("Food deselected successfully."),
     NO_FOOD_SELECTED("No food has been selected."),
     DISPLAY_RATINGS(""),
     DISPLAY_COMMENTS(""),
-
     ;
 
     private String message;

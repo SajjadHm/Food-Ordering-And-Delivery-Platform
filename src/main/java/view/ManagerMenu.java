@@ -39,7 +39,6 @@ public class ManagerMenu {
     }
 
     public static ManagerMenuResults run(Scanner scanner) {
-        System.out.println(1);
         isRunning = true;
         while (isRunning) {
             message = ManagerMenuMessages.INVALID_COMMAND;
@@ -70,6 +69,8 @@ public class ManagerMenu {
                 message = checkDiscountFood();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.SELECT_FOOD)) != null)
                 message = checkSelectFood();
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.DESELECT_FOOD)) != null)
+                message = checkDeselectFood();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.DISPLAY_RATINGS)) != null)
                 message = checkDisplayRatings();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.DISPLAY_COMMENTS)) != null)
@@ -199,6 +200,10 @@ public class ManagerMenu {
         return ManagerMenuController.checkSelectFood(foodID);
     }
 
+    public static ManagerMenuMessages checkDeselectFood() {
+        return ManagerMenuController.checkDeselectFood();
+    }
+
     public static ManagerMenuMessages checkDisplayRatings() {
         ManagerMenuMessages result = ManagerMenuController.checkDisplayRatings();
         if (result != ManagerMenuMessages.DISPLAY_RATINGS) return result;
@@ -210,8 +215,18 @@ public class ManagerMenu {
 
     public static ManagerMenuMessages checkDisplayComments() {
         ManagerMenuMessages result = ManagerMenuController.checkDisplayComments();
-        if (result != ManagerMenuMessages.DISPLAY_COMMENTS) return result;
+        if (result != ManagerMenuMessages.DISPLAY_COMMENTS && result != ManagerMenuMessages.NO_FOOD_SELECTED) return result;
         Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (result == ManagerMenuMessages.NO_FOOD_SELECTED) {
+            ArrayList<Comment> restaurantComments = resturant.getComments();
+            if (restaurantComments.size() == 0) {
+                printer("There is no comments for this restaurant.");
+                return null;
+            }
+            for (Comment comment : restaurantComments)
+                printer(comment.toString() + "\n");
+            return null;
+        }
         Food food = resturant.getSelectedFood();
         ArrayList<Comment> comments = food.getComments();
         if (comments.size() == 0) {

@@ -4,8 +4,6 @@ import model.Memory;
 import view.UserMenu;
 import view.enums.usermenu.UserMenuMessages;
 
-import javax.jws.soap.SOAPBinding;
-
 public class UserMenuController
 {
     public static UserMenuMessages logoutController()

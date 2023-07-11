@@ -182,4 +182,13 @@ public class ManagerMenuController {
         if (food == null) return ManagerMenuMessages.NO_FOOD_SELECTED;
         return ManagerMenuMessages.DISPLAY_COMMENTS;
     }
+
+    public static ManagerMenuMessages checkDeselectFood() {
+        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (resturant == null) return ManagerMenuMessages.INVALID_COMMAND;
+        Food food = resturant.getSelectedFood();
+        if (food == null) return ManagerMenuMessages.NO_FOOD_SELECTED;
+        resturant.setSelectedFood(null);
+        return ManagerMenuMessages.FOOD_DESELECTED;
+    }
 }

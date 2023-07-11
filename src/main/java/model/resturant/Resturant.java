@@ -1,6 +1,5 @@
 package model.resturant;
 
-import model.Memory;
 import model.enums.ResturantFoodType;
 import model.social.Comment;
 import model.social.Rating;

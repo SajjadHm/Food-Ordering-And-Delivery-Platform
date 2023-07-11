@@ -2,11 +2,10 @@ package view;
 
 import controllers.UserMenuController;
 import model.Cart;
-import model.Memory;
+import model.*;
 import model.resturant.*;
 import model.social.Comment;
 import model.social.Rating;
-import sun.dc.pr.PRError;
 import view.enums.usermenu.UserMenuCommands;
 import view.enums.usermenu.UserMenuMessages;
 import view.enums.usermenu.UserMenuResults;
@@ -445,7 +444,7 @@ public class UserMenu
     {
         Resturant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
         int id = userCurrentRestaurant.getComments().size();
-        Comment newComment = new Comment(text,id+"rc");
+        Comment newComment = new Comment(text,id+"rc", Memory.getCurrentUser());
         userCurrentRestaurant.getComments().add(newComment);
         Memory.getCurrentUser().getUserComments().put(newComment,userCurrentRestaurant);
 
@@ -559,7 +558,7 @@ public class UserMenu
     {
         Food userCurrentFood = Memory.getCurrentUser().getUserCurrentFood();
         int id = userCurrentFood.getComments().size();
-        Comment newComment = new Comment(text,id+"fc");
+        Comment newComment = new Comment(text,id+"fc", Memory.getCurrentUser());
         userCurrentFood.getComments().add(newComment);
         Memory.getCurrentUser().getUserCommentsFood().put(newComment,userCurrentFood);
 
