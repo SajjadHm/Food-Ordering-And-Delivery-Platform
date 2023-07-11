@@ -1,1 +1,8 @@
-{"currentUser":{},"restaurantsList":{},"foodIDCount":0,"currentAccount":{},"managers":[],"users":[]}
+{
+  "currentAccount": {},
+  "currentUser": {},
+  "foodIDCount": 0,
+  "managers": [],
+  "restaurantsList": {},
+  "users": []
+}
