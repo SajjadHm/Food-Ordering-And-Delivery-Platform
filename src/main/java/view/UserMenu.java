@@ -394,7 +394,7 @@ public class UserMenu
     {
         HashMap<String,Food> foodSearchResult = new HashMap<>();
 
-        for(HashMap.Entry<String, Restaurant> resturantEntry :Memory.getResturantsList().entrySet())
+        for(HashMap.Entry<String, Restaurant> resturantEntry :Memory.getRestaurantsList().entrySet())
         {
             for(Food food:resturantEntry.getValue().getMenu())
             {

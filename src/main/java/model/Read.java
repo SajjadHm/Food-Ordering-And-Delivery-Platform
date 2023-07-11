@@ -14,6 +14,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import view.ManagerMenu;
 
+import javax.jws.Oneway;
 import javax.management.ObjectName;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -181,5 +182,23 @@ public class Read {
         return user;
     }
 
+    public static void readMemory(JSONObject object) {
+        Memory.setFoodIdCount((Integer) object.get("foodIDCount"));
+        Memory.setCurrentUser(readUser((JSONObject) object.get("currentUser")));
+        Memory.setCurrentAccount(readManager((JSONObject) object.get("currentAccount")));
+        ArrayList<Manager> managers = new ArrayList<>();
+        for (Object manager : (JSONArray) object.get("managers"))
+            managers.add(readManager((JSONObject) manager));
+        Memory.getAdmins().addAll(managers);
+        ArrayList<User> users = new ArrayList<>();
+        for (Object user : (JSONArray) object.get("users"))
+            users.add(readUser((JSONObject) user));
+        Memory.getUsers().addAll(users);
+        HashMap<String, Restaurant> restaurantsList = new HashMap<>();
+        JSONObject restaurantsListObject = (JSONObject) object.get("restaurantsList");
+        for (Object restaurantID : restaurantsListObject.keySet())
+            restaurantsList.put((String) restaurantID, readRestaurant((JSONObject) restaurantsListObject.get(restaurantID)));
+        Memory.getRestaurantsList().putAll(restaurantsList);
+    }
 
 }

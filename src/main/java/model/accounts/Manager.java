@@ -26,19 +26,19 @@ public class Manager extends Account {
     public Restaurant getRestaurant(String name) {
         if (restaurantsID.size() == 0) return null;
         for (String id : restaurantsID) {
-            if (name.equals(Memory.getResturantsList().get(id).getName())) return Memory.getResturantsList().get(id);
+            if (name.equals(Memory.getRestaurantsList().get(id).getName())) return Memory.getRestaurantsList().get(id);
         }
         return null;
     }
 
     public Restaurant getRestaurantById(String id) {
-        return Memory.getResturantsList().get(id);
+        return Memory.getRestaurantsList().get(id);
     }
 
     public HashMap<String, Restaurant> getResturants() {
         HashMap<String, Restaurant> output = new HashMap<>();
         for (String id : restaurantsID) {
-            output.put(id, Memory.getResturantsList().get(id));
+            output.put(id, Memory.getRestaurantsList().get(id));
         }
         return output;
     }

@@ -14,7 +14,7 @@ import java.util.HashMap;
 public class Memory {
     private final static ArrayList<Manager> managers;
     private final static ArrayList<User> users;
-    private final static HashMap<String, Restaurant> resturantsList;
+    private final static HashMap<String, Restaurant> restaurantsList;
     private static Account currentAccount;
     private static User currentUser;
     public static final DateTimeFormatter dateTimeFormatter;
@@ -24,7 +24,7 @@ public class Memory {
         managers = new ArrayList<>();
         users = new ArrayList<>();
         currentAccount = null;
-        resturantsList = new HashMap<>();
+        restaurantsList = new HashMap<>();
         dateTimeFormatter = new DateTimeFormatterBuilder()
                 .appendPattern("yyyy").appendLiteral("/")
                 .appendPattern("MM").appendLiteral("/")
@@ -54,14 +54,14 @@ public class Memory {
 
     public static Restaurant getRestaurant(String id)
     {
-        return resturantsList.get(id);
+        return restaurantsList.get(id);
     }
 
     public static ArrayList<Restaurant> getRestaurants(String name)
     {
-        if (resturantsList.size() == 0) return null;
+        if (restaurantsList.size() == 0) return null;
         ArrayList<Restaurant> sameNameRestaurants = new ArrayList<>();
-        for (Restaurant restaurant : resturantsList.values())
+        for (Restaurant restaurant : restaurantsList.values())
         {
             if (restaurant.getName().contains(name))
             {
@@ -88,8 +88,8 @@ public class Memory {
         Memory.currentAccount = currentAccount;
     }
 
-    public static HashMap<String, Restaurant> getResturantsList() {
-        return resturantsList;
+    public static HashMap<String, Restaurant> getRestaurantsList() {
+        return restaurantsList;
     }
 
     public static User getCurrentUser() {
@@ -103,7 +103,7 @@ public class Memory {
     public static Food getFood(String id)
     {
         Food food = null;
-        for(HashMap.Entry<String, Restaurant> resturantEntry :Memory.getResturantsList().entrySet())
+        for(HashMap.Entry<String, Restaurant> resturantEntry :Memory.getRestaurantsList().entrySet())
         {
             for(Food foodLoop:resturantEntry.getValue().getMenu())
             {
@@ -126,4 +126,5 @@ public class Memory {
     public static void setFoodIdCount(int foodIdCount) {
         Memory.foodIdCount = foodIdCount;
     }
+
 }

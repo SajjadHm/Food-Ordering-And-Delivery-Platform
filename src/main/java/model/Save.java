@@ -10,7 +10,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.time.LocalDateTime;
-import java.util.regex.Matcher;
+import java.util.HashMap;
 
 public class Save {
     public static JSONObject saveLocalDateTime(LocalDateTime time) {
@@ -177,6 +177,27 @@ public class Save {
         for (Cart cart : user.getUserCart())
             userCart.add(saveCart(cart));
         object.put("userCart", userCart);
+        return object;
+    }
+
+    public static JSONObject saveMemory() {
+        JSONObject object = new JSONObject();
+        object.put("foodIDCount", Memory.getFoodIdCount());
+        object.put("currentUser", saveUser(Memory.getCurrentUser()));
+        object.put("currentAccount", saveManager((Manager) Memory.getCurrentAccount()));
+        JSONArray managers = new JSONArray();
+        for (Manager manager : Memory.getAdmins())
+            managers.add(saveManager(manager));
+        object.put("managers", managers);
+        JSONArray users = new JSONArray();
+        for (User user : Memory.getUsers())
+            users.add(saveUser(user));
+        object.put("users", users);
+        JSONObject restaurantList = new JSONObject();
+        HashMap<String, Restaurant> restaurantsList = Memory.getRestaurantsList();
+        for (String restaurantID : restaurantsList.keySet())
+            restaurantList.put(restaurantID, saveRestaurant(restaurantsList.get(restaurantID)));
+        object.put("restaurantsList", restaurantList);
         return object;
     }
 

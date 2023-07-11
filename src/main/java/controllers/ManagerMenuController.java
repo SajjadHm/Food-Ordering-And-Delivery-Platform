@@ -47,7 +47,7 @@ public class ManagerMenuController {
         if (foodTypes == null) return ManagerMenuMessages.INVALID_FOOD_TYPE;
         while (manager.getRestaurantById(getID(String.valueOf(idCount), 0, 8)) != null) idCount++;
         restaurant = new Restaurant(name, foodTypes, location, getID(String.valueOf(idCount), 0, 8));
-        Memory.getResturantsList().put(restaurant.getId(), restaurant);
+        Memory.getRestaurantsList().put(restaurant.getId(), restaurant);
         manager.getRestaurantsID().add(restaurant.getId());
         idCount++;
         return ManagerMenuMessages.RESTAURANT_ADDED;
