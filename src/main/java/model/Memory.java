@@ -6,6 +6,8 @@ import model.accounts.User;
 import model.resturant.Food;
 import model.resturant.Restaurant;
 
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -16,12 +18,21 @@ public class Memory {
     private static Account currentAccount;
     private static User currentUser;
     private static Restaurant currentRestaurant;
+    public static final DateTimeFormatter dateTimeFormatter;
 
     static {
         managers = new ArrayList<>();
         users = new ArrayList<>();
         currentAccount = null;
         resturantsList = new HashMap<>();
+        dateTimeFormatter = new DateTimeFormatterBuilder()
+                .appendPattern("yyyy").appendLiteral("/")
+                .appendPattern("MM").appendLiteral("/")
+                .appendPattern("dd").appendLiteral("  ")
+                .appendPattern("HH").appendLiteral(":")
+                .appendPattern("mm").appendLiteral(":")
+                .appendPattern("ss")
+                .toFormatter();
     }
 
     public static Manager getAdmin(String userName) {

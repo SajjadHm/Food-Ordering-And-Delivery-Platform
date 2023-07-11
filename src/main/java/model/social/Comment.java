@@ -1,5 +1,6 @@
 package model.social;
 
+import model.Memory;
 import model.accounts.Account;
 import view.others.Colors;
 
@@ -85,13 +86,13 @@ public class Comment {
     public String toString() {
         String self = "";
         self += Colors.UNDERLINE + "#" + id + Colors.RESET + "\n";
-        self += "@" + Colors.BOLD + author.getUserName() + Colors.RESET + "   at " + timeCreated.toString();
+        self += "@" + Colors.BOLD + author.getUserName() + Colors.RESET + "   at " + timeCreated.format(Memory.dateTimeFormatter);
         if (isModified) self += " (Modified)";
         self += "\n" + "\t" + this.message;
         if (replies.size() != 0) {
             for (Comment reply : replies) {
                 self += "\t\t---- " + Colors.UNDERLINE + "#" + reply.id + Colors.RESET + "\n";
-                self += "\t\t     reply from " + "@" + Colors.BOLD + reply.author.getUserName() + Colors.RESET + "   at " + reply.timeCreated.toString() + "\n";
+                self += "\t\t     reply from " + "@" + Colors.BOLD + reply.author.getUserName() + Colors.RESET + "   at " + reply.timeCreated.format(Memory.dateTimeFormatter) + "\n";
                 self += "\t\t     " + reply.message + "\n";
             }
         }

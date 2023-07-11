@@ -19,6 +19,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ManagerMenu {
     private static boolean isRunning;
@@ -91,6 +92,25 @@ public class ManagerMenu {
         int hour = Integer.parseInt(matcher.group("hour"));
         int minute = Integer.parseInt(matcher.group("minute"));
         int second = Integer.parseInt(matcher.group("second"));
+        LocalDateTime timestamp;
+        try {
+            timestamp = LocalDateTime.of(year, month, day, hour, minute, second);
+            return timestamp;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public static LocalDateTime datetimeParser(String time) {
+        Pattern pattern = Pattern.compile("(?<year>\\d{4})\\/(?<month>\\d{2})\\/(?<day>\\d{2})\\s{2}(?<hour>\\d{2}):(?<minute>\\d{2}):(?<second>\\d{2})");
+        Matcher m = pattern.matcher(time);
+        if (!m.matches()) return null;
+        int year = Integer.parseInt(m.group("year"));
+        int month = Integer.parseInt(m.group("month"));
+        int day = Integer.parseInt(m.group("day"));
+        int hour = Integer.parseInt(m.group("hour"));
+        int minute = Integer.parseInt(m.group("minute"));
+        int second = Integer.parseInt(m.group("second"));
         LocalDateTime timestamp;
         try {
             timestamp = LocalDateTime.of(year, month, day, hour, minute, second);

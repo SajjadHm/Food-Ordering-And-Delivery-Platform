@@ -27,7 +27,7 @@ public class LoginMenuController
         if (manager != null) return LoginMenuMessages.ADMIN_EXISTS;
         Matcher matcher = Pattern.compile("(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}").matcher(passWord);
         if (!matcher.matches()) return LoginMenuMessages.WEAK_PASSWORD;
-        manager = new Manager(userName, passWord, "", ""); // TODO: fix it!
+        manager = new Manager(userName, passWord, "", "", false); // TODO: fix it!
         Memory.getAdmins().add(manager);
         return LoginMenuMessages.ADMIN_ACCOUNT_CREATED;
     }
@@ -39,7 +39,7 @@ public class LoginMenuController
         if (user != null) return LoginMenuMessages.USER_EXISTS;
         Matcher matcher = Pattern.compile("(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}").matcher(passWord);
         if (!matcher.matches()) return LoginMenuMessages.WEAK_PASSWORD;
-        user = new User(userName, passWord, "", ""); // TODO: fix it!
+        user = new User(userName, passWord, "", "", false); // TODO: fix it!
         Memory.getUsers().add(user);
         return LoginMenuMessages.USER_ACCOUNT_CREATED;
     }
