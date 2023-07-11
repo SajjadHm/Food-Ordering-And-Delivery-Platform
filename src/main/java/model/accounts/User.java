@@ -16,7 +16,7 @@ public class User extends Account
     private boolean loginStatus;
     private Restaurant userCurrentRestaurant = null;
     private Food userCurrentFood = null;
-    String location;
+    private String location;
     private  HashMap<Comment, Restaurant> userComments = new HashMap<>();
     private  HashMap<Rating, Restaurant> userRatings = new HashMap<>();
     private  HashMap<Comment,Food> userCommentsFood = new HashMap<>();
@@ -117,24 +117,11 @@ public class User extends Account
         this.setLoginStatus(false);
     }
 
+    public String getLocation() {
+        return location;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public void setLocation(String location) {
+        this.location = location;
+    }
 }

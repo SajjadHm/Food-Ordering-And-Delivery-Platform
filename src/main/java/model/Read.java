@@ -2,6 +2,7 @@ package model;
 
 import com.sun.org.apache.xpath.internal.operations.Or;
 import model.accounts.Manager;
+import model.accounts.User;
 import model.enums.ResturantFoodType;
 import model.resturant.Food;
 import model.resturant.FoodMenu;
@@ -139,6 +140,45 @@ public class Read {
                 readOrder((JSONObject) object.get("order"))
         );
         return cart;
+    }
+
+    public static User readUser(JSONObject object) {
+        HashMap<Comment, Restaurant> userComments = new HashMap<>();
+        JSONObject userCommentsObject = (JSONObject) object.get("userComments");
+        for (Object userComment : userCommentsObject.keySet())
+            userComments.put(readComment((JSONObject) userComment), readRestaurant((JSONObject) userCommentsObject.get(userComment)));
+        HashMap<Rating, Restaurant> userRatings = new HashMap<>();
+        JSONObject userRatingsObject = (JSONObject) object.get("userRatings");
+        for (Object userRating : userRatingsObject.keySet())
+            userRatings.put(readRating((JSONObject) userRating), readRestaurant((JSONObject) userRatingsObject.get(userRating)));
+        HashMap<Comment,Food> userCommentsFood = new HashMap<>();
+        JSONObject userCommentsFoodObject = (JSONObject) object.get("userCommentsFood");
+        for (Object userComment : userCommentsFoodObject.keySet())
+            userCommentsFood.put(readComment((JSONObject) userComment), readFood((JSONObject) userCommentsFoodObject.get(userComment)));
+        HashMap<Rating,Food> userRatingsFood = new HashMap<>();
+        JSONObject userRatingsFoodObject = (JSONObject) object.get("userRatingsFood");
+        for (Object userRating : userRatingsFoodObject.keySet())
+            userRatingsFood.put(readRating((JSONObject) userRating), readFood((JSONObject) userRatingsFoodObject.get(userRating)));
+        ArrayList<Order> ordersHistory = new ArrayList<>();
+        for (Object order : (JSONArray) object.get("ordersHistory"))
+            ordersHistory.add(readOrder((JSONObject) order));
+        ArrayList<Cart> userCart = new ArrayList<>();
+        for (Object cart : (JSONArray) object.get("userCart"))
+            userCart.add(readCart((JSONObject) cart));
+        User user = new User (
+                (String) object.get("userName"),
+                (String) object.get("hashedPassWord"),
+                (String) object.get("firstName"),
+                (String) object.get("lastName"),
+                true
+        );
+        user.getUserComments().putAll(userComments);
+        user.getUserRatings().putAll(userRatings);
+        user.getUserCommentsFood().putAll(userCommentsFood);
+        user.getUserRatingsFood().putAll(userRatingsFood);
+        user.getOrdersHistory().addAll(ordersHistory);
+        user.getUserCart().addAll(userCart);
+        return user;
     }
 
 

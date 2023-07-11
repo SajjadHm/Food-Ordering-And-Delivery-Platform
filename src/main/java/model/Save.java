@@ -1,6 +1,7 @@
 package model;
 
 import model.accounts.Manager;
+import model.accounts.User;
 import model.enums.ResturantFoodType;
 import model.resturant.*;
 import model.social.Comment;
@@ -138,6 +139,44 @@ public class Save {
         JSONObject object = new JSONObject();
         object.put("restaurantID", cart.getRestaurantID());
         object.put("order", saveOrder(cart.getOrder()));
+        return object;
+    }
+
+    public static JSONObject saveUser(User user) {
+        JSONObject object = new JSONObject();
+        object.put("userName", user.getUserName());
+        object.put("hashedPassWord", user.getHashedPassWord());
+        object.put("firstName", user.getFirstName());
+        object.put("lastName", user.getLastName());
+        object.put("balance", user.getBalance());
+        object.put("loginstatus", user.getLoginStatus());
+        object.put("userCurrentRestaurant", saveRestaurant(user.getUserCurrentRestaurant()));
+        object.put("userCurrentFood", saveFood(user.getUserCurrentFood()));
+        object.put("location", user.getLocation());
+        JSONObject userComments = new JSONObject();
+        for (Comment userComment : user.getUserComments().keySet())
+            userComments.put(saveComment(userComment), saveRestaurant(user.getUserComments().get(userComment)));
+        object.put("userComments", userComments);
+        JSONObject userRatings = new JSONObject();
+        for (Rating userRating : user.getUserRatings().keySet())
+            userRatings.put(saveRating(userRating), saveRestaurant(user.getUserRatings().get(userRating)));
+        object.put("userRatings", userRatings);
+        JSONObject userCommentsFood = new JSONObject();
+        for (Comment userComment : user.getUserCommentsFood().keySet())
+            userComments.put(saveComment(userComment), saveFood(user.getUserCommentsFood().get(userComment)));
+        object.put("userCommentsFood", userCommentsFood);
+        JSONObject userRatingsFood = new JSONObject();
+        for (Rating userRating : user.getUserRatingsFood().keySet())
+            userRatings.put(saveRating(userRating), saveFood(user.getUserRatingsFood().get(userRating)));
+        object.put("userRatingsFood", userRatingsFood);
+        JSONArray ordersHistory = new JSONArray();
+        for (Order order : user.getOrdersHistory())
+            ordersHistory.add(saveOrder(order));
+        object.put("ordersHistory", ordersHistory);
+        JSONArray userCart = new JSONArray();
+        for (Cart cart : user.getUserCart())
+            userCart.add(saveCart(cart));
+        object.put("userCart", userCart);
         return object;
     }
 
