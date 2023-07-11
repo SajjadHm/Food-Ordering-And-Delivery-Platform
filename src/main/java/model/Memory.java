@@ -19,6 +19,7 @@ public class Memory {
     private static User currentUser;
     private static Restaurant currentRestaurant;
     public static final DateTimeFormatter dateTimeFormatter;
+    private static int foodIdCount;
 
     static {
         managers = new ArrayList<>();
@@ -33,6 +34,7 @@ public class Memory {
                 .appendPattern("mm").appendLiteral(":")
                 .appendPattern("ss")
                 .toFormatter();
+        foodIdCount = 0;
     }
 
     public static Manager getAdmin(String userName) {
@@ -116,5 +118,13 @@ public class Memory {
         }
 
        return food;
+    }
+
+    public static int getFoodIdCount() {
+        return foodIdCount;
+    }
+
+    public static void setFoodIdCount(int foodIdCount) {
+        Memory.foodIdCount = foodIdCount;
     }
 }

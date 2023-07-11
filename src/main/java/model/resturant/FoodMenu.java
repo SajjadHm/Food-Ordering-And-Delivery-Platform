@@ -4,7 +4,6 @@ import model.Memory;
 import model.accounts.Manager;
 
 public class FoodMenu extends FoodList {
-    private static int foodIdCount = 0;
     public FoodMenu(String name, String id) {
         super(name, id);
     }
@@ -34,18 +33,18 @@ public class FoodMenu extends FoodList {
     }
 
     public void addFood(String name, int price, int discountPercent) {
-        String newID = getUID(String.valueOf(foodIdCount), 8, 8 + 5);
+        String newID = getUID(String.valueOf(Memory.getFoodIdCount()), 8, 8 + 5);
         while (get(newID) != null) {
-            foodIdCount++;
-            newID = getUID(String.valueOf(foodIdCount), 8, 8 + 5);
+            Memory.setFoodIdCount(Memory.getFoodIdCount() + 1);
+            newID = getUID(String.valueOf(Memory.getFoodIdCount()), 8, 8 + 5);
         }
-        foodIdCount++;
+        Memory.setFoodIdCount(Memory.getFoodIdCount() + 1);
         Food food = new Food(newID, name, price, discountPercent);
         food.setRestaurantID(((Manager) Memory.getCurrentAccount()).getCurrentRestaurant());
         add(food);
     }
 
     public static int getFoodIdCount() {
-        return foodIdCount;
+        return Memory.getFoodIdCount();
     }
 }

@@ -1,6 +1,7 @@
 package model;
 
 import model.resturant.Food;
+import model.resturant.FoodMenu;
 import model.resturant.Restaurant;
 import model.social.Comment;
 import model.social.Rating;
@@ -61,6 +62,19 @@ public class Read {
         for (Object comment : (JSONArray) object.get("comments"))
             comments.add(readComment((JSONObject) comment));
         return food;
+    }
+
+    private static FoodMenu readFoodMenu(JSONObject object) {
+        FoodMenu foodMenu = new FoodMenu(
+                (String) object.get("name"),
+                (String) object.get("id")
+        );
+        if (((JSONArray) object.get("foodMenu")).size() > 0) {
+            for (Object object1 : (JSONArray) object.get("foodMenu")) {
+                foodMenu.add(readFood((JSONObject) object1));
+            }
+        }
+        return foodMenu;
     }
 
 }

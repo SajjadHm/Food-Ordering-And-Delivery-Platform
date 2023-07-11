@@ -1,6 +1,8 @@
 package model;
 
 import model.resturant.Food;
+import model.resturant.FoodList;
+import model.resturant.FoodMenu;
 import model.social.Comment;
 import model.social.Rating;
 import org.json.simple.JSONArray;
@@ -57,6 +59,20 @@ public class Save {
         for (Comment comment : food.getComments())
             comments.add(saveComment(comment));
         object.put("comments", comments);
+        return object;
+    }
+
+    public static JSONObject saveFoodMenu(FoodMenu foodMenu) {
+        if (foodMenu == null) return null;
+
+        JSONObject object = new JSONObject();
+        object.put("name", foodMenu.getName());
+        object.put("id", foodMenu.getId());
+        JSONArray array = new JSONArray();
+        for (Food food : foodMenu) {
+            array.add(saveFood(food));
+        }
+        object.put("foodMenu", array);
         return object;
     }
 
