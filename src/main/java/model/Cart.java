@@ -15,6 +15,12 @@ public class Cart {
         this.order = order;
     }
 
+    public Cart(String restaurantID, Order order)
+    {
+        this.restaurantID = restaurantID;
+        this.order = order;
+    }
+
     public Restaurant getRestaurant() {
         return Memory.getRestaurant(restaurantID);
     }
@@ -29,5 +35,13 @@ public class Cart {
 
     public void setOrder(Order order) {
         this.order = order;
+    }
+
+    public String getRestaurantID() {
+        return restaurantID;
+    }
+
+    public void setRestaurantID(String restaurantID) {
+        this.restaurantID = restaurantID;
     }
 }

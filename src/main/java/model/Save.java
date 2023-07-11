@@ -134,4 +134,11 @@ public class Save {
         return object;
     }
 
+    public static JSONObject saveCart(Cart cart) {
+        JSONObject object = new JSONObject();
+        object.put("restaurantID", cart.getRestaurantID());
+        object.put("order", saveOrder(cart.getOrder()));
+        return object;
+    }
+
 }

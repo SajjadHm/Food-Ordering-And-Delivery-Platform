@@ -133,5 +133,13 @@ public class Read {
         return order;
     }
 
+    private static Cart readCart(JSONObject object) {
+        Cart cart = new Cart(
+                (Restaurant) object.get("restaurantID"),
+                readOrder((JSONObject) object.get("order"))
+        );
+        return cart;
+    }
+
 
 }
