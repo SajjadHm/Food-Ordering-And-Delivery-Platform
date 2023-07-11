@@ -17,7 +17,7 @@
          </font>
       </Text>
       <Separator layoutY="123.0" prefWidth="1200.0" />
-      <Pagination layoutX="248.0" layoutY="155.0" prefHeight="388.0" prefWidth="704.0" style="-fx-background-color: lightgray;" />
+      <Pagination layoutX="246.0" layoutY="136.0" prefHeight="388.0" prefWidth="704.0" style="-fx-background-color: lightgray;" />
       <Text layoutX="286.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurent Name" wrappingWidth="121.47006225585938">
          <font>
             <Font size="15.0" />
@@ -46,5 +46,7 @@
       <Button layoutX="618.0" layoutY="441.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="95.0" text="Clear Order " textFill="RED" />
       <Label fx:id="labeltest" layoutX="286.0" layoutY="450.0" prefHeight="21.0" prefWidth="135.0" />
       <Button layoutX="339.0" layoutY="439.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="95.0" text="Display Order" />
+      <Button layoutX="34.0" layoutY="178.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="89.0" text="Home" />
+      <Button layoutX="34.0" layoutY="237.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="89.0" text="Exit" textFill="RED" />
    </children>
 </Pane>
