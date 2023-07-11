@@ -324,7 +324,7 @@ public class UserMenu
 
     public static void printSearchedRestaurant(String name)
     {
-        ArrayList<Resturant> searchResult = Memory.getRestaurants(name);
+        ArrayList<Restaurant> searchResult = Memory.getRestaurants(name);
         for(int i=0 ;i<searchResult.size();i++)
         {
             System.out.println("Name: "+searchResult.get(i).getName()+"      "+"ID: "+searchResult.get(i).getId());
@@ -339,7 +339,7 @@ public class UserMenu
             //printing menu
             System.out.println("");
             System.out.println("The Menu:");
-            Resturant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
+            Restaurant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
             FoodMenu menu =userCurrentRestaurant.getMenu();
             if (menu.size() == 0)
                 System.out.println("MENU IS EMPTY!");
@@ -394,7 +394,7 @@ public class UserMenu
     {
         HashMap<String,Food> foodSearchResult = new HashMap<>();
 
-        for(HashMap.Entry<String, Resturant> resturantEntry :Memory.getResturantsList().entrySet())
+        for(HashMap.Entry<String, Restaurant> resturantEntry :Memory.getResturantsList().entrySet())
         {
             for(Food food:resturantEntry.getValue().getMenu())
             {
@@ -442,7 +442,7 @@ public class UserMenu
 
     public static void addNewComment(String text)
     {
-        Resturant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
+        Restaurant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
         int id = userCurrentRestaurant.getComments().size();
         Comment newComment = new Comment(text,id+"rc", Memory.getCurrentUser());
         userCurrentRestaurant.getComments().add(newComment);
@@ -453,8 +453,8 @@ public class UserMenu
     public static boolean checkEditComment(String commentId)
     {
         boolean edit = false;
-        HashMap<Comment, Resturant> comments = Memory.getCurrentUser().getUserComments();
-        for(Map.Entry<Comment, Resturant> entry:comments.entrySet())
+        HashMap<Comment, Restaurant> comments = Memory.getCurrentUser().getUserComments();
+        for(Map.Entry<Comment, Restaurant> entry:comments.entrySet())
         {
             if(entry.getKey().getId().equals(commentId))
             {
@@ -466,8 +466,8 @@ public class UserMenu
     }
     public static void editComment(String commentId,String newText)
     {
-        HashMap<Comment, Resturant> comments = Memory.getCurrentUser().getUserComments();
-        for(Map.Entry<Comment, Resturant> entry:comments.entrySet())
+        HashMap<Comment, Restaurant> comments = Memory.getCurrentUser().getUserComments();
+        for(Map.Entry<Comment, Restaurant> entry:comments.entrySet())
         {
             if(entry.getKey().getId().equals(commentId))
             {
@@ -486,7 +486,7 @@ public class UserMenu
 
     public static void addNewRating(String rate)
     {
-            Resturant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
+            Restaurant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
             int id = userCurrentRestaurant.getRatings().size();
             Rating newRate= new Rating(Double.parseDouble(rate),id+"rr");
             userCurrentRestaurant.getRatings().add(newRate);
@@ -496,8 +496,8 @@ public class UserMenu
     public static boolean checkEditRating()
     {
         boolean edit = false;
-        HashMap<Rating, Resturant> ratings = Memory.getCurrentUser().getUserRatings();
-        for(Map.Entry<Rating, Resturant> entry:ratings.entrySet())
+        HashMap<Rating, Restaurant> ratings = Memory.getCurrentUser().getUserRatings();
+        for(Map.Entry<Rating, Restaurant> entry:ratings.entrySet())
         {
             if(entry.getValue().getId().equals(Memory.getCurrentUser().getUserCurrentRestaurant().getId()))
             {
@@ -510,8 +510,8 @@ public class UserMenu
 
     public static void editRating(int newRating)
     {
-        HashMap<Rating, Resturant> ratings = Memory.getCurrentUser().getUserRatings();
-        for(Map.Entry<Rating, Resturant> entry:ratings.entrySet())
+        HashMap<Rating, Restaurant> ratings = Memory.getCurrentUser().getUserRatings();
+        for(Map.Entry<Rating, Restaurant> entry:ratings.entrySet())
         {
             if(entry.getValue().getId().equals(Memory.getCurrentUser().getUserCurrentRestaurant().getId()))
             {
@@ -635,7 +635,7 @@ public class UserMenu
 
     public static void addFoodToCart()
     {
-        Resturant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
+        Restaurant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
         Food userCurrentFood = Memory.getCurrentUser().getUserCurrentFood();
         if(checkRestaurantInCart()!=null)
         {
@@ -653,7 +653,7 @@ public class UserMenu
 
     public static Cart checkRestaurantInCart()
     {
-        Resturant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
+        Restaurant userCurrentRestaurant = Memory.getCurrentUser().getUserCurrentRestaurant();
         for(Cart cart:Memory.getCurrentUser().getUserCart())
         {
             if(cart.getRestaurant().getId().equals(userCurrentRestaurant.getId()))

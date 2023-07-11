@@ -7,17 +7,17 @@ import model.social.Rating;
 import java.util.ArrayList;
 
 
-public class Resturant {
+public class Restaurant {
     private String name, location;
     private ArrayList<ResturantFoodType> foodTypes;
     private final FoodMenu menu;
     private final String id;
     private Food selectedFood;
-    private ArrayList<Comment> comments = new ArrayList<>();
+    private final ArrayList<Comment> comments = new ArrayList<>();
 
     private ArrayList<Rating> ratings = new ArrayList<>();
 
-    public Resturant(String name, ArrayList<ResturantFoodType> foodTypes, String location, String id) {
+    public Restaurant(String name, ArrayList<ResturantFoodType> foodTypes, String location, String id) {
         this.name = name;
         this.foodTypes = (ArrayList<ResturantFoodType>) foodTypes.clone();
         this.id = id;

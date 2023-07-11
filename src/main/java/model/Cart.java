@@ -1,26 +1,26 @@
 package model;
 
 import model.resturant.Order;
-import model.resturant.Resturant;
+import model.resturant.Restaurant;
 
 public class Cart {
 
 
-    private  Resturant restaurant;
+    private Restaurant restaurant;
     private  Order order;
 
-    public Cart(Resturant restaurant, Order order)
+    public Cart(Restaurant restaurant, Order order)
     {
         this.restaurant = restaurant;
         this.order = order;
     }
 
-    public Resturant getRestaurant() {
+    public Restaurant getRestaurant() {
         return restaurant;
     }
 
-    public void setRestaurant(Resturant resturant) {
-        this.restaurant = resturant;
+    public void setRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
     }
 
     public Order getOrder() {

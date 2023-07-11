@@ -23,9 +23,10 @@ public class Account {
         }
     }
 
-    Account(String userName, String passWord, String firstName, String lastName) {
+    Account(String userName, String passWord, String firstName, String lastName, boolean isPasswordHashed) {
         this.userName = userName;
-        this.hashedPassWord = encrypted(passWord);
+        if (isPasswordHashed) this.hashedPassWord = passWord;
+        else this.hashedPassWord = encrypted(passWord);
         this.firstName = firstName;
         this.lastName = lastName;
     }

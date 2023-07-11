@@ -1,25 +1,23 @@
 package model.accounts;
 
 import model.Memory;
-import model.resturant.FoodMenu;
-import model.resturant.Resturant;
+import model.resturant.Restaurant;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class Manager extends Account {
     private final ArrayList<String> restaurantsID;
-    private Resturant currentRestaurant;
+    private Restaurant currentRestaurant;
 
-    public Manager(String userName, String passWord, String firstName, String lastName)
+    public Manager(String userName, String passWord, String firstName, String lastName, boolean isPasswordHashed)
     {
-        super(userName, passWord, firstName, lastName);
+        super(userName, passWord, firstName, lastName, isPasswordHashed);
         restaurantsID = new ArrayList<>();
         currentRestaurant = null;
     }
 
-    public Resturant getRestaurant(String name) {
+    public Restaurant getRestaurant(String name) {
         if (restaurantsID.size() == 0) return null;
         for (String id : restaurantsID) {
             if (name.equals(Memory.getResturantsList().get(id).getName())) return Memory.getResturantsList().get(id);
@@ -27,23 +25,23 @@ public class Manager extends Account {
         return null;
     }
 
-    public Resturant getRestaurantById(String id) {
+    public Restaurant getRestaurantById(String id) {
         return Memory.getResturantsList().get(id);
     }
 
-    public HashMap<String, Resturant> getResturants() {
-        HashMap<String, Resturant> output = new HashMap<>();
+    public HashMap<String, Restaurant> getResturants() {
+        HashMap<String, Restaurant> output = new HashMap<>();
         for (String id : restaurantsID) {
             output.put(id, Memory.getResturantsList().get(id));
         }
         return output;
     }
 
-    public Resturant getCurrentRestaurant() {
+    public Restaurant getCurrentRestaurant() {
         return currentRestaurant;
     }
 
-    public void setCurrentRestaurant(Resturant currentRestaurant) {
+    public void setCurrentRestaurant(Restaurant currentRestaurant) {
         this.currentRestaurant = currentRestaurant;
     }
 

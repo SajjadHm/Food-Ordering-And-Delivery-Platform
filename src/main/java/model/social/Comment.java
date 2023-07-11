@@ -30,6 +30,17 @@ public class Comment {
         this.isModified = false;
     }
 
+    public Comment(String message, String id, int rating, ArrayList<Comment> replie, LocalDateTime timeCreated) {
+        this.message = message;
+        this.id = id;
+        this.rating = rating;
+        for (Comment comment : replies) {
+            this.replies.add(comment);
+        }
+        this.timeCreated = timeCreated;
+        this.isModified = false;
+    }
+
     public Comment(String message, String id, Account author )
     {
         this.message = message;

@@ -4,19 +4,18 @@ import model.accounts.Account;
 import model.accounts.Manager;
 import model.accounts.User;
 import model.resturant.Food;
-import model.resturant.Resturant;
+import model.resturant.Restaurant;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class Memory {
     private final static ArrayList<Manager> managers;
     private final static ArrayList<User> users;
-    private final static HashMap<String, Resturant> resturantsList;
+    private final static HashMap<String, Restaurant> resturantsList;
     private static Account currentAccount;
     private static User currentUser;
-    private static Resturant currentResturant;
+    private static Restaurant currentRestaurant;
 
     static {
         managers = new ArrayList<>();
@@ -41,20 +40,20 @@ public class Memory {
         return null;
     }
 
-    public static Resturant getRestaurant(String id)
+    public static Restaurant getRestaurant(String id)
     {
         return resturantsList.get(id);
     }
 
-    public static ArrayList<Resturant> getRestaurants(String name)
+    public static ArrayList<Restaurant> getRestaurants(String name)
     {
         if (resturantsList.size() == 0) return null;
-        ArrayList<Resturant> sameNameRestaurants = new ArrayList<>();
-        for (Resturant resturant : resturantsList.values())
+        ArrayList<Restaurant> sameNameRestaurants = new ArrayList<>();
+        for (Restaurant restaurant : resturantsList.values())
         {
-            if (resturant.getName().contains(name))
+            if (restaurant.getName().contains(name))
             {
-                sameNameRestaurants.add(resturant);
+                sameNameRestaurants.add(restaurant);
             }
         }
         if(sameNameRestaurants.size()==0) return null;
@@ -77,7 +76,7 @@ public class Memory {
         Memory.currentAccount = currentAccount;
     }
 
-    public static HashMap<String, Resturant> getResturantsList() {
+    public static HashMap<String, Restaurant> getResturantsList() {
         return resturantsList;
     }
 
@@ -92,7 +91,7 @@ public class Memory {
     public static Food getFood(String id)
     {
         Food food = null;
-        for(HashMap.Entry<String, Resturant> resturantEntry :Memory.getResturantsList().entrySet())
+        for(HashMap.Entry<String, Restaurant> resturantEntry :Memory.getResturantsList().entrySet())
         {
             for(Food foodLoop:resturantEntry.getValue().getMenu())
             {

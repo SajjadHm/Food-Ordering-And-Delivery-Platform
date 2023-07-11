@@ -6,7 +6,7 @@ import model.accounts.Manager;
 import model.enums.ResturantFoodType;
 import model.resturant.Food;
 import model.resturant.FoodMenu;
-import model.resturant.Resturant;
+import model.resturant.Restaurant;
 import model.social.Comment;
 import view.enums.managermenu.ManagerMenuCommands;
 import view.enums.managermenu.ManagerMenuMessages;
@@ -121,7 +121,7 @@ public class ManagerMenu {
         if (manager.getResturants().size() == 0) return ManagerMenuMessages.NO_RESTAURANTS;
         System.out.println("Number of restaurants: " + manager.getResturants().size());
         if (manager.getCurrentRestaurant() != null) System.out.println("Current Restaurant == " + manager.getCurrentRestaurant().getId());
-        HashMap<String, Resturant> resturants = manager.getResturants();
+        HashMap<String, Restaurant> resturants = manager.getResturants();
         String[] keys = resturants.keySet().toArray(new String[0]);
         Arrays.sort(keys);
         for (String key : keys) {
@@ -157,9 +157,9 @@ public class ManagerMenu {
     }
 
     public static ManagerMenuMessages checkSelectMenu() {
-        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
-        if (resturant == null) return ManagerMenuMessages.INVALID_COMMAND;
-        FoodMenu menu = resturant.getMenu();
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (restaurant == null) return ManagerMenuMessages.INVALID_COMMAND;
+        FoodMenu menu = restaurant.getMenu();
         if (menu.size() == 0) return ManagerMenuMessages.EMPTY_MENU;
         for (Food food : menu) {
             System.out.printf("%s. %s  %s$    isUnlisted: %b\n", food.getId(), food.getName(), food.getTextPrice(), food.isUnlisted());
@@ -207,8 +207,8 @@ public class ManagerMenu {
     public static ManagerMenuMessages checkDisplayRatings() {
         ManagerMenuMessages result = ManagerMenuController.checkDisplayRatings();
         if (result != ManagerMenuMessages.DISPLAY_RATINGS) return result;
-        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
-        Food food = resturant.getSelectedFood();
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        Food food = restaurant.getSelectedFood();
         printer(food.getRating().toString());
         return null;
     }
@@ -216,9 +216,9 @@ public class ManagerMenu {
     public static ManagerMenuMessages checkDisplayComments() {
         ManagerMenuMessages result = ManagerMenuController.checkDisplayComments();
         if (result != ManagerMenuMessages.DISPLAY_COMMENTS && result != ManagerMenuMessages.NO_FOOD_SELECTED) return result;
-        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
         if (result == ManagerMenuMessages.NO_FOOD_SELECTED) {
-            ArrayList<Comment> restaurantComments = resturant.getComments();
+            ArrayList<Comment> restaurantComments = restaurant.getComments();
             if (restaurantComments.size() == 0) {
                 printer("There is no comments for this restaurant.");
                 return null;
@@ -227,7 +227,7 @@ public class ManagerMenu {
                 printer(comment.toString() + "\n");
             return null;
         }
-        Food food = resturant.getSelectedFood();
+        Food food = restaurant.getSelectedFood();
         ArrayList<Comment> comments = food.getComments();
         if (comments.size() == 0) {
             printer("There is no comments for this food.");

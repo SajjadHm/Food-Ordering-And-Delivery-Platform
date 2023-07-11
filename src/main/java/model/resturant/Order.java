@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class Order extends FoodList {
     private DeliveryStatus status;
     public final LocalDateTime time;
-    private Resturant restaurant;
+    private Restaurant restaurant;
 
     {
         status = DeliveryStatus.ORDERING;
@@ -36,11 +36,11 @@ public class Order extends FoodList {
 
 
 
-    public Resturant getRestaurant() {
+    public Restaurant getRestaurant() {
         return restaurant;
     }
 
-    public void setRestaurant(Resturant restaurant) {
+    public void setRestaurant(Restaurant restaurant) {
         this.restaurant = restaurant;
     }
 }

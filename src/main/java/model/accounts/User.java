@@ -3,7 +3,7 @@ package model.accounts;
 import model.Cart;
 import model.resturant.Food;
 import model.resturant.Order;
-import model.resturant.Resturant;
+import model.resturant.Restaurant;
 import model.social.Comment;
 import model.social.Rating;
 
@@ -14,11 +14,11 @@ public class User extends Account
 {
     private int balance ;
     private boolean loginStatus;
-    private Resturant userCurrentRestaurant = null;
+    private Restaurant userCurrentRestaurant = null;
     private Food userCurrentFood = null;
     String location;
-    private  HashMap<Comment,Resturant> userComments = new HashMap<>();
-    private  HashMap<Rating,Resturant> userRatings = new HashMap<>();
+    private  HashMap<Comment, Restaurant> userComments = new HashMap<>();
+    private  HashMap<Rating, Restaurant> userRatings = new HashMap<>();
     private  HashMap<Comment,Food> userCommentsFood = new HashMap<>();
     private  HashMap<Rating,Food> userRatingsFood = new HashMap<>();
     private ArrayList<Order> ordersHistory = new ArrayList<>();
@@ -26,9 +26,9 @@ public class User extends Account
 
 
 
-    public User(String userName, String passWord, String firstName, String lastName)
+    public User(String userName, String passWord, String firstName, String lastName, boolean isPasswordHashed)
     {
-        super(userName, passWord, firstName, lastName);
+        super(userName, passWord, firstName, lastName, isPasswordHashed);
         this.balance = 0 ;
         this.loginStatus = false ;
     }
@@ -49,11 +49,11 @@ public class User extends Account
     {
         this.balance = balance;
     }
-    public Resturant getUserCurrentRestaurant()
+    public Restaurant getUserCurrentRestaurant()
     {
         return userCurrentRestaurant;
     }
-    public void setUserCurrentRestaurant(Resturant userCurrentRestaurant)
+    public void setUserCurrentRestaurant(Restaurant userCurrentRestaurant)
     {
         this.userCurrentRestaurant = userCurrentRestaurant;
     }
@@ -67,12 +67,12 @@ public class User extends Account
         this.userCurrentFood = userCurrentFood;
     }
 
-    public HashMap<Comment, Resturant> getUserComments()
+    public HashMap<Comment, Restaurant> getUserComments()
     {
         return userComments;
     }
 
-    public HashMap<Rating, Resturant> getUserRatings()
+    public HashMap<Rating, Restaurant> getUserRatings()
     {
         return userRatings;
     }

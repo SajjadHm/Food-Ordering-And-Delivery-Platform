@@ -3,10 +3,8 @@ package model.resturant;
 import model.social.Comment;
 import model.social.Rating;
 
-import java.time.DateTimeException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Food {
     private final String id;
@@ -14,7 +12,7 @@ public class Food {
     private int price;
     private double discountPercent;
     private boolean isUnlisted;
-    private Resturant resturant;
+    private Restaurant restaurant;
     private ArrayList<Comment> comments;
 
     private ArrayList<Rating> ratings = new ArrayList<>();
@@ -103,12 +101,12 @@ public class Food {
     }
 
 
-    public Resturant getResturant() {
-        return resturant;
+    public Restaurant getResturant() {
+        return restaurant;
     }
 
-    public void setResturant(Resturant resturant) {
-        this.resturant = resturant;
+    public void setResturant(Restaurant restaurant) {
+        this.restaurant = restaurant;
     }
 
     public LocalDateTime getDiscountTime() {

@@ -5,19 +5,15 @@ import model.accounts.Manager;
 import model.enums.ResturantFoodType;
 import model.resturant.Food;
 import model.resturant.FoodMenu;
-import model.resturant.Resturant;
-import view.ManagerMenu;
-import view.enums.managermenu.ManagerMenuCommands;
+import model.resturant.Restaurant;
 import view.enums.managermenu.ManagerMenuMessages;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.security.PublicKey;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class ManagerMenuController {
     private static int idCount;
@@ -46,13 +42,13 @@ public class ManagerMenuController {
     public static ManagerMenuMessages checkAddRestaurant(String name, String location, ResturantFoodType[] foodTypesArr) {
         ArrayList<ResturantFoodType> foodTypes = new ArrayList<>(Arrays.asList(foodTypesArr));
         Manager manager = (Manager) Memory.getCurrentAccount();
-        Resturant resturant = manager.getRestaurant(name);
-        if (resturant != null) return ManagerMenuMessages.RESTAURANT_EXISTS;
+        Restaurant restaurant = manager.getRestaurant(name);
+        if (restaurant != null) return ManagerMenuMessages.RESTAURANT_EXISTS;
         if (foodTypes == null) return ManagerMenuMessages.INVALID_FOOD_TYPE;
         while (manager.getRestaurantById(getID(String.valueOf(idCount), 0, 8)) != null) idCount++;
-        resturant = new Resturant(name, foodTypes, location, getID(String.valueOf(idCount), 0, 8));
-        Memory.getResturantsList().put(resturant.getId(), resturant);
-        manager.getRestaurantsID().add(resturant.getId());
+        restaurant = new Restaurant(name, foodTypes, location, getID(String.valueOf(idCount), 0, 8));
+        Memory.getResturantsList().put(restaurant.getId(), restaurant);
+        manager.getRestaurantsID().add(restaurant.getId());
         idCount++;
         return ManagerMenuMessages.RESTAURANT_ADDED;
     }
@@ -64,41 +60,41 @@ public class ManagerMenuController {
 
     public static ManagerMenuMessages checkRemoveRestaurant(String id) {
         Manager manager = (Manager) Memory.getCurrentAccount();
-        Resturant resturant = manager.getRestaurantById(id);
-        if (resturant == null) return ManagerMenuMessages.RESTAURANT_NOT_FOUND;
-        manager.getResturants().remove(resturant);
+        Restaurant restaurant = manager.getRestaurantById(id);
+        if (restaurant == null) return ManagerMenuMessages.RESTAURANT_NOT_FOUND;
+        manager.getResturants().remove(restaurant);
         return ManagerMenuMessages.RESTAURANT_REMOVED;
     }
 
     public static ManagerMenuMessages checkSelect(String id) {
         Manager manager = (Manager) Memory.getCurrentAccount();
-        Resturant resturant = manager.getRestaurantById(id);
-        if (resturant == null) return ManagerMenuMessages.RESTAURANT_NOT_FOUND;
-        manager.setCurrentRestaurant(resturant);
+        Restaurant restaurant = manager.getRestaurantById(id);
+        if (restaurant == null) return ManagerMenuMessages.RESTAURANT_NOT_FOUND;
+        manager.setCurrentRestaurant(restaurant);
         return ManagerMenuMessages.RESTAURANT_OPENED;
     }
 
     public static ManagerMenuMessages checkEditFoodType(ResturantFoodType[] resturantFoodTypes) {
         Manager manager = (Manager) Memory.getCurrentAccount();
-        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
-        if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (restaurant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
         if (resturantFoodTypes == null) return ManagerMenuMessages.INVALID_FOOD_TYPE;
         return ManagerMenuMessages.ARE_YOU_SURE_FOODTYPE;
     }
 
     public static ManagerMenuMessages editFoodType(ResturantFoodType[] resturantFoodTypesArr) {
         ArrayList<ResturantFoodType> resturantFoodTypes = new ArrayList<>(Arrays.asList(resturantFoodTypesArr));
-        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
-        if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
-        resturant.setFoodTypes(resturantFoodTypes);
-        resturant.getMenu().removeAll(resturant.getMenu());
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (restaurant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
+        restaurant.setFoodTypes(resturantFoodTypes);
+        restaurant.getMenu().removeAll(restaurant.getMenu());
         return ManagerMenuMessages.RESTAURANT_FOOD_TYPE_CHANGED;
     }
 
     public static ManagerMenuMessages checkAddFood(String name, int price) {
-        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
-        if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
-        FoodMenu menu = resturant.getMenu();
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (restaurant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
+        FoodMenu menu = restaurant.getMenu();
         Food food = menu.getByName(name);
         if (food != null) return ManagerMenuMessages.FOOD_EXISTS;
         menu.addFood(name, price);
@@ -107,9 +103,9 @@ public class ManagerMenuController {
     }
 
     public static ManagerMenuMessages checkRemoveFood(String id) {
-        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
-        if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
-        FoodMenu menu = resturant.getMenu();
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (restaurant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
+        FoodMenu menu = restaurant.getMenu();
         if (menu.size() == 0) return ManagerMenuMessages.EMPTY_MENU;
         Food food = menu.get(id);
         if (food == null) return ManagerMenuMessages.FOOD_NOT_FOUND;
@@ -123,29 +119,29 @@ public class ManagerMenuController {
 
     public static ManagerMenuMessages checkDeactiveFood(String foodID) {
         // TODO: handle orders
-        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
-        if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
-        if (resturant.getMenu().size() == 0) return ManagerMenuMessages.EMPTY_MENU;
-        Food food = resturant.getMenu().get(foodID);
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (restaurant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
+        if (restaurant.getMenu().size() == 0) return ManagerMenuMessages.EMPTY_MENU;
+        Food food = restaurant.getMenu().get(foodID);
         if (food == null) return ManagerMenuMessages.FOOD_NOT_FOUND;
         food.setUnlisted(true);
         return ManagerMenuMessages.FOOD_DEACTIVATED;
     }
 
     public static ManagerMenuMessages checkActiveFood(String foodID) {
-        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
-        if (resturant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
-        if (resturant.getMenu().size() == 0) return ManagerMenuMessages.EMPTY_MENU;
-        Food food = resturant.getMenu().get(foodID);
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (restaurant == null) return ManagerMenuMessages.NO_RESTAURANT_SELECTED;
+        if (restaurant.getMenu().size() == 0) return ManagerMenuMessages.EMPTY_MENU;
+        Food food = restaurant.getMenu().get(foodID);
         if (food == null) return ManagerMenuMessages.FOOD_NOT_FOUND;
         food.setUnlisted(false);
         return ManagerMenuMessages.FOOD_DEACTIVATED;
     }
 
     public static ManagerMenuMessages checkDiscountFood(String foodID, double discountPercent, LocalDateTime timeStamp) {
-        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
-        if (resturant == null) return ManagerMenuMessages.INVALID_COMMAND;
-        FoodMenu menu = resturant.getMenu();
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (restaurant == null) return ManagerMenuMessages.INVALID_COMMAND;
+        FoodMenu menu = restaurant.getMenu();
         if (menu.size() == 0) return ManagerMenuMessages.EMPTY_MENU;
         Food food = menu.get(foodID);
         if (food == null) return ManagerMenuMessages.FOOD_NOT_FOUND;
@@ -157,38 +153,38 @@ public class ManagerMenuController {
     }
 
     public static ManagerMenuMessages checkSelectFood(String foodID) {
-        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
-        if (resturant == null) return ManagerMenuMessages.INVALID_COMMAND;
-        FoodMenu menu = resturant.getMenu();
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (restaurant == null) return ManagerMenuMessages.INVALID_COMMAND;
+        FoodMenu menu = restaurant.getMenu();
         if (menu.size() == 0) return ManagerMenuMessages.EMPTY_MENU;
         Food food = menu.get(foodID);
         if (food == null) return ManagerMenuMessages.FOOD_NOT_FOUND;
-        resturant.setSelectedFood(food);
+        restaurant.setSelectedFood(food);
         return ManagerMenuMessages.FOOD_SELECTED;
     }
 
     public static ManagerMenuMessages checkDisplayRatings() {
-        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
-        if (resturant == null) return ManagerMenuMessages.INVALID_COMMAND;
-        Food food = resturant.getSelectedFood();
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (restaurant == null) return ManagerMenuMessages.INVALID_COMMAND;
+        Food food = restaurant.getSelectedFood();
         if (food == null) return ManagerMenuMessages.NO_FOOD_SELECTED;
         return ManagerMenuMessages.DISPLAY_RATINGS;
     }
 
     public static ManagerMenuMessages checkDisplayComments() {
-        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
-        if (resturant == null) return ManagerMenuMessages.INVALID_COMMAND;
-        Food food = resturant.getSelectedFood();
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (restaurant == null) return ManagerMenuMessages.INVALID_COMMAND;
+        Food food = restaurant.getSelectedFood();
         if (food == null) return ManagerMenuMessages.NO_FOOD_SELECTED;
         return ManagerMenuMessages.DISPLAY_COMMENTS;
     }
 
     public static ManagerMenuMessages checkDeselectFood() {
-        Resturant resturant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
-        if (resturant == null) return ManagerMenuMessages.INVALID_COMMAND;
-        Food food = resturant.getSelectedFood();
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (restaurant == null) return ManagerMenuMessages.INVALID_COMMAND;
+        Food food = restaurant.getSelectedFood();
         if (food == null) return ManagerMenuMessages.NO_FOOD_SELECTED;
-        resturant.setSelectedFood(null);
+        restaurant.setSelectedFood(null);
         return ManagerMenuMessages.FOOD_DESELECTED;
     }
 }
