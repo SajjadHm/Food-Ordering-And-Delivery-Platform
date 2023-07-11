@@ -52,7 +52,14 @@ public class Read {
         );
         food.setUnlisted((Boolean) object.get("isUnlisted"));
         food.setRestaurantID((String) object.get("restaurantID")); //CHANGE IT
-
+        food.setDiscountTime(readDateTime((JSONObject) object.get("discountTime")));
+        food.setRating(readRating((JSONObject) object.get("rating")));
+        ArrayList<Rating> ratings = food.getRatings();
+        for (Object rating : (JSONArray) object.get("ratings"))
+            ratings.add(readRating((JSONObject) rating));
+        ArrayList<Comment> comments = food.getComments();
+        for (Object comment : (JSONArray) object.get("comments"))
+            comments.add(readComment((JSONObject) comment));
         return food;
     }
 

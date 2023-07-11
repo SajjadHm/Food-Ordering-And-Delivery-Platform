@@ -119,4 +119,8 @@ public class Food {
     public void setDiscountTime(LocalDateTime discountTime) {
         this.discountTime = discountTime;
     }
+
+    public void setRating(Rating rating) {
+        this.rating = rating;
+    }
 }

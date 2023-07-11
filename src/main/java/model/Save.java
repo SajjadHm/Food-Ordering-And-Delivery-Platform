@@ -53,7 +53,10 @@ public class Save {
         for (Rating rating : food.getRatings())
             ratings.add(saveRating(rating));
         object.put("ratings", ratings);
-//        object.put("", food.);
+        JSONArray comments = new JSONArray();
+        for (Comment comment : food.getComments())
+            comments.add(saveComment(comment));
+        object.put("comments", comments);
         return object;
     }
 
