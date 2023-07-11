@@ -12,14 +12,14 @@ public class Food {
     private int price;
     private double discountPercent;
     private boolean isUnlisted;
-    private Restaurant restaurant;
+    private String restaurantID;
     private ArrayList<Comment> comments;
 
     private ArrayList<Rating> ratings = new ArrayList<>();
     private Rating rating;
     private LocalDateTime discountTime;
 
-    //TODO: adding refrence back to restaurant
+    //TODO: adding refrence back to restaurantID
 
     {
         isUnlisted = false;
@@ -101,12 +101,15 @@ public class Food {
     }
 
 
-    public Restaurant getResturant() {
-        return restaurant;
+    public String getResturant() {
+        return restaurantID;
     }
 
-    public void setResturant(Restaurant restaurant) {
-        this.restaurant = restaurant;
+    public void setRestaurantID(Restaurant restaurant) {
+        this.restaurantID = restaurant.getId();
+    }
+    public void setRestaurantID(String restaurantID) {
+        this.restaurantID = restaurantID;
     }
 
     public LocalDateTime getDiscountTime() {

@@ -41,7 +41,7 @@ public class FoodMenu extends FoodList {
         }
         foodIdCount++;
         Food food = new Food(newID, name, price, discountPercent);
-        food.setResturant(((Manager) Memory.getCurrentAccount()).getCurrentRestaurant());
+        food.setRestaurantID(((Manager) Memory.getCurrentAccount()).getCurrentRestaurant());
         add(food);
     }
 

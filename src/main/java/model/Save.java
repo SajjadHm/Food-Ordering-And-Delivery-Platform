@@ -1,7 +1,9 @@
 package model;
 
 import model.resturant.Food;
+import model.social.Comment;
 import model.social.Rating;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.time.LocalDateTime;
@@ -22,6 +24,21 @@ public class Save {
         return object;
     }
 
+    public static JSONObject saveComment(Comment comment) {
+        JSONObject object = new JSONObject();
+        object.put("message", comment.getMessage());
+        object.put("id", comment.getId());
+        object.put("rating", comment.getRating());
+        object.put("authorID", comment.getAuthorID());
+        object.put("timeCreated", saveLocalDateTime(comment.getTimeCreated()));
+        object.put("isModified", comment.isModified());
+        JSONArray replies = new JSONArray();
+        for (Comment reply : comment.getReplies())
+            replies.add(saveComment(comment));
+        object.put("replies", replies);
+        return object;
+    }
+
     public static JSONObject saveFood(Food food) {
         JSONObject object = new JSONObject();
         object.put("id", food.getId());
@@ -29,10 +46,13 @@ public class Save {
         object.put("price", food.getPrice());
         object.put("discountPercent", food.getDiscountPercent());
         object.put("isUnlisted", food.isUnlisted());
-        object.put("restaurantID", food.getResturant().getId());
+        object.put("restaurantID", food.getResturant());
         object.put("rating", saveRating(food.getRating()));
-//        object.put("", food.);
-//        object.put("", food.);
+        object.put("discountTime", saveLocalDateTime(food.getDiscountTime()));
+        JSONArray ratings = new JSONArray();
+        for (Rating rating : food.getRatings())
+            ratings.add(saveRating(rating));
+        object.put("ratings", ratings);
 //        object.put("", food.);
         return object;
     }

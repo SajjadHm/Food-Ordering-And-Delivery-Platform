@@ -12,7 +12,7 @@ public class Comment {
     private final String id;
     private int rating;
     private final ArrayList<Comment> replies;
-    private Account author;
+    private String authorID;
     private final LocalDateTime timeCreated;
     private boolean isModified;
 
@@ -31,7 +31,7 @@ public class Comment {
         this.isModified = false;
     }
 
-    public Comment(String message, String id, int rating, ArrayList<Comment> replie, LocalDateTime timeCreated) {
+    public Comment(String message, String id, int rating, ArrayList<Comment> replies, LocalDateTime timeCreated) {
         this.message = message;
         this.id = id;
         this.rating = rating;
@@ -42,12 +42,22 @@ public class Comment {
         this.isModified = false;
     }
 
-    public Comment(String message, String id, Account author )
+    public Comment(String message, String id, String authorID )
     {
         this.message = message;
         this.id = id;
         this.timeCreated = LocalDateTime.now();
-        this.author = author;
+        this.authorID = authorID;
+    }
+
+    public Comment(String message, String id, String authorID, LocalDateTime timeCreated, int rating, boolean isModified )
+    {
+        this.message = message;
+        this.id = id;
+        this.timeCreated = timeCreated;
+        this.authorID = authorID;
+        this.rating = rating;
+        this.isModified = isModified;
     }
 
     public String getMessage() {
@@ -75,15 +85,23 @@ public class Comment {
         return replies;
     }
 
+    public String getAuthorID() {
+        return authorID;
+    }
+
     public Account getAuthor() {
+        Account author = Memory.getUser(authorID);
+        if (author == null) author = Memory.getAdmin(authorID);
         return author;
     }
 
     public void setAuthor(Account author) {
-        this.author = author;
+        this.authorID = author.getUserName();
     }
 
     public String toString() {
+        Account author = Memory.getUser(authorID);
+        if (author == null) author = Memory.getAdmin(authorID);
         String self = "";
         self += Colors.UNDERLINE + "#" + id + Colors.RESET + "\n";
         self += "@" + Colors.BOLD + author.getUserName() + Colors.RESET + "   at " + timeCreated.format(Memory.dateTimeFormatter);
@@ -92,11 +110,18 @@ public class Comment {
         if (replies.size() != 0) {
             for (Comment reply : replies) {
                 self += "\t\t---- " + Colors.UNDERLINE + "#" + reply.id + Colors.RESET + "\n";
-                self += "\t\t     reply from " + "@" + Colors.BOLD + reply.author.getUserName() + Colors.RESET + "   at " + reply.timeCreated.format(Memory.dateTimeFormatter) + "\n";
+                self += "\t\t     reply from " + "@" + Colors.BOLD + reply.getAuthor().getUserName() + Colors.RESET + "   at " + reply.timeCreated.format(Memory.dateTimeFormatter) + "\n";
                 self += "\t\t     " + reply.message + "\n";
             }
         }
         return self;
     }
 
+    public LocalDateTime getTimeCreated() {
+        return timeCreated;
+    }
+
+    public boolean isModified() {
+        return isModified;
+    }
 }

@@ -55,7 +55,7 @@ public class UserMenuController
         else
         {
             Memory.getCurrentUser().setUserCurrentFood(Memory.getFood(id));
-            Memory.getCurrentUser().setUserCurrentRestaurant(Memory.getFood(id).getResturant());
+            Memory.getCurrentUser().setUserCurrentRestaurant(Memory.getRestaurant(Memory.getFood(id).getResturant()));
             return UserMenuMessages.FOOD_SELECTED_SUCCESSFULLY;
         }
     }
