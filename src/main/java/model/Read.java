@@ -1,9 +1,11 @@
 package model;
 
+import com.sun.org.apache.xpath.internal.operations.Or;
 import model.accounts.Manager;
 import model.enums.ResturantFoodType;
 import model.resturant.Food;
 import model.resturant.FoodMenu;
+import model.resturant.Order;
 import model.resturant.Restaurant;
 import model.social.Comment;
 import model.social.Rating;
@@ -73,11 +75,8 @@ public class Read {
                 (String) object.get("name"),
                 (String) object.get("id")
         );
-        if (((JSONArray) object.get("foodMenu")).size() > 0) {
-            for (Object object1 : (JSONArray) object.get("foodMenu")) {
-                foodMenu.add(readFood((JSONObject) object1));
-            }
-        }
+        for (Object object1 : (JSONArray) object.get("foodMenu"))
+            foodMenu.add(readFood((JSONObject) object1));
         return foodMenu;
     }
 
@@ -120,6 +119,18 @@ public class Read {
         );
 
         return manager;
+    }
+
+    private static Order readOrder(JSONObject object) {
+        Order order = new Order(
+                (String) object.get("name"),
+                (String) object.get("id"),
+                readDateTime((JSONObject) object.get("time"))
+        );
+        for (Object object1 : (JSONArray) object.get("orderList"))
+            order.add(readFood((JSONObject) object1));
+        order.setRestaurantID((String) object.get("restaurantID"));
+        return order;
     }
 
 

@@ -2,10 +2,7 @@ package model;
 
 import model.accounts.Manager;
 import model.enums.ResturantFoodType;
-import model.resturant.Food;
-import model.resturant.FoodList;
-import model.resturant.FoodMenu;
-import model.resturant.Restaurant;
+import model.resturant.*;
 import model.social.Comment;
 import model.social.Rating;
 import org.json.simple.JSONArray;
@@ -118,6 +115,22 @@ public class Save {
         if (manager.getCurrentRestaurant() != null) id = manager.getCurrentRestaurantID();
         object.put("currentRestaurantID", id);
         object.put("restaurants", array);
+        return object;
+    }
+
+    public static JSONObject saveOrder(Order order) {
+        if (order == null) return null;
+
+        JSONObject object = new JSONObject();
+        object.put("name", order.getName());
+        object.put("id", order.getId());
+        JSONArray array = new JSONArray();
+        for (Food food : order) {
+            array.add(saveFood(food));
+        }
+        object.put("orderList", array);
+        object.put("time", saveLocalDateTime(order.time));
+        object.put("restaurantID", order.getRestaurantID());
         return object;
     }
 

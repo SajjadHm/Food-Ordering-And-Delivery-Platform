@@ -1,11 +1,13 @@
 package model.resturant;
 
+import model.Memory;
+
 import java.time.LocalDateTime;
 
 public class Order extends FoodList {
     private DeliveryStatus status;
     public final LocalDateTime time;
-    private Restaurant restaurant;
+    private String restaurantID;
 
     {
         status = DeliveryStatus.ORDERING;
@@ -14,6 +16,11 @@ public class Order extends FoodList {
     public Order(String name, String id) {
         super(name, id);
         this.time = LocalDateTime.now();
+    }
+
+    public Order(String name, String id, LocalDateTime time) {
+        super(name, id);
+        this.time = time;
     }
 
     public int getTotalPrice() {
@@ -37,10 +44,18 @@ public class Order extends FoodList {
 
 
     public Restaurant getRestaurant() {
-        return restaurant;
+        return Memory.getRestaurant(restaurantID);
     }
 
     public void setRestaurant(Restaurant restaurant) {
-        this.restaurant = restaurant;
+        this.restaurantID = restaurant.getId();
+    }
+
+    public String getRestaurantID() {
+        return restaurantID;
+    }
+
+    public void setRestaurantID(String restaurantID) {
+        this.restaurantID = restaurantID;
     }
 }

@@ -17,7 +17,6 @@ public class Memory {
     private final static HashMap<String, Restaurant> resturantsList;
     private static Account currentAccount;
     private static User currentUser;
-    private static Restaurant currentRestaurant;
     public static final DateTimeFormatter dateTimeFormatter;
     private static int foodIdCount;
 
