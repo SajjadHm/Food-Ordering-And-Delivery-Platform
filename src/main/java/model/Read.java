@@ -1,5 +1,6 @@
 package model;
 
+import model.enums.ResturantFoodType;
 import model.resturant.Food;
 import model.resturant.FoodMenu;
 import model.resturant.Restaurant;
@@ -9,6 +10,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import view.ManagerMenu;
 
+import javax.management.ObjectName;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -76,5 +78,30 @@ public class Read {
         }
         return foodMenu;
     }
+
+    private static Restaurant readRestaurant(JSONObject object) {
+        ArrayList<ResturantFoodType> foodTypes = new ArrayList<>();
+        if (((JSONArray) object.get("foodTypes")).size() > 0) {
+            for (Object object1 : (JSONArray) object.get("foodTypes")) {
+                foodTypes.add(ResturantFoodType.valueOf(object1.toString()));
+            }
+        }
+        Restaurant resturant = new Restaurant (
+                (String) object.get("name"),
+                foodTypes,
+                (String) object.get("location"),
+                (String) object.get("id"),
+                readFoodMenu((JSONObject) object.get("menu"))
+        );
+        Food selectedFood = readFood((JSONObject) object.get("selectedFood"));
+        ArrayList<Comment> comments = resturant.getComments();
+        for (Object comment : (JSONArray) object.get("comments"))
+            comments.add(readComment((JSONObject) comment));
+        ArrayList<Rating> ratings = resturant.getRatings();
+        for (Object rating : (JSONArray) object.get("ratings"))
+            ratings.add(readRating((JSONObject) rating));
+        return resturant;
+    }
+
 
 }

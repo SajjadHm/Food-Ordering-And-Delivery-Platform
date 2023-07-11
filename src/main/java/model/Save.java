@@ -1,8 +1,10 @@
 package model;
 
+import model.enums.ResturantFoodType;
 import model.resturant.Food;
 import model.resturant.FoodList;
 import model.resturant.FoodMenu;
+import model.resturant.Restaurant;
 import model.social.Comment;
 import model.social.Rating;
 import org.json.simple.JSONArray;
@@ -73,6 +75,31 @@ public class Save {
             array.add(saveFood(food));
         }
         object.put("foodMenu", array);
+        return object;
+    }
+
+    public static JSONObject saveRestaurant(Restaurant resturant) {
+        if (resturant == null) return null;
+
+        JSONObject object = new JSONObject();
+        object.put("name", resturant.getName());
+        object.put("location", resturant.getLocation());
+        object.put("id", resturant.getId());
+        object.put("menu", saveFoodMenu(resturant.getMenu()));
+        JSONArray array = new JSONArray();
+        for (ResturantFoodType foodType : resturant.getFoodTypes()) {
+            array.add(foodType.toString());
+        }
+        object.put("foodTypes", array);
+        object.put("selectedFood", saveFood(resturant.getSelectedFood()));
+        JSONArray comments = new JSONArray();
+        for (Comment comment : resturant.getComments())
+            comments.add(saveComment(comment));
+        object.put("comments", comments);
+        JSONArray ratings = new JSONArray();
+        for (Rating rating : resturant.getRatings())
+            ratings.add(saveRating(rating));
+        object.put("ratings", ratings);
         return object;
     }
 

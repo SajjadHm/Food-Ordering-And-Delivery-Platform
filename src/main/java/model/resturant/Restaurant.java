@@ -25,6 +25,14 @@ public class Restaurant {
         this.menu = new FoodMenu(name, id);
     }
 
+    public Restaurant(String name, ArrayList<ResturantFoodType> foodTypes, String location, String id, FoodMenu menu) {
+        this.name = name;
+        this.foodTypes = (ArrayList<ResturantFoodType>) foodTypes.clone();
+        this.id = id;
+        this.location = location;
+        this.menu = menu;
+    }
+
     public String getName() {
         return name;
     }
