@@ -1,5 +1,6 @@
 package model;
 
+import model.accounts.Manager;
 import model.enums.ResturantFoodType;
 import model.resturant.Food;
 import model.resturant.FoodMenu;
@@ -13,6 +14,7 @@ import view.ManagerMenu;
 import javax.management.ObjectName;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Objects;
 import java.util.Observable;
 
@@ -101,6 +103,23 @@ public class Read {
         for (Object rating : (JSONArray) object.get("ratings"))
             ratings.add(readRating((JSONObject) rating));
         return resturant;
+    }
+
+    private static Manager readManager(JSONObject object) {
+        ArrayList<String> restaurantsID = new ArrayList<>();
+        for (Object restaurantID : (JSONArray) object.get("restaurants"))
+            restaurantsID.add((String) restaurantID);
+        Manager manager = new Manager(
+                (String) object.get("userName"),
+                (String) object.get("hashedPassWord"),
+                (String) object.get("firstName"),
+                (String) object.get("lastName"),
+                true,
+                restaurantsID,
+                (String) object.get("currentRestaurantID")
+        );
+
+        return manager;
     }
 
 

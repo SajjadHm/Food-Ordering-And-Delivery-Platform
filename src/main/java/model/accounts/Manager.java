@@ -8,13 +8,19 @@ import java.util.HashMap;
 
 public class Manager extends Account {
     private final ArrayList<String> restaurantsID;
-    private Restaurant currentRestaurant;
+    private String currentRestaurantID;
 
     public Manager(String userName, String passWord, String firstName, String lastName, boolean isPasswordHashed)
     {
         super(userName, passWord, firstName, lastName, isPasswordHashed);
         restaurantsID = new ArrayList<>();
-        currentRestaurant = null;
+        currentRestaurantID = null;
+    }
+
+    public Manager(String userName, String passWord, String firstName, String lastName, boolean isPasswordHashed, ArrayList<String> restaurantsID, String currentRestaurantID) {
+        super(userName, passWord, firstName, lastName, isPasswordHashed);
+        this.restaurantsID = restaurantsID;
+        this.currentRestaurantID = currentRestaurantID;
     }
 
     public Restaurant getRestaurant(String name) {
@@ -38,14 +44,18 @@ public class Manager extends Account {
     }
 
     public Restaurant getCurrentRestaurant() {
-        return currentRestaurant;
+        return Memory.getRestaurant(currentRestaurantID);
     }
 
     public void setCurrentRestaurant(Restaurant currentRestaurant) {
-        this.currentRestaurant = currentRestaurant;
+        this.currentRestaurantID = currentRestaurant.getId();
     }
 
     public ArrayList<String> getRestaurantsID() {
         return restaurantsID;
+    }
+
+    public String getCurrentRestaurantID() {
+        return currentRestaurantID;
     }
 }

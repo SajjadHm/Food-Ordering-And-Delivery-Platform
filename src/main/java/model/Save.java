@@ -1,5 +1,6 @@
 package model;
 
+import model.accounts.Manager;
 import model.enums.ResturantFoodType;
 import model.resturant.Food;
 import model.resturant.FoodList;
@@ -100,6 +101,23 @@ public class Save {
         for (Rating rating : resturant.getRatings())
             ratings.add(saveRating(rating));
         object.put("ratings", ratings);
+        return object;
+    }
+
+    public static JSONObject saveManager(Manager manager) {
+        JSONObject object = new JSONObject();
+        object.put("userName", manager.getUserName());
+        object.put("hashedPassWord", manager.getHashedPassWord());
+        object.put("firstName", manager.getFirstName());
+        object.put("lastName", manager.getLastName());
+        JSONArray array = new JSONArray();
+        for (String restaurantID : manager.getRestaurantsID()) {
+            array.add(restaurantID);
+        }
+        String id = null;
+        if (manager.getCurrentRestaurant() != null) id = manager.getCurrentRestaurantID();
+        object.put("currentRestaurantID", id);
+        object.put("restaurants", array);
         return object;
     }
 
