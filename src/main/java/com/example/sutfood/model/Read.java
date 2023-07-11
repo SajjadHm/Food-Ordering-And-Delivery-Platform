@@ -1,5 +1,6 @@
 package com.example.sutfood.model;
 
+import com.example.sutfood.Main;
 import com.example.sutfood.model.accounts.Manager;
 import com.example.sutfood.model.accounts.User;
 import com.example.sutfood.model.enums.ResturantFoodType;
@@ -15,9 +16,11 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import com.example.sutfood.view.ManagerMenu;
 
+import javax.naming.InitialContext;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InterruptedIOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,7 +34,7 @@ public class Read {
     public static Rating readRating(JSONObject object) {
         Rating rating = new Rating(
                 (Double) object.get("rating"),
-                (Integer) object.get("count"),
+                Math.toIntExact((Long) object.get("count")),
                 (String) object.get("id")
         );
         return rating;
@@ -43,7 +46,7 @@ public class Read {
                 (String) object.get("id"),
                 (String) object.get("authorID"),
                 readDateTime((JSONObject) object.get("timeCreated")),
-                (Integer) object.get("rating"),
+                Math.toIntExact((Long) object.get("rating")),
                 (Boolean) object.get("isModified")
         );
         ArrayList<Comment> replies = comment.getReplies();
@@ -53,10 +56,11 @@ public class Read {
     }
 
     public static Food readFood(JSONObject object) {
+        if (object.get("price") == null) return null;
         Food food = new Food(
                 (String) object.get("id"),
                 (String) object.get("name"),
-                (Integer) object.get("price"),
+                Math.toIntExact((Long) object.get("price")),
                 (Double) object.get("discountPercent")
         );
         food.setUnlisted((Boolean) object.get("isUnlisted"));
@@ -83,6 +87,7 @@ public class Read {
     }
 
     private static Restaurant readRestaurant(JSONObject object) {
+        if (object == null) return null;
         ArrayList<ResturantFoodType> foodTypes = new ArrayList<>();
         if (((JSONArray) object.get("foodTypes")).size() > 0) {
             for (Object object1 : (JSONArray) object.get("foodTypes")) {
@@ -108,8 +113,10 @@ public class Read {
 
     private static Manager readManager(JSONObject object) {
         ArrayList<String> restaurantsID = new ArrayList<>();
-        for (Object restaurantID : (JSONArray) object.get("restaurants"))
-            restaurantsID.add((String) restaurantID);
+        JSONArray restaurantsArr = (JSONArray) object.get("restaurants");
+        if (restaurantsArr != null)
+            for (Object restaurantID : restaurantsArr)
+                restaurantsID.add((String) restaurantID);
         Manager manager = new Manager(
                 (String) object.get("userName"),
                 (String) object.get("hashedPassWord"),
@@ -129,8 +136,10 @@ public class Read {
                 (String) object.get("id"),
                 readDateTime((JSONObject) object.get("time"))
         );
-        for (Object object1 : (JSONArray) object.get("orderList"))
-            order.add(readFood((JSONObject) object1));
+        JSONArray orderListArr = (JSONArray) object.get("orderList");
+        if (orderListArr != null)
+            for (Object object1 : orderListArr)
+                order.add(readFood((JSONObject) object1));
         order.setRestaurantID((String) object.get("restaurantID"));
         return order;
     }
@@ -146,26 +155,48 @@ public class Read {
     public static User readUser(JSONObject object) {
         HashMap<Comment, Restaurant> userComments = new HashMap<>();
         JSONObject userCommentsObject = (JSONObject) object.get("userComments");
-        for (Object userComment : userCommentsObject.keySet())
-            userComments.put(readComment((JSONObject) userComment), readRestaurant((JSONObject) userCommentsObject.get(userComment)));
+        if (userCommentsObject != null) {
+            JSONParser parser = new JSONParser();
+            for (Object userComment : userCommentsObject.keySet()) {
+                try {
+                    JSONObject parsed = (JSONObject) parser.parse((String) userComment);
+                    userComments.put(readComment(parsed), readRestaurant((JSONObject) userCommentsObject.get(parsed)));
+                } catch (ParseException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+
         HashMap<Rating, Restaurant> userRatings = new HashMap<>();
         JSONObject userRatingsObject = (JSONObject) object.get("userRatings");
-        for (Object userRating : userRatingsObject.keySet())
-            userRatings.put(readRating((JSONObject) userRating), readRestaurant((JSONObject) userRatingsObject.get(userRating)));
+        if (userRatingsObject != null)
+            for (Object userRating : userRatingsObject.keySet())
+                userRatings.put(readRating((JSONObject) userRating), readRestaurant((JSONObject) userRatingsObject.get(userRating)));
+
         HashMap<Comment,Food> userCommentsFood = new HashMap<>();
         JSONObject userCommentsFoodObject = (JSONObject) object.get("userCommentsFood");
-        for (Object userComment : userCommentsFoodObject.keySet())
-            userCommentsFood.put(readComment((JSONObject) userComment), readFood((JSONObject) userCommentsFoodObject.get(userComment)));
+        if (userCommentsFoodObject != null)
+            for (Object userComment : userCommentsFoodObject.keySet())
+                userCommentsFood.put(readComment((JSONObject) userComment), readFood((JSONObject) userCommentsFoodObject.get(userComment)));
+
         HashMap<Rating,Food> userRatingsFood = new HashMap<>();
         JSONObject userRatingsFoodObject = (JSONObject) object.get("userRatingsFood");
-        for (Object userRating : userRatingsFoodObject.keySet())
-            userRatingsFood.put(readRating((JSONObject) userRating), readFood((JSONObject) userRatingsFoodObject.get(userRating)));
+        if (userRatingsFoodObject != null)
+            for (Object userRating : userRatingsFoodObject.keySet())
+                userRatingsFood.put(readRating((JSONObject) userRating), readFood((JSONObject) userRatingsFoodObject.get(userRating)));
+
         ArrayList<Order> ordersHistory = new ArrayList<>();
-        for (Object order : (JSONArray) object.get("ordersHistory"))
-            ordersHistory.add(readOrder((JSONObject) order));
+        JSONArray ordersHistoryArr = (JSONArray) object.get("ordersHistory");
+        if (ordersHistoryArr != null)
+            for (Object order : ordersHistoryArr)
+                ordersHistory.add(readOrder((JSONObject) order));
+
         ArrayList<Cart> userCart = new ArrayList<>();
-        for (Object cart : (JSONArray) object.get("userCart"))
-            userCart.add(readCart((JSONObject) cart));
+        JSONArray userCartArr = (JSONArray) object.get("userCart");
+        if (userCartArr != null)
+            for (Object cart : userCartArr)
+                userCart.add(readCart((JSONObject) cart));
+
         User user = new User (
                 (String) object.get("userName"),
                 (String) object.get("hashedPassWord"),
@@ -183,7 +214,7 @@ public class Read {
     }
 
     public static void readMemory(JSONObject object) {
-        Memory.setFoodIdCount((Integer) object.get("foodIDCount"));
+        Memory.setFoodIdCount(Math.toIntExact((Long) object.get("foodIDCount")));
         Memory.setCurrentUser(readUser((JSONObject) object.get("currentUser")));
         Memory.setCurrentAccount(readManager((JSONObject) object.get("currentAccount")));
         ArrayList<Manager> managers = new ArrayList<>();

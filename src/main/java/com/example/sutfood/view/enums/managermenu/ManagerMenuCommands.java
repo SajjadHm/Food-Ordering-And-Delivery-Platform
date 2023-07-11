@@ -24,6 +24,7 @@ public enum ManagerMenuCommands {
     DESELECT_FOOD("deselect\\s+food"),
     DISPLAY_RATINGS("display\\s+ratings"),
     DISPLAY_COMMENTS("display\\s+comments"),
+    ADD_NEW_RESPONSE("add\\s+new\\s+response\\s+(?<commentID>\\w+)\\s+(?<message>[^\n]+)"),
     END("end"),
     ;
 

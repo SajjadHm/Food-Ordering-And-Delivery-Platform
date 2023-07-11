@@ -20,12 +20,14 @@ import java.util.HashMap;
 public class Save {
     public static JSONObject saveLocalDateTime(LocalDateTime time) {
         JSONObject object = new JSONObject();
+        if (time == null) return object;
         object.put("string", time.format(Memory.dateTimeFormatter));
         return object;
     }
 
     public static JSONObject saveRating(Rating rating) {
         JSONObject object = new JSONObject();
+        if (rating == null) return object;
         object.put("rating", rating.getRating());
         object.put("count", rating.getCount());
         object.put("id", rating.getId());
@@ -34,6 +36,7 @@ public class Save {
 
     public static JSONObject saveComment(Comment comment) {
         JSONObject object = new JSONObject();
+        if (comment == null) return object;
         object.put("message", comment.getMessage());
         object.put("id", comment.getId());
         object.put("rating", comment.getRating());
@@ -42,13 +45,14 @@ public class Save {
         object.put("isModified", comment.isModified());
         JSONArray replies = new JSONArray();
         for (Comment reply : comment.getReplies())
-            replies.add(saveComment(comment));
+            replies.add(saveComment(reply));
         object.put("replies", replies);
         return object;
     }
 
     public static JSONObject saveFood(Food food) {
         JSONObject object = new JSONObject();
+        if (food == null) return object;
         object.put("id", food.getId());
         object.put("name", food.getName());
         object.put("price", food.getPrice());
@@ -69,9 +73,8 @@ public class Save {
     }
 
     public static JSONObject saveFoodMenu(FoodMenu foodMenu) {
-        if (foodMenu == null) return null;
-
         JSONObject object = new JSONObject();
+        if (foodMenu == null) return object;
         object.put("name", foodMenu.getName());
         object.put("id", foodMenu.getId());
         JSONArray array = new JSONArray();
@@ -83,9 +86,8 @@ public class Save {
     }
 
     public static JSONObject saveRestaurant(Restaurant resturant) {
-        if (resturant == null) return null;
-
         JSONObject object = new JSONObject();
+        if (resturant == null) return object;
         object.put("name", resturant.getName());
         object.put("location", resturant.getLocation());
         object.put("id", resturant.getId());
@@ -126,9 +128,8 @@ public class Save {
     }
 
     public static JSONObject saveOrder(Order order) {
-        if (order == null) return null;
-
         JSONObject object = new JSONObject();
+        if (order == null) return object;
         object.put("name", order.getName());
         object.put("id", order.getId());
         JSONArray array = new JSONArray();
@@ -143,6 +144,7 @@ public class Save {
 
     public static JSONObject saveCart(Cart cart) {
         JSONObject object = new JSONObject();
+        if (cart == null) return object;
         object.put("restaurantID", cart.getRestaurantID());
         object.put("order", saveOrder(cart.getOrder()));
         return object;
@@ -164,22 +166,27 @@ public class Save {
         for (Comment userComment : user.getUserComments().keySet())
             userComments.put(saveComment(userComment), saveRestaurant(user.getUserComments().get(userComment)));
         object.put("userComments", userComments);
+
         JSONObject userRatings = new JSONObject();
         for (Rating userRating : user.getUserRatings().keySet())
             userRatings.put(saveRating(userRating), saveRestaurant(user.getUserRatings().get(userRating)));
         object.put("userRatings", userRatings);
+
         JSONObject userCommentsFood = new JSONObject();
         for (Comment userComment : user.getUserCommentsFood().keySet())
             userComments.put(saveComment(userComment), saveFood(user.getUserCommentsFood().get(userComment)));
         object.put("userCommentsFood", userCommentsFood);
         JSONObject userRatingsFood = new JSONObject();
+
         for (Rating userRating : user.getUserRatingsFood().keySet())
             userRatings.put(saveRating(userRating), saveFood(user.getUserRatingsFood().get(userRating)));
         object.put("userRatingsFood", userRatingsFood);
+
         JSONArray ordersHistory = new JSONArray();
         for (Order order : user.getOrdersHistory())
             ordersHistory.add(saveOrder(order));
         object.put("ordersHistory", ordersHistory);
+
         JSONArray userCart = new JSONArray();
         for (Cart cart : user.getUserCart())
             userCart.add(saveCart(cart));
@@ -191,7 +198,10 @@ public class Save {
         JSONObject object = new JSONObject();
         object.put("foodIDCount", Memory.getFoodIdCount());
         object.put("currentUser", saveUser(Memory.getCurrentUser()));
-        object.put("currentAccount", saveManager((Manager) Memory.getCurrentAccount()));
+        if (Memory.getCurrentAccount() instanceof Manager)
+            object.put("currentAccount", saveManager((Manager) Memory.getCurrentAccount()));
+        else if (Memory.getCurrentAccount() instanceof User)
+            object.put("currentAccount", saveUser((User) Memory.getCurrentAccount()));
         JSONArray managers = new JSONArray();
         for (Manager manager : Memory.getAdmins())
             managers.add(saveManager(manager));

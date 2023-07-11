@@ -76,6 +76,8 @@ public class ManagerMenu {
                 message = checkDisplayRatings();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.DISPLAY_COMMENTS)) != null)
                 message = checkDisplayComments();
+            else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.ADD_NEW_RESPONSE)) != null)
+                message = checkAddNewResponse();
             else if ((matcher = ManagerMenuCommands.getMatcher(input, ManagerMenuCommands.LOGOUT)) != null) {
                 message = checkLogOut();
                 isRunning = false;
@@ -102,6 +104,7 @@ public class ManagerMenu {
     }
 
     public static LocalDateTime datetimeParser(String time) {
+        if (time == null) return null;
         Pattern pattern = Pattern.compile("(?<year>\\d{4})\\/(?<month>\\d{2})\\/(?<day>\\d{2})\\s{2}(?<hour>\\d{2}):(?<minute>\\d{2}):(?<second>\\d{2})");
         Matcher m = pattern.matcher(time);
         if (!m.matches()) return null;
@@ -256,5 +259,11 @@ public class ManagerMenu {
         for (Comment comment : comments)
             printer(comment.toString() + "\n");
         return null;
+    }
+
+    public static ManagerMenuMessages checkAddNewResponse() {
+        String commentID = matcher.group("commentID");
+        String message = matcher.group("message");
+        return ManagerMenuController.checkAddResponse(commentID, message);
     }
 }

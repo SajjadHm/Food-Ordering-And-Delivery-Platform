@@ -6,6 +6,7 @@ import com.example.sutfood.model.enums.ResturantFoodType;
 import com.example.sutfood.model.resturant.Food;
 import com.example.sutfood.model.resturant.Restaurant;
 import com.example.sutfood.model.resturant.FoodMenu;
+import com.example.sutfood.model.social.Comment;
 import com.example.sutfood.view.enums.managermenu.ManagerMenuMessages;
 
 import java.math.BigInteger;
@@ -169,6 +170,29 @@ public class ManagerMenuController {
         Food food = restaurant.getSelectedFood();
         if (food == null) return ManagerMenuMessages.NO_FOOD_SELECTED;
         return ManagerMenuMessages.DISPLAY_RATINGS;
+    }
+
+    public static ManagerMenuMessages checkAddResponse(String commentID, String message) {
+        Restaurant restaurant = ((Manager) Memory.getCurrentAccount()).getCurrentRestaurant();
+        if (restaurant == null) return ManagerMenuMessages.INVALID_COMMAND;
+        Food food = restaurant.getSelectedFood();
+        ArrayList<Comment> comments = restaurant.getComments();
+        if (food != null) comments = food.getComments();
+        Comment reply = new Comment(message, "0000", Memory.getCurrentUser());
+        for (Comment comment : comments)
+            if (commentID.equals(comment.getId())) {
+                if (comment.getReplies().size() != 0) {
+                    if (!comment.getReplies().get(0).getId().equals("0000")) {
+                        comment.getReplies().add(reply);
+                        return ManagerMenuMessages.REPLY_ADDED;
+                    } else
+                        return ManagerMenuMessages.NO_MORE_REPLIES;
+                } else {
+                    comment.getReplies().add(reply);
+                    return ManagerMenuMessages.REPLY_ADDED;
+                }
+            }
+        return ManagerMenuMessages.COMMENT_NOT_FOUND;
     }
 
     public static ManagerMenuMessages checkDisplayComments() {

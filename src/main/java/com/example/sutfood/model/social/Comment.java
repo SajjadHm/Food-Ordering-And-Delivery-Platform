@@ -43,7 +43,7 @@ public class Comment {
         this.isModified = false;
     }
 
-    public Comment(String message, String id, User author )
+    public Comment(String message, String id, Account author )
     {
         this.message = message;
         this.id = id;
@@ -107,7 +107,7 @@ public class Comment {
         self += Colors.UNDERLINE + "#" + id + Colors.RESET + "\n";
         self += "@" + Colors.BOLD + author.getUserName() + Colors.RESET + "   at " + timeCreated.format(Memory.dateTimeFormatter);
         if (isModified) self += " (Modified)";
-        self += "\n" + "\t" + this.message;
+        self += "\n" + "\t" + this.message + "\n";
         if (replies.size() != 0) {
             for (Comment reply : replies) {
                 self += "\t\t---- " + Colors.UNDERLINE + "#" + reply.id + Colors.RESET + "\n";

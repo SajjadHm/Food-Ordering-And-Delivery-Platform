@@ -6,7 +6,6 @@ import com.example.sutfood.view.MainMenu;
 
 public class Main {
     public static void main(String[] args) {
-        Save.saveData();
         Read.loadData();
         MainMenu mainMenu = new MainMenu();
         mainMenu.run();

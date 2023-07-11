@@ -4,8 +4,6 @@ import com.example.sutfood.controllers.UserMenuController;
 import com.example.sutfood.model.Memory;
 import com.example.sutfood.model.resturant.*;
 import com.example.sutfood.model.Cart;
-import model.*;
-import model.resturant.*;
 import com.example.sutfood.model.social.Comment;
 import com.example.sutfood.model.social.Rating;
 import com.example.sutfood.view.enums.usermenu.UserMenuCommands;
