@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="620.0" prefWidth="1200.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scenebuildertest.HelloController">
+   <children>
+      <Button layoutX="156.0" layoutY="270.0" mnemonicParsing="false" onAction="#onRestPath" prefHeight="81.0" prefWidth="116.0" text="Rest Path" />
+      <Button layoutX="542.0" layoutY="270.0" mnemonicParsing="false" onAction="#onPath" prefHeight="81.0" prefWidth="116.0" text="Path" />
+      <Button layoutX="898.0" layoutY="270.0" mnemonicParsing="false" onAction="#onTime" prefHeight="81.0" prefWidth="116.0" text="Time" />
+      <Pane fx:id="paneRest" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1200.0" style="-fx-background-color: #eaeaea;" visible="false">
+         <children>
+            <Label layoutX="40.0" layoutY="157.0" text="Estimated Time:" textFill="#183d36">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Group layoutX="165.0" layoutY="263.0">
+               <children>
+                  <Circle fill="#84b8ac9c" layoutX="100.0" layoutY="91.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Text fx:id="textTimeR" fill="#183d36" layoutX="27.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time" textAlignment="CENTER" wrappingWidth="146.43603515625">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#183d36" layoutX="27.0" layoutY="130.1015625" strokeType="OUTSIDE" strokeWidth="0.0" text="min" textAlignment="CENTER" wrappingWidth="146.43603515625">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group layoutX="133.0" layoutY="19.0">
+               <children>
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#f0e0de" height="58.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="263.0" />
+                  <Label layoutX="9.0" layoutY="14.0" text="Best Route To Destination:" textFill="#183d36">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+            <Separator layoutX="510.0" orientation="VERTICAL" prefHeight="620.0" />
+            <Pane layoutX="516.0" layoutY="-3.0" prefHeight="620.0" prefWidth="693.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Text fx:id="textPathRest" fill="#183d36" layoutX="32.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Path" textAlignment="CENTER" wrappingWidth="628.4835815429688">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Text>
+               </children></Pane>
+            <Group layoutX="256.0" layoutY="562.0">
+               <children>
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#f0e0de" height="41.0" layoutX="-33.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="83.0" />
+                  <Text fill="#183d36" layoutX="-24.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back" textAlignment="CENTER" underline="true" wrappingWidth="65.62030029296875">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-35.0" layoutY="-7.0" mnemonicParsing="false" onAction="#onBack" opacity="0.0" prefHeight="42.0" prefWidth="87.0" style="-fx-background-color: #f0e0de;" text="Back" textAlignment="CENTER" textFill="#183d36" />
+               </children>
+            </Group>
+         </children>
+      </Pane>
+      <Pane fx:id="paneTime" layoutX="450.0" layoutY="112.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #eaeaea; -fx-border-color: #183d36; -fx-border-width: 5px; -fx-border-style: inset;" visible="false">
+         <children>
+            <Group layoutX="68.0" layoutY="14.0">
+               <children>
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#f0e0de" height="58.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="165.0" />
+                  <Label layoutX="9.0" layoutY="14.0" text="Estimated Time:" textFill="#183d36">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+            <Text fx:id="textTime" fill="#183d36" layoutX="77.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time" textAlignment="CENTER" wrappingWidth="146.43603515625">
+               <font>
+                  <Font size="44.0" />
+               </font>
+            </Text>
+            <Text fill="#183d36" layoutX="77.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="min" textAlignment="CENTER" wrappingWidth="146.43603515625">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Group layoutX="125.0" layoutY="348.0">
+               <children>
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#f0e0de" height="35.0" layoutX="-6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="55.0" />
+                  <Text fill="#183d36" layoutX="4.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back" underline="true">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-6.0" mnemonicParsing="false" onAction="#onBack" opacity="0.0" prefHeight="33.0" prefWidth="55.0" style="-fx-background-color: #f0e0de;" text="Back" textAlignment="CENTER" textFill="#183d36" />
+               </children>
+            </Group>
+         </children>
+      </Pane>
+      <Pane fx:id="panePath" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1200.0" style="-fx-background-color: #eaeaea;" visible="false">
+         <children>
+            <Group layoutX="510.0" layoutY="11.0">
+               <children>
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#f0e0de" height="58.0" layoutY="3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="180.0" />
+                  <Label layoutX="9.0" layoutY="14.0" text="Selected Route:" textFill="#183d36">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+            <Group layoutX="591.0" layoutY="570.0">
+               <children>
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#f0e0de" height="41.0" layoutX="-33.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="83.0" />
+                  <Text fill="#183d36" layoutX="-24.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back" textAlignment="CENTER" underline="true" wrappingWidth="65.62030029296875">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-35.0" layoutY="-7.0" mnemonicParsing="false" onAction="#onBack" opacity="0.0" prefHeight="42.0" prefWidth="87.0" style="-fx-background-color: #f0e0de;" text="Back" textAlignment="CENTER" textFill="#183d36" />
+               </children>
+            </Group>
+            <Text fx:id="textPathUser" fill="#183d36" layoutX="285.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Path" textAlignment="CENTER" wrappingWidth="628.4835815429688">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</Pane>
