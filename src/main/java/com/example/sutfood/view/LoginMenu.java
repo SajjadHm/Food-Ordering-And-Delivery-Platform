@@ -33,9 +33,9 @@ public class LoginMenu {
             else if ((matcher = LoginMenuCommands.getMatcher(input, LoginMenuCommands.BACK)) != null)
                 return LoginMenuResults.BACK;
             else if ((matcher = LoginMenuCommands.getMatcher(input, LoginMenuCommands.ADD_ADMIN)) != null)
-                messages = checkAddAdmin();
+                messages = checkAddAdmin(scanner);
             else if ((matcher = LoginMenuCommands.getMatcher(input, LoginMenuCommands.ADD_USER)) != null)
-                messages = checkAddUser();
+                messages = checkAddUser(scanner);
             else if ((matcher = LoginMenuCommands.getMatcher(input, LoginMenuCommands.LOGIN_ADMIN)) != null)
                 messages = checkLoginAdmin();
             else if ((matcher = LoginMenuCommands.getMatcher(input, LoginMenuCommands.LOGIN_USER)) != null)
@@ -51,18 +51,34 @@ public class LoginMenu {
         return null;
     }
 
-    public static LoginMenuMessages checkAddAdmin()
+    public static LoginMenuMessages checkAddAdmin(Scanner scanner)
     {
         String userName = matcher.group("userName");
         String passWord = matcher.group("passWord");
-        return LoginMenuController.checkAddAdmin(userName, passWord);
+        LoginMenuMessages result = LoginMenuController.checkAddAdmin(userName, passWord);
+        if (result != LoginMenuMessages.ADMIN_ACCOUNT_CREATED) return result;
+        System.out.println("Enter your firstName:");
+        String firstName = scanner.nextLine().trim();
+        System.out.println("Enter your lastName:");
+        String lastName = scanner.nextLine().trim();
+        LoginMenuController.addAdmin(userName, passWord, firstName, lastName);
+        return result;
     }
 
-    public static LoginMenuMessages checkAddUser()
+    public static LoginMenuMessages checkAddUser(Scanner scanner)
     {
         String userName = matcher.group("userName");
         String passWord = matcher.group("passWord");
-        return LoginMenuController.checkAddUser(userName, passWord);
+        LoginMenuMessages result = LoginMenuController.checkAddUser(userName, passWord);
+        if (result != LoginMenuMessages.USER_ACCOUNT_CREATED) return result;
+        System.out.println("Enter your firstName:");
+        String firstName = scanner.nextLine().trim();
+        System.out.println("Enter your lastName:");
+        String lastName = scanner.nextLine().trim();
+        System.out.println("Enter your location:");
+        String location = scanner.nextLine().trim();
+        LoginMenuController.addUser(userName, passWord, firstName, lastName, location);
+        return result;
     }
 
     public static LoginMenuMessages checkLoginAdmin()

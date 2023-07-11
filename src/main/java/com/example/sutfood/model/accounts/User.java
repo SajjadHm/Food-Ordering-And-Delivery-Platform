@@ -26,11 +26,12 @@ public class User extends Account
 
 
 
-    public User(String userName, String passWord, String firstName, String lastName, boolean isPasswordHashed)
+    public User(String userName, String passWord, String firstName, String lastName, boolean isPasswordHashed, String location)
     {
         super(userName, passWord, firstName, lastName, isPasswordHashed);
         this.balance = 0 ;
         this.loginStatus = false ;
+        this.location = location;
     }
 
     public boolean getLoginStatus()

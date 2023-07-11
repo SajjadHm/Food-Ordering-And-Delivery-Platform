@@ -202,7 +202,8 @@ public class Read {
                 (String) object.get("hashedPassWord"),
                 (String) object.get("firstName"),
                 (String) object.get("lastName"),
-                true
+                true,
+                (String) object.get("location")
         );
         user.getUserComments().putAll(userComments);
         user.getUserRatings().putAll(userRatings);

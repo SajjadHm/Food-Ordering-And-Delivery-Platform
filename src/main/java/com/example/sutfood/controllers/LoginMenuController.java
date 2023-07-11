@@ -32,6 +32,11 @@ public class LoginMenuController
         return LoginMenuMessages.ADMIN_ACCOUNT_CREATED;
     }
 
+    public static void addAdmin(String userName, String passWord, String firstName, String lastName) {
+        Manager admin = new Manager(userName, passWord, firstName, lastName, false); // TODO: fix it!
+        Memory.getAdmins().add(admin);
+    }
+
     public static LoginMenuMessages checkAddUser(String userName, String passWord)
     {
         if (checkUsernamePassword(userName, passWord) != null) return checkUsernamePassword(userName, passWord);
@@ -39,9 +44,12 @@ public class LoginMenuController
         if (user != null) return LoginMenuMessages.USER_EXISTS;
         Matcher matcher = Pattern.compile("(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}").matcher(passWord);
         if (!matcher.matches()) return LoginMenuMessages.WEAK_PASSWORD;
-        user = new User(userName, passWord, "", "", false); // TODO: fix it!
-        Memory.getUsers().add(user);
         return LoginMenuMessages.USER_ACCOUNT_CREATED;
+    }
+
+    public static void addUser(String userName, String passWord, String firstName, String lastName, String location) {
+        User user = new User(userName, passWord, firstName, lastName, false, location); // TODO: fix it!
+        Memory.getUsers().add(user);
     }
 
     public static LoginMenuMessages checkLoginAdmin(String userName, String passWord)
