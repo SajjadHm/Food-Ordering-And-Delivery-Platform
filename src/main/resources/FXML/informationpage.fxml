@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER_LEFT" maxHeight="1600.0" maxWidth="2560.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="50.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sutfood.guiview.loginmenu.InformationPageFXController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="547.0" text="Sign Up" textOverrun="CLIP">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" prefHeight="357.0" prefWidth="500.0" spacing="50.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="236.0" prefWidth="238.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="username" promptText="Username" />
+                  <PasswordField fx:id="password" promptText="Password" />
+                  <TextField fx:id="locationNode" promptText="Location (User Only)" />
+                  <Button fx:id="userSignup" mnemonicParsing="false" onAction="#userSignup" prefHeight="39.0" prefWidth="218.0" text="User Sign Up" />
+                  <HBox prefHeight="33.0" prefWidth="303.0" />
+                  <HBox prefHeight="43.0" prefWidth="288.0" spacing="20.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="256.0" prefWidth="261.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="firstname" promptText="First Name" />
+                  <TextField fx:id="lastname" promptText="Last Name" />
+                  <TextField disable="true" editable="false" visible="false" />
+                  <Button fx:id="adminSignup" mnemonicParsing="false" onAction="#adminSignup" prefHeight="39.0" prefWidth="243.0" text="Admin Sign Up" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+   </padding>
+</VBox>

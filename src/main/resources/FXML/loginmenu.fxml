@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox maxHeight="1600.0" maxWidth="2560.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sutfood.guiview.loginmenu.LoginMenuFXController">
+   <padding>
+      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+   </padding>
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="357.0" prefWidth="500.0" spacing="50.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="53.0" prefWidth="147.0" text="Welcome!">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" prefHeight="300.0" prefWidth="303.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="textField" promptText="username" />
+                  <PasswordField fx:id="passwordField" promptText="password" />
+                  <HBox prefHeight="43.0" prefWidth="288.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="userLogin" mnemonicParsing="false" onAction="#userLogin" prefHeight="39.0" prefWidth="153.0" text="User Login" />
+                        <Button fx:id="adminLogin" mnemonicParsing="false" onAction="#adminLogin" prefHeight="39.0" prefWidth="151.0" text="Admin Login" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="33.0" prefWidth="303.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="207.0" text="Don't have an account?">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Hyperlink onAction="#signUp" prefHeight="52.0" prefWidth="77.0" text="Sign Up" />
+                     </children>
+                  </HBox>
+                  <Hyperlink onAction="#forgetPassword" text="Forget Password" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
