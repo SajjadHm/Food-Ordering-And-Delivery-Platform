@@ -1,7 +1,6 @@
 package com.example.sutfood.model.resturant;
 
 import com.example.sutfood.model.Memory;
-import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.time.LocalDateTime;
 

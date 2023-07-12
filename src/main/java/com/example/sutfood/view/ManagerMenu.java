@@ -13,7 +13,6 @@ import com.example.sutfood.model.social.Comment;
 import com.example.sutfood.view.enums.managermenu.ManagerMenuCommands;
 import com.example.sutfood.view.enums.managermenu.ManagerMenuMessages;
 import com.example.sutfood.view.others.Colors;
-import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

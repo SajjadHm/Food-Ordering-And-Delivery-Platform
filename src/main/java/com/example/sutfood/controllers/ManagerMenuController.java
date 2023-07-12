@@ -9,7 +9,6 @@ import com.example.sutfood.model.resturant.Restaurant;
 import com.example.sutfood.model.resturant.FoodMenu;
 import com.example.sutfood.model.social.Comment;
 import com.example.sutfood.view.enums.managermenu.ManagerMenuMessages;
-import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
