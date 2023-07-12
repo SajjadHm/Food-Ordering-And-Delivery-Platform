@@ -1,6 +1,7 @@
 package com.example.sutfood.guiview.loginmenu;
 
 import com.example.sutfood.controllers.LoginMenuController;
+import com.example.sutfood.guiview.managermenu.ManagerMenuGui;
 import com.example.sutfood.view.ManagerMenu;
 import com.example.sutfood.view.enums.loginmenu.LoginMenuMessages;
 import com.example.sutfood.view.enums.loginmenu.LoginMenuResults;
@@ -20,7 +21,7 @@ public class LoginMenuFXController {
     public static void incompleteFieldsAlert() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Incomplete Fields");
-        alert.setContentText("Complete all fields for login.");
+        alert.setContentText("Complete all fields properly.");
         alert.show();
     }
 
@@ -48,13 +49,13 @@ public class LoginMenuFXController {
         }
     }
 
-    public void adminLogin(ActionEvent actionEvent) {
+    public void adminLogin(ActionEvent actionEvent) throws Exception {
         if (!textField.getText().matches("\\w+") || !passwordField.getText().matches("\\S+"))
             incompleteFieldsAlert();
         else {
             LoginMenuMessages results = LoginMenuController.checkLoginAdmin(textField.getText(), passwordField.getText());
             if (results != LoginMenuMessages.ADMIN_LOGIN_SUCCESSFUL) alert(results);
-            else System.out.println("Login Admin");
+            new ManagerMenuGui().start(LoginMenuGui.stage);
         }
     }
 

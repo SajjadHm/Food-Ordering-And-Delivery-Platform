@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="151.0" fitWidth="200.0" layoutX="35.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Media/temp.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="436.0" layoutY="130.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="82.0" text="Add " />
+      <TextArea layoutX="270.0" layoutY="130.0" prefHeight="35.0" prefWidth="122.0" promptText="Price" />
+      <TextArea layoutX="270.0" layoutY="54.0" prefHeight="33.0" prefWidth="122.0" promptText="Food Name" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="416.0" layoutY="59.0" prefHeight="30.0" prefWidth="122.0" text="AvgRating" />
+      <Button layoutX="86.0" layoutY="367.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="98.0" text="Add Comment" />
+      <Button layoutX="168.0" layoutY="208.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="98.0" text="Submit" />
+      <TextField layoutX="24.0" layoutY="209.0" prefHeight="39.0" prefWidth="133.0" promptText="Rate this Food 1 to 5" />
+      <TextField layoutX="24.0" layoutY="267.0" prefHeight="89.0" prefWidth="242.0" promptText="Add Your Comment" />
+      <ScrollPane layoutX="309.0" layoutY="253.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="228.0" prefWidth="374.0">
+         <content>
+            <VBox prefHeight="303.0" prefWidth="357.0">
+               <children>
+                  <TextArea prefHeight="60.0" prefWidth="357.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <TextArea layoutX="10.0" layoutY="10.0" prefHeight="60.0" prefWidth="357.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <TextArea layoutX="10.0" layoutY="70.0" prefHeight="60.0" prefWidth="357.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <TextArea layoutX="10.0" layoutY="70.0" prefHeight="60.0" prefWidth="357.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <TextArea layoutX="10.0" layoutY="10.0" prefHeight="60.0" prefWidth="357.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <TextArea layoutX="10.0" layoutY="70.0" prefHeight="60.0" prefWidth="357.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <TextArea layoutX="10.0" layoutY="111.0" prefHeight="60.0" prefWidth="357.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <TextArea layoutX="10.0" layoutY="140.0" prefHeight="60.0" prefWidth="357.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Text layoutX="309.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Comments" wrappingWidth="122.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
